@@ -6,6 +6,7 @@
 
 ##Git 常用命令
 * git clone git@github.com:courseweb/course.git    #克隆仓库到本地
+  或者 git clone https://github.com/courseweb/course.git （https) 上面那个是ssh方式
 * git add * 	
 * git commit -m "xxx"
 * git push -u origin master 	#上面三条用来向远程仓库提交代码
