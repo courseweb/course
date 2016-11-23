@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body ng-app="myapp" ng-controller="myCtrl" ng-cloak>
+
+        <!-- 中心内容 -->
+        <ion-side-menu-content>
+            <ion-header-bar class="bar-balanced">
+                <button class="button button-icon" ng-click="toggle()">
+                  <i class="icon ion-navicon"></i>
+                </button>
+                <h1 class="title">硅科联创</h1>
+            </ion-header-bar>
+            <ui-view></ui-view>
+        </ion-side-menu-content>
+
+        <!-- 左边栏 -->
+        <ion-side-menu side="left">
+            <ion-header-bar class="bar-balanced">
+                <h1 class="title">公益导航</h1>
+            </ion-header-bar>
+            <ion-content scroll="false">
+                <ion-list>
+                    <div>
+                        <ion-item ng-click="toggleGroup(groups[0])" ng-class="{active: isGroupShown(groups[0])}">
+                            <i class="icon" ng-class="isGroupShown(groups[0]) ? 'ion-minus' : 'ion-plus'"></i> {{groups[0].name}}
+                        </ion-item>
+                        <div ng-repeat="items in groups[0].items" ng-show="isGroupShown(groups[0])">
+                            <ion-item ng-click="toggleGroup(items)" ng-class="{active: isGroupShown(items)}">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><i class="icon" ng-class="isGroupShown(items) ? 'ion-minus' : 'ion-plus'"></i> {{items.name}}
+                            </ion-item>
+                            <ion-item class="item-accordion" ng-repeat="item in items.items" ng-click="toggleGroup(item)" ng-show="isGroupShown(items)">
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{item.name}}
+                            </ion-item>
+                        </div>
+                    </div>
+                    <div>
+                        <ion-item ng-click="toggleGroup(groups[1])" ng-class="{active: isGroupShown(groups[1])}">
+                            <i class="icon" ng-class="isGroupShown(groups[1]) ? 'ion-minus' : 'ion-plus'"></i> {{groups[1].name}}
+                        </ion-item>
+                        <ion-item class="item-accordion" ng-repeat="item in groups[1].items" ng-click="toggleGroup(item)" ng-show="isGroupShown(groups[1])">
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>{{item.name}}
+                        </ion-item>
+                    </div>
+                    <div>
+                        <ion-item>
+                            {{groups[2].name}}
+                        </ion-item>
+                    </div>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
