@@ -1,66 +1,8 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-
-<body ng-app="myapp" ng-controller="myCtrl" ng-cloak>
-
-        <!-- 中心内容 -->
-        <ion-side-menu-content>
-            <ion-header-bar class="bar-balanced">
-                <button class="button button-icon" ng-click="toggle()">
-                  <i class="icon ion-navicon"></i>
-                </button>
-                <h1 class="title">硅科联创</h1>
-            </ion-header-bar>
-            <ui-view></ui-view>
-        </ion-side-menu-content>
-
-        <!-- 左边栏 -->
-        <ion-side-menu side="left">
-            <ion-header-bar class="bar-balanced">
-                <h1 class="title">公益导航</h1>
-            </ion-header-bar>
-            <ion-content scroll="false">
-                <ion-list>
-                    <div>
-                        <ion-item ng-click="toggleGroup(groups[0])" ng-class="{active: isGroupShown(groups[0])}">
-                            <i class="icon" ng-class="isGroupShown(groups[0]) ? 'ion-minus' : 'ion-plus'"></i> {{groups[0].name}}
-                        </ion-item>
-                        <div ng-repeat="items in groups[0].items" ng-show="isGroupShown(groups[0])">
-                            <ion-item ng-click="toggleGroup(items)" ng-class="{active: isGroupShown(items)}">
-                                <span>&nbsp;&nbsp;&nbsp;&nbsp;</span><i class="icon" ng-class="isGroupShown(items) ? 'ion-minus' : 'ion-plus'"></i> {{items.name}}
-                            </ion-item>
-                            <ion-item class="item-accordion" ng-repeat="item in items.items" ng-click="toggleGroup(item)" ng-show="isGroupShown(items)">
-                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{item.name}}
-                            </ion-item>
-                        </div>
-                    </div>
-                    <div>
-                        <ion-item ng-click="toggleGroup(groups[1])" ng-class="{active: isGroupShown(groups[1])}">
-                            <i class="icon" ng-class="isGroupShown(groups[1]) ? 'ion-minus' : 'ion-plus'"></i> {{groups[1].name}}
-                        </ion-item>
-                        <ion-item class="item-accordion" ng-repeat="item in groups[1].items" ng-click="toggleGroup(item)" ng-show="isGroupShown(groups[1])">
-                            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>{{item.name}}
-                        </ion-item>
-                    </div>
-                    <div>
-                        <ion-item>
-                            {{groups[2].name}}
-                        </ion-item>
-                    </div>
-                </ion-list>
-            </ion-content>
-        </ion-side-menu>
-    </ion-side-menus>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-ui-router.min.js"></script>
-    <script src="js/main.js"></script>
+<body>
+<style type="text/css">*{ padding: 0; margin: 0; } .think_default_text{ padding: 4px 48px;} a{color:#2E5CD5;cursor: pointer;text-decoration: none} a:hover{text-decoration:underline; } body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.6em; font-size: 42px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p> ThinkPHP V5<br/><span style="font-size:30px">十年磨一剑 - 为API开发设计的高性能框架</span></p><span style="font-size:22px;">[ V5.0 版本由 <a href="http://www.qiniu.com" target="qiniu">七牛云</a> 独家赞助发布 ]</span></div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_bd568ce7058a1091"></thinkad>
 </body>
-
 </html>
