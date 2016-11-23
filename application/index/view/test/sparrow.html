@@ -1,0 +1,48 @@
+<!-- http://localhost/index.php/index/test/sparrow -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <style type="text/css">*{ padding: 0; margin: 0; } 
+        .think_default_text{ padding: 4px 48px;} 
+        body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px} 
+    </style>
+    <div style="padding: 24px 48px;">
+        <div style="font-size:22px;">
+            <div>1.登录模块测试</div>
+            <span>ID:<input id="login_id"></span>
+            <span>PWD:<input id="login_pwd"></span>
+            <span>TYPE:<input id="login_type"></span>
+            <button type="submit" id="login">提交</button>
+            <div>RESULT:<span id="login_result"></span></div>
+        </div>
+        <script>
+            $('#login').click(function(){
+                var id = document.getElementById("login_id").value;
+                var pwd = document.getElementById("login_pwd").value;
+                var type = document.getElementById("login_type").value;
+                document.getElementById("login_result").innerHTML="";
+                $('#login_result').load("/index.php/index/User/login",{"id":id,"pwd":pwd,"type":type});
+            });
+        </script>
+
+        <div style="font-size:22px;">
+            <div>2.修改密码模块测试（登陆后修改）</div>
+            <span>PWD:<input id="editPwd_pwd"></span>
+            <span>NEWPWD:<input id="editPwd_newPwd"></span>
+            <button type="submit" id="editPwd">提交</button>
+            <div>RESULT:<span id="editPwd_result"></span></div>
+        </div>
+        <script>
+            $('#editPwd').click(function(){
+                var pwd = document.getElementById("editPwd_pwd").value;
+                var newPwd = document.getElementById("editPwd_newPwd").value;
+                document.getElementById("editPwd_result").innerHTML="";
+                $('#editPwd_result').load("/index.php/index/User/editPwd",{"pwd":pwd,"newPwd":newPwd});
+            });
+        </script>
+    </div>
+</body>
+</html>
