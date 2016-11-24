@@ -14,7 +14,7 @@
 * 记住先git pull再push!记住先git pull再push!记住先git pull再push!
 
 ##杂项
-* 网址首页 http://115.28.173.183/
+* 网址首页 http://115.28.173.183/ 或 http://zjumaple.top
 * 登录、修改密码模块测试网页 http://115.28.173.183/index.php/index/test/sparrow
 * 服务器定于每天早上6点执行git pull命令
 * 开发语言 php 5.6
