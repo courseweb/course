@@ -14,6 +14,6 @@
 * 记住先git pull再push!记住先git pull再push!记住先git pull再push!
 
 ##杂项
-* 网址首页 http://115.28.173.183/
+* 网址首页 http://115.28.173.183/ 服务器不定更新，目前以github为准
 * 登录、修改密码模块测试网页 http://115.28.173.183/index.php/index/test/sparrow
 * 开发语言 php 5.6
