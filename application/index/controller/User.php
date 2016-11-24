@@ -4,7 +4,7 @@ use think\Controller;
 class User extends Controller
 {
     /** 
-    * login()函数用登录
+    * login()函数用于登录
     * 
     * 函数的参数如下，POST方式参数需要前端传输
     * 用户id:POST['id']
@@ -47,13 +47,14 @@ class User extends Controller
                 $result='success';
                 session('usr_id',$id);
                 session('usr_type',$type);
+                session('login',true);
             }
         }else{
             $result='false_type';
         }
 
         $arr = array('result' => $result);
-        return json_encode($arr);
+        echo json_encode($arr);
     }
 
     /** 
@@ -75,7 +76,7 @@ class User extends Controller
     * @return json_encode
     */  
     public function editPwd(){
-        if(session('?usr_id')){
+        if(session('?login')){
             $id=session('usr_id');
             $type=session('usr_type');
             $pwd=md5($_POST['pwd']);
@@ -105,7 +106,147 @@ class User extends Controller
         }
 
         $arr = array('result' => $result);
-        return json_encode($arr);
+        echo json_encode($arr);
+    }
+
+    public function setQuest(){
+        if (session('?login')) {
+            $id=session('usr_id');
+            $type=session('usr_type');
+            $quest=$_POST['quest'];
+            $ans=$_POST['ans'];
+
+            if($type=="1"||$type=="2"){
+                if($type=="1"){
+                    $user= new \app\index\model\Student();
+                    $id_str='stu_id';
+                    $quest_str= 'pwd_question';
+                    $ans_str='pwd_answer';
+                }else if($type=="2"){
+                    $user= new \app\index\model\Teacher();
+                    $id_str='t_id';
+                    $quest_str= 'pwd_question';
+                    $ans_str='pwd_answer';
+                }
+                $result=$user->where($id_str,$id)->value($quest_str);
+                if (!$result) {
+                    $result=$user->where($id_str,$id)->update([$quest_str => $quest,$ans_str=>$ans]);
+                    if(!$result){
+                        $result="failure";
+                    }else{
+                        $result="success";
+                    }
+                }else{
+                    $result="false_isset";
+                }
+            }else{
+                $result='false_type';
+            }  
+        }else{
+            $result='false_unlogin';
+        }            
+        $arr = array('result' => $result);
+        echo json_encode($arr); 
+    }
+
+    public function getQuest(){
+        $id=$_POST['id'];
+        $type=$_POST['type'];
+
+        if($type=="1"||$type=="2"){
+            if($type=="1"){
+                $user= new \app\index\model\Student();
+                $id_str='stu_id';
+                $quest_str= 'pwd_question';
+            }else if($type=="2"){
+                $user= new \app\index\model\Teacher();
+                $id_str='t_id';
+                $quest_str= 'pwd_question';
+            }
+            if (!$user->where($id_str,$id)->find()) { 
+                $result='false_id';
+            }else{
+                $result=$user->where($id_str,$id)->value($quest_str);
+                if (!$result) {
+                    $result="false_quest";
+                }else{
+                    session('usr_id',$id);
+                    session('usr_type',$type);
+                }
+            }
+        }else{
+            $result='false_type';
+        }
+        $arr = array("result" => $result);
+        echo json_encode($arr,JSON_UNESCAPED_UNICODE);
+    }
+
+    public function veriAns(){
+        if (session('?usr_id')) {
+            $id=session('usr_id');
+            $type=session('?usr_type');
+            $ans=$_POST['ans'];
+
+            if($type=="1"||$type=="2"){
+                if($type=="1"){
+                    $user= new \app\index\model\Student();
+                    $id_str='stu_id';
+                    $ans_str= 'pwd_answer';
+                }else if($type=="2"){
+                    $user= new \app\index\model\Teacher();
+                    $id_str='t_id';
+                    $ans_str= 'pwd_answer';
+                }
+                $result=$user->where($id_str,$id)->where($ans_str,$ans)->find();
+                if (!$result) {
+                    $result="failure";
+                }else{
+                    $result="success";
+                    session("veriAns",true);
+                }
+            }else{
+                $result='false_type';
+            }
+        }else{
+            $result='false_notset';
+        }
+
+        $arr = array('result' => $result);
+        echo json_encode($arr);
+    }
+
+    public function retrPwd(){
+        if (session('?usr_id')&&session('?veriAns')) {
+            $id=session('usr_id');
+            $type=session('?usr_type');
+            $newPwd=md5($_POST['newPwd']);
+
+            if($type=="1"||$type=="2"){
+                if($type=="1"){
+                    $user= new \app\index\model\Student();
+                    $id_str='stu_id';
+                    $pwd_str= 'stu_pwd';
+                }else if($type=="2"){
+                    $user= new \app\index\model\Teacher();
+                    $id_str='t_id';
+                    $pwd_str= 't_pwd';
+                }
+                $result=$user->where($id_str,$id)->update([$pwd_str=>$newPwd]);
+                if (!$result) {
+                    $result="failure";
+                }else{
+                    $result="success";
+                }
+            }else{
+                $result='false_type';
+            }
+            session('veriAns', null);
+        }else{
+            $result='false_notset';
+        }
+
+        $arr = array('result' => $result);
+        echo json_encode($arr);
     }
 }
 ?>

@@ -43,6 +43,66 @@
                 $('#editPwd_result').load("/index.php/index/User/editPwd",{"pwd":pwd,"newPwd":newPwd});
             });
         </script>
+
+        <div style="font-size:22px;">
+            <div>3.设置密保测试</div>
+            <span>QUESTION:<input id="setQuest_quest"></span>
+            <span>ANSWER:<input id="setQuest_ans"></span>
+            <button type="submit" id="setQuest">提交</button>
+            <div>RESULT:<span id="setQuest_result"></span></div>
+        </div>
+        <script>
+            $('#setQuest').click(function(){
+                var quest = document.getElementById("setQuest_quest").value;
+                var ans = document.getElementById("setQuest_ans").value;
+                document.getElementById("setQuest_result").innerHTML="";
+                $('#setQuest_result').load("/index.php/index/User/setQuest",{"quest":quest,"ans":ans});
+            });
+        </script>
+
+        <div style="font-size:22px;">
+            <div>4.获取密保问题测试</div>
+            <span>ID:<input id="getQuest_id"></span>
+            <span>TYPE:<input id="getQuest_type"></span>
+            <button type="submit" id="getQuest">提交</button>
+            <div>RESULT:<span id="getQuest_result"></span></div>
+        </div>
+        <script>
+            $('#getQuest').click(function(){
+                var id = document.getElementById("getQuest_id").value;
+                var type = document.getElementById("getQuest_type").value;
+                document.getElementById("getQuest_result").innerHTML="";
+                $('#getQuest_result').load("/index.php/index/User/getQuest",{"id":id,"type":type});
+            });
+        </script>
+
+        <div style="font-size:22px;">
+            <div>5.验证密保答案测试</div>
+            <span>ANSWER:<input id="veriAns_ans"></span>
+            <button type="submit" id="veriAns">提交</button>
+            <div>RESULT:<span id="veriAns_result"></span></div>
+        </div>
+        <script>
+            $('#veriAns').click(function(){
+                var ans = document.getElementById("veriAns_ans").value;
+                document.getElementById("veriAns_result").innerHTML="";
+                $('#veriAns_result').load("/index.php/index/User/veriAns",{"ans":ans});
+            });
+        </script>
+
+        <div style="font-size:22px;">
+            <div>6.修改密码测试（找回密码后修改）</div>
+            <span>NEWPWD:<input id="retrPwd_newPwd"></span>
+            <button type="submit" id="retrPwd">提交</button>
+            <div>RESULT:<span id="retrPwd_result"></span></div>
+        </div>
+        <script>
+            $('#retrPwd').click(function(){
+                var newPwd = document.getElementById("retrPwd_newPwd").value;
+                document.getElementById("retrPwd_result").innerHTML="";
+                $('#retrPwd_result').load("/index.php/index/User/retrPwd",{"newPwd":newPwd});
+            });
+        </script>
     </div>
 </body>
 </html>

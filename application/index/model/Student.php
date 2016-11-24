@@ -22,7 +22,7 @@ class Student extends Model
         // 数据库连接参数
         'params' => [],
         // 数据库编码默认采用utf8
-        'charset' => 'gbk',
+        'charset' => 'utf8',
         // 数据库表前缀
         'prefix' => '',
     ];
