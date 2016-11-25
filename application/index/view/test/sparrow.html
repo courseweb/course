@@ -105,14 +105,12 @@
         </script>
 
         <div style="font-size:22px;">
-            <div>7.查看个人信息测试（找回密码后修改）</div>
-            <!-- <span>NEWPWD:<input id="showInfo_newPwd"></span> -->
+            <div>7.查看个人信息测试</div>
             <button type="submit" id="showInfo">提交</button>
             <div>RESULT:<span id="showInfo_result"></span></div>
         </div>
         <script>
             $('#showInfo').click(function(){
-                // var newPwd = document.getElementById("retrPwd_newPwd").value;,{"newPwd":newPwd}
                 document.getElementById("showInfo_result").innerHTML="";
                 $('#showInfo_result').load("/index.php/index/Index/showInfo");
             });

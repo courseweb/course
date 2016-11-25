@@ -199,13 +199,31 @@ class UserModel extends Model
                         ['teach e', 'c.class_id=e.class_id'],
                         ['teacher f','e.t_id=f.t_id']
                     ];
-                    $result = Db::table($user)->alias('a')->join($join)->where('a.stu_id',$id)->field('a.stu_name,a.pwd_question,a.pwd_answer,c.section_id,d.subject,f.t_name')->find();
+                    $result = Db::table($user)->alias('a')->join($join)->where('a.stu_id',$id)->field('a.stu_name,a.pwd_question,a.pwd_answer,c.section_id,d.subject,f.t_name,c.class_id')->select();
 
                     if(!$result){
                         $result = 'failure';
                     }else{
-                        $result = array('id' => $id, '');
+                        $teacher = array_column($result,'t_name');
+                        for ($i = 0; $i < count($result); $i++) { 
+                            for($j = 0;$j < $i; $j++){
+                                if ($result[$i]['class_id']==$result[$j]['class_id'] AND $teacher[$i]) {
+                                    $teacher[$j]=$teacher[$j].'&'.$teacher[$i];
+                                    $teacher[$i]='';
+                                }
+                            }
+                        }
+                        $arr = array();
+                        $index = 0;
+                        for ($i = 0; $i < count($result); $i++) { 
+                            if($teacher[$i]){
+                                $arr[$index] = $result[$i]['subject'].'-'.$teacher[$i].'-'.$result[$i]['section_id'].'班';
+                                $index++;
+                            }
+                        }
+                        $result=array('id'=>$id,'name'=>$result[0]['stu_name'],'question'=>$result[0]['pwd_question'],'answer'=>$result[0]['pwd_answer'],'class'=>$arr);
                     }
+                    return json_encode($result,JSON_UNESCAPED_UNICODE);
                 }else if($type=="2"){
                     $user = 'teacher';
                 }
@@ -221,7 +239,7 @@ class UserModel extends Model
         }else{
             $result='false_unlogin';
         }
-        $arr = array('result' => result);
+        $arr = array('result' => $result);
         echo json_encode($arr);
     }
 }
