@@ -12,107 +12,140 @@
     <div style="padding: 24px 48px;">
         <div style="font-size:22px;">
             <div>1.登录模块测试</div>
-            <span>ID:<input id="login_id"></span>
-            <span>PWD:<input id="login_pwd"></span>
-            <span>TYPE:<input id="login_type"></span>
-            <button type="submit" id="login">提交</button>
-            <div>RESULT:<span id="login_result"></span></div>
+            <span>ID:<input id="loginUser_id"></span>
+            <span>PWD:<input id="loginUser_pwd"></span>
+            <span>TYPE:<input id="loginUser_type"></span>
+            <button type="submit" id="loginUser">提交</button>
+            <div>RESULT:<span id="loginUser_result"></span></div>
         </div>
         <script>
-            $('#login').click(function(){
-                var id = document.getElementById("login_id").value;
-                var pwd = document.getElementById("login_pwd").value;
-                var type = document.getElementById("login_type").value;
-                document.getElementById("login_result").innerHTML="";
-                $('#login_result').load("/index.php/index/Index/login",{"id":id,"pwd":pwd,"type":type});
+            $('#loginUser').click(function(){
+                var id = document.getElementById("loginUser_id").value;
+                var pwd = document.getElementById("loginUser_pwd").value;
+                var type = document.getElementById("loginUser_type").value;
+                document.getElementById("loginUser_result").innerHTML="";
+                $('#loginUser_result').load("/index.php/index/Index/loginUser",{"id":id,"pwd":pwd,"type":type});
             });
         </script>
 
         <div style="font-size:22px;">
             <div>2.修改密码模块测试（登陆后修改）</div>
-            <span>PWD:<input id="editPwd_pwd"></span>
-            <span>NEWPWD:<input id="editPwd_newPwd"></span>
-            <button type="submit" id="editPwd">提交</button>
-            <div>RESULT:<span id="editPwd_result"></span></div>
+            <span>PWD:<input id="editUserPwd_pwd"></span>
+            <span>NEWPWD:<input id="editUserPwd_newPwd"></span>
+            <button type="submit" id="editUserPwd">提交</button>
+            <div>RESULT:<span id="editUserPwd_result"></span></div>
         </div>
         <script>
-            $('#editPwd').click(function(){
-                var pwd = document.getElementById("editPwd_pwd").value;
-                var newPwd = document.getElementById("editPwd_newPwd").value;
-                document.getElementById("editPwd_result").innerHTML="";
-                $('#editPwd_result').load("/index.php/index/Index/editPwd",{"pwd":pwd,"newPwd":newPwd});
+            $('#editUserPwd').click(function(){
+                var pwd = document.getElementById("editUserPwd_pwd").value;
+                var newPwd = document.getElementById("editUserPwd_newPwd").value;
+                document.getElementById("editUserPwd_result").innerHTML="";
+                $('#editUserPwd_result').load("/index.php/index/Index/editUserPwd",{"pwd":pwd,"newPwd":newPwd});
             });
         </script>
 
-        <div style="font-size:22px;">
+<!--         <div style="font-size:22px;">
             <div>3.设置密保测试</div>
-            <span>QUESTION:<input id="setQuest_quest"></span>
-            <span>ANSWER:<input id="setQuest_ans"></span>
-            <button type="submit" id="setQuest">提交</button>
-            <div>RESULT:<span id="setQuest_result"></span></div>
+            <span>QUESTION:<input id="setUserQuest_quest"></span>
+            <span>ANSWER:<input id="setUserQuest_ans"></span>
+            <button type="submit" id="setUserQuest">提交</button>
+            <div>RESULT:<span id="setUserQuest_result"></span></div>
         </div>
         <script>
-            $('#setQuest').click(function(){
-                var quest = document.getElementById("setQuest_quest").value;
-                var ans = document.getElementById("setQuest_ans").value;
-                document.getElementById("setQuest_result").innerHTML="";
-                $('#setQuest_result').load("/index.php/index/Index/setQuest",{"quest":quest,"ans":ans});
+            $('#setUserQuest').click(function(){
+                var quest = document.getElementById("setUserQuest_quest").value;
+                var ans = document.getElementById("setUserQuest_ans").value;
+                document.getElementById("setUserQuest_result").innerHTML="";
+                $('#setUserQuest_result').load("/index.php/index/Index/setUserQuest",{"quest":quest,"ans":ans});
             });
-        </script>
+        </script> -->
 
         <div style="font-size:22px;">
             <div>4.获取密保问题测试</div>
-            <span>ID:<input id="getQuest_id"></span>
-            <span>TYPE:<input id="getQuest_type"></span>
-            <button type="submit" id="getQuest">提交</button>
-            <div>RESULT:<span id="getQuest_result"></span></div>
+            <span>ID:<input id="getUserQuest_id"></span>
+            <span>TYPE:<input id="getUserQuest_type"></span>
+            <button type="submit" id="getUserQuest">提交</button>
+            <div>RESULT:<span id="getUserQuest_result"></span></div>
         </div>
         <script>
-            $('#getQuest').click(function(){
-                var id = document.getElementById("getQuest_id").value;
-                var type = document.getElementById("getQuest_type").value;
-                document.getElementById("getQuest_result").innerHTML="";
-                $('#getQuest_result').load("/index.php/index/Index/getQuest",{"id":id,"type":type});
+            $('#getUserQuest').click(function(){
+                var id = document.getElementById("getUserQuest_id").value;
+                var type = document.getElementById("getUserQuest_type").value;
+                document.getElementById("getUserQuest_result").innerHTML="";
+                $('#getUserQuest_result').load("/index.php/index/Index/getUserQuest",{"id":id,"type":type});
             });
         </script>
 
         <div style="font-size:22px;">
             <div>5.验证密保答案测试</div>
-            <span>ANSWER:<input id="veriAns_ans"></span>
-            <button type="submit" id="veriAns">提交</button>
-            <div>RESULT:<span id="veriAns_result"></span></div>
+            <span>ANSWER:<input id="veriUserAns_ans"></span>
+            <button type="submit" id="veriUserAns">提交</button>
+            <div>RESULT:<span id="veriUserAns_result"></span></div>
         </div>
         <script>
-            $('#veriAns').click(function(){
-                var ans = document.getElementById("veriAns_ans").value;
-                document.getElementById("veriAns_result").innerHTML="";
-                $('#veriAns_result').load("/index.php/index/Index/veriAns",{"ans":ans});
+            $('#veriUserAns').click(function(){
+                var ans = document.getElementById("veriUserAns_ans").value;
+                document.getElementById("veriUserAns_result").innerHTML="";
+                $('#veriUserAns_result').load("/index.php/index/Index/veriUserAns",{"ans":ans});
             });
         </script>
 
         <div style="font-size:22px;">
             <div>6.修改密码测试（找回密码后修改）</div>
-            <span>NEWPWD:<input id="retrPwd_newPwd"></span>
-            <button type="submit" id="retrPwd">提交</button>
-            <div>RESULT:<span id="retrPwd_result"></span></div>
+            <span>NEWPWD:<input id="retrUserPwd_newPwd"></span>
+            <button type="submit" id="retrUserPwd">提交</button>
+            <div>RESULT:<span id="retrUserPwd_result"></span></div>
         </div>
         <script>
-            $('#retrPwd').click(function(){
-                var newPwd = document.getElementById("retrPwd_newPwd").value;
-                document.getElementById("retrPwd_result").innerHTML="";
-                $('#retrPwd_result').load("/index.php/index/Index/retrPwd",{"newPwd":newPwd});
+            $('#retrUserPwd').click(function(){
+                var newPwd = document.getElementById("retrUserPwd_newPwd").value;
+                document.getElementById("retrUserPwd_result").innerHTML="";
+                $('#retrUserPwd_result').load("/index.php/index/Index/retrUserPwd",{"newPwd":newPwd});
             });
         </script>
 
         <div style="font-size:22px;">
             <div>7.查看个人信息测试</div>
-            <button type="submit" id="showInfo">提交</button>
-            <div>RESULT:<span id="showInfo_result"></span></div>
+            <button type="submit" id="showUserInfo">提交</button>
+            <div>RESULT:<span id="showUserInfo_result"></span></div>
         </div>
         <script>
-            $('#showInfo').click(function(){
-                document.getElementById("showInfo_result").innerHTML="";
-                $('#showInfo_result').load("/index.php/index/Index/showInfo");
+            $('#showUserInfo').click(function(){
+                document.getElementById("showUserInfo_result").innerHTML="";
+                $('#showUserInfo_result').load("/index.php/index/Index/showUserInfo");
+            });
+        </script>
+
+
+        <div style="font-size:22px;">
+            <div>8.修改个人信息测试</div>
+            <span>QUEST:<input id="editUserInfo_quest"></span>
+            <span>ANS:<input id="editUserInfo_ans"></span>
+            <span>DEPART:<input id="editUserInfo_depart"></span>
+            <span>JOB:<input id="editUserInfo_job"></span>
+            <div><span>TEL:<input id="editUserInfo_tel"></span>
+            <span>EMAIL:<input id="editUserInfo_email"></span>
+            <span>ACHIEVE:<input id="editUserInfo_achieve"></span>
+            <span>STYLE:<input id="editUserInfo_style"></span></div>
+            <div>PUBLICATION:<input id="editUserInfo_publication"></div>
+            <div>REPUTATION:<input id="editUserInfo_reputation">
+            <button type="submit" id="editUserInfo">提交</button></div>
+            <div>RESULT:<span id="editUserInfo_result"></span></div>
+        </div>
+        <script>
+            $('#editUserInfo').click(function(){
+                var quest = document.getElementById("editUserInfo_quest").value;
+                var ans = document.getElementById("editUserInfo_ans").value;
+                var depart = document.getElementById("editUserInfo_depart").value;
+                var job = document.getElementById("editUserInfo_job").value;
+                var tel = document.getElementById("editUserInfo_tel").value;
+                var email = document.getElementById("editUserInfo_email").value;
+                var achieve = document.getElementById("editUserInfo_achieve").value;
+                var style = document.getElementById("editUserInfo_style").value;
+                var publication = document.getElementById("editUserInfo_publication").value;
+                var reputation = document.getElementById("editUserInfo_reputation").value;
+                document.getElementById("editUserInfo_result").innerHTML="";
+                $('#editUserInfo_result').load("/index.php/index/Index/editUserInfo",{"quest":quest,"ans":ans,"depart":depart,"job":job,"tel":tel,"email":email,"achieve":achieve,"style":style,"publication":publication,"reputation":reputation});
             });
         </script>
     </div>

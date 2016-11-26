@@ -25,7 +25,7 @@ class Index extends Controller
     * 密码错误:false_pwd
     * 登录成功:success
     */  
-    public function login(){
+    public function loginUser(){
         $id=$_POST['id'];
         $pwd=md5($_POST['pwd']);
         $type=$_POST['type'];
@@ -50,7 +50,7 @@ class Index extends Controller
     * 修改新密码失败:failure
     * 修改新密码成功:success
     */  
-    public function editPwd(){
+    public function editUserPwd(){
         $pwd=md5($_POST['pwd']);
         $newPwd=md5($_POST['newPwd']);
 
@@ -59,16 +59,16 @@ class Index extends Controller
         echo $result;
     }
 
-    public function setQuest(){
-        $quest=$_POST['quest'];
-        $ans=$_POST['ans'];
+    // public function setUserQuest(){
+    //     $quest=$_POST['quest'];
+    //     $ans=$_POST['ans'];
 
-        $user = new \app\index\model\UserModel();
-        $result = $user->setQuest($quest,$ans);
-        echo $result;
-    }
+    //     $user = new \app\index\model\UserModel();
+    //     $result = $user->setQuest($quest,$ans);
+    //     echo $result;
+    // }
 
-    public function getQuest(){
+    public function getUserQuest(){
         $id=$_POST['id'];
         $type=$_POST['type'];
 
@@ -77,7 +77,7 @@ class Index extends Controller
         echo $result;
     }
 
-    public function veriAns(){
+    public function veriUserAns(){
         $ans=$_POST['ans'];
 
         $user = new \app\index\model\UserModel();
@@ -85,7 +85,7 @@ class Index extends Controller
         echo $result;
     }
 
-    public function retrPwd(){
+    public function retrUserPwd(){
         $newPwd=md5($_POST['newPwd']);
 
         $user = new \app\index\model\UserModel();
@@ -93,9 +93,26 @@ class Index extends Controller
         echo $result;
     }
 
-    public function showInfo(){
+    public function showUserInfo(){
         $user = new \app\index\model\UserModel();
         $result = $user->showInfo();
+        echo $result;
+    }
+
+    public function editUserInfo(){
+        $quest=$_POST['quest'];
+        $ans=$_POST['ans'];
+        $depart=$_POST['depart'];
+        $job=$_POST['job'];
+        $tel=$_POST['tel'];
+        $email=$_POST['email'];
+        $achieve=$_POST['achieve'];
+        $style=$_POST['style'];
+        $publication=$_POST['publication'];
+        $reputation=$_POST['reputation'];
+
+        $user = new \app\index\model\UserModel();
+        $result = $user->editInfo($quest, $ans, $depart, $job, $tel, $email, $achieve, $style, $publication, $reputation);
         echo $result;
     }
 }
