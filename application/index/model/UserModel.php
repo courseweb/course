@@ -233,11 +233,8 @@ class UserModel extends Model
                     $str['pwd_answer']      =   $ans;
                 }
                 $result=Db::table('student')->where('stu_id',$id)->update($str);
-                if(!$result){
-                    $result="failure";
-                }else{
-                    $result="success";
-                }
+                if(!$result) $result="failure";
+                else $result="success";
             }else if($type=="2"){
                 $str = array();
                 if($quest AND $ans){
