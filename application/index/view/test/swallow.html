@@ -1,0 +1,59 @@
+<!-- http://localhost/index.php/index/test/swallow-->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <style type="text/css">*{ padding: 0; margin: 0; } 
+        .think_default_text{ padding: 4px 48px;} 
+        body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px} 
+    </style>
+    <div style="padding: 24px 48px;">
+        <div style="font-size:22px;">
+            <div>1.发布交流学习文章</div>
+            <span>TITLE:<input id="publishLearningEx_title"></span>
+            <span>CONTENT:<input id="publishLearningEx_content"></span>
+            <button type="submit" id="publishLearningEx">提交</button>
+            <div>RESULT:<span id="publishLearningEx_result"></span></div>
+        </div>
+        <script>
+            $('#publishLearningEx').click(function(){
+                var title = document.getElementById("publishLearningEx_title").value;
+                var content = document.getElementById("publishLearningEx_content").value;
+                document.getElementById("publishLearningEx_result").innerHTML="";
+                $('#publishLearningEx_result').load("/index.php/index/Index/publishLearningEx",{"title":title,"content":content});
+            });
+        </script>
+
+        <div style="font-size:22px;">
+            <div>2.获取交流学习文章标题</div>
+            <div>RESULT:
+                <div class="paglist">
+                    <ul>
+                    {volist name='list' id='user'}
+                        <li>{$user.t_id}
+                            {$user.learning_ex_id}
+                            {$user.title}
+                            {$user.release_time}</li>
+                        <li>{$user.content}</li>
+                    {/volist}
+                    </ul>
+                </div>
+                {$list->render()}
+                <!-- {$list->render()}这里用的类是pagination -->
+            </div>
+        </div>
+        <style type="text/css">
+            .paglist li{ list-style:none} 
+            .pagination li{ float: left; list-style:none} 
+            /* CSS注释：加list-style:none去掉li默认产生"点" */ 
+            .pagination a:hover,.current{background-color: #f54281;border: 1px solid #f54281;color: #ffffff; }
+            /*这里有一个鼠标覆盖的效果*/
+            .pagination{height: auto;_height: 45px; line-height: 20px;margin-right: 15px;_margin-right: 5px; color:#565656;margin-top: 10px;_margin-top: 20px; clear:both;}
+            .pagination a,.pagination span{ font-size: 14px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #ccc;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;}
+            /*a是未激活的页面,span是已激活的页面。这里设置成一样的了。*/
+        </style>
+    </div>
+</body>
+</html>

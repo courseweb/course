@@ -193,4 +193,15 @@ class Index extends Controller
         $result = $user->editInfo($quest, $ans, $depart, $job, $tel, $email, $achieve, $style, $publication, $reputation);
         echo $result;
     }
+
+    public function publishLearningEx(){
+        $title=$_POST['title'];
+        $content=$_POST['content'];
+
+        $learning_ex=new \app\index\model\LearningExModel();
+        $result = $learning_ex->publish($title,$content);
+        echo $result;
+    }
+
+
 }
