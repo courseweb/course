@@ -50,7 +50,7 @@ class LearningExModel extends Model
     public function getTitles(){
         $join = [['teacher b','a.t_id=b.t_id']];
         // 查询数据 并且每页显示10条数据
-        $list = Db::table('learning_ex')->alias('a')->join($join)->field('t_name as name,learning_ex_id as id,title,content,release_time as time')->order('release_time desc')->paginate(5);
+        $list = Db::table('learning_ex')->alias('a')->join($join)->field('t_name as name,learning_ex_id as id,title,release_time as time')->order('release_time desc')->paginate(5);
         return $list;
     }
 
