@@ -48,6 +48,18 @@ class LearningExModel extends Model
     }
 
     public function getTitles(){
+        $join = [['teacher b','a.t_id=b.t_id']];
+        // 查询数据 并且每页显示10条数据
+        $list = Db::table('learning_ex')->alias('a')->join($join)->field('t_name as name,learning_ex_id as id,title,content,release_time as time')->order('release_time desc')->paginate(5);
+        return $list;
+    }
 
+    public function getContent($id){
+        $result=Db::table('learning_ex')->where('learning_ex_id',$id)->value('content');
+        if(!$result){
+            $result='failure';
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
 }

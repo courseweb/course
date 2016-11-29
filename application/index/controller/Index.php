@@ -203,5 +203,18 @@ class Index extends Controller
         echo $result;
     }
 
+    public function getLearningExTitles(){
+        $learning_ex=new \app\index\model\LearningExModel();
+        $list = $learning_ex->getTitles();
+        
+        return $list;
+    }
 
+    public function getLearningExContent(){
+        $id=$_POST['id'];
+
+        $learning_ex=new \app\index\model\LearningExModel();
+        $result = $learning_ex->getContent($id);
+        echo $result;
+    }
 }

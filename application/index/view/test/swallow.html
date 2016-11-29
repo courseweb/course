@@ -25,18 +25,16 @@
                 $('#publishLearningEx_result').load("/index.php/index/Index/publishLearningEx",{"title":title,"content":content});
             });
         </script>
-
+        
         <div style="font-size:22px;">
             <div>2.获取交流学习文章标题</div>
             <div>RESULT:
                 <div class="paglist">
                     <ul>
                     {volist name='list' id='user'}
-                        <li>{$user.t_id}
-                            {$user.learning_ex_id}
-                            {$user.title}
-                            {$user.release_time}</li>
-                        <li>{$user.content}</li>
+                        <li>{$user.name}
+                        <a href="#" onclick="javascript:getLearningExContent({$user.id})">{$user.title}</a>
+                            {$user.time}</li>
                     {/volist}
                     </ul>
                 </div>
@@ -51,9 +49,22 @@
             .pagination a:hover,.current{background-color: #f54281;border: 1px solid #f54281;color: #ffffff; }
             /*这里有一个鼠标覆盖的效果*/
             .pagination{height: auto;_height: 45px; line-height: 20px;margin-right: 15px;_margin-right: 5px; color:#565656;margin-top: 10px;_margin-top: 20px; clear:both;}
-            .pagination a,.pagination span{ font-size: 14px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #ccc;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;}
-            /*a是未激活的页面,span是已激活的页面。这里设置成一样的了。*/
+            .pagination a{ font-size: 14px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #ccc;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;}
+            .pagination span{font-size: 14px;text-decoration: none;display: block;float: left;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;background-color: #f54281;border: 1px solid #f54281;color: #ffffff; }
+            /*.pagination a是未激活的页码,.pagination span是已激活的页码。*/
         </style>
+
+        <br><br>
+        <div style="font-size:22px;">
+            <div>3.点击文章标题获取文章内容</div>
+            <div>RESULT:<span id="getLearningExContent_result"></span></div>
+        </div>
+        <script>
+            function getLearningExContent($id){
+                document.getElementById("getLearningExContent_result").innerHTML="";
+                $('#getLearningExContent_result').load("/index.php/index/Index/getLearningExContent",{"id":$id});
+            }
+        </script>
     </div>
 </body>
 </html>
