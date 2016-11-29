@@ -15,5 +15,6 @@
 
 ##杂项
 * 网址首页 http://115.28.173.183/ 服务器不定更新，目前以github为准
-* 登录修改密码模块、查看修改个人信息模块测试页面 http://115.28.173.183/index.php/index/test/sparrow
+* 登录修改密码、查看修改个人信息测试页面 http://115.28.173.183/index.php/index/test/sparrow
+* 发布查看老师交流心得测试页面 http://115.28.173.183/index.php/index/test/swallow
 * 开发语言 php 5.6
