@@ -19,7 +19,7 @@ return [
     // 用户名
     'username'       => 'root',
     // 数据库密码
-    'password'       => 'root',
+    'password'       => 'LYJSHIdashuaige2333',
     // 数据库连接端口
     'hostport'       => '3306',
     // 连接dsn
