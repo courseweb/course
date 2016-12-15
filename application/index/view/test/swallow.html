@@ -3,6 +3,7 @@
 <html>
 <head>
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
     <style type="text/css">*{ padding: 0; margin: 0; } 
@@ -29,12 +30,10 @@
         <div style="font-size:22px;">
             <div>2.获取交流学习文章标题</div>
             <div>RESULT:
-                <div class="paglist">
+                <div class="list-group">
                     <ul>
                     {volist name='list' id='user'}
-                        <li>{$user.name}
-                        <a href="#" onclick="javascript:getLearningExContent({$user.id})">{$user.title}</a>
-                            {$user.time}</li>
+                        <a class="list-group-item" onclick="javascript:getLearningExContent({$user.id})">{$user.name} {$user.title} {$user.time}</a>
                     {/volist}
                     </ul>
                 </div>
@@ -42,7 +41,7 @@
                 <!-- {$list->render()}这里用的类是pagination -->
             </div>
         </div>
-        <style type="text/css">
+<!--         <style type="text/css">
             .paglist li{ list-style:none} 
             .pagination li{ float: left; list-style:none} 
             /* CSS注释：加list-style:none去掉li默认产生"点" */ 
@@ -52,7 +51,7 @@
             .pagination a{ font-size: 14px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #ccc;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;}
             .pagination span{font-size: 14px;text-decoration: none;display: block;float: left;height: 34px;line-height: 34px;margin: 0 2px;width: 34px;text-align: center;background-color: #f54281;border: 1px solid #f54281;color: #ffffff; }
             /*.pagination a是未激活的页码,.pagination span是已激活的页码。*/
-        </style>
+        </style> -->
 
         <br><br>
         <div style="font-size:22px;">

@@ -103,8 +103,6 @@
 
         <div style="font-size:22px;">
             <div>8.修改个人信息测试</div>
-            <span>QUEST:<input id="editUserInfo_quest"></span>
-            <span>ANS:<input id="editUserInfo_ans"></span>
             <span>DEPART:<input id="editUserInfo_depart"></span>
             <span>JOB:<input id="editUserInfo_job"></span>
             <div><span>TEL:<input id="editUserInfo_tel"></span>
@@ -118,8 +116,6 @@
         </div>
         <script>
             $('#editUserInfo').click(function(){
-                var quest = document.getElementById("editUserInfo_quest").value;
-                var ans = document.getElementById("editUserInfo_ans").value;
                 var depart = document.getElementById("editUserInfo_depart").value;
                 var job = document.getElementById("editUserInfo_job").value;
                 var tel = document.getElementById("editUserInfo_tel").value;
@@ -129,7 +125,7 @@
                 var publication = document.getElementById("editUserInfo_publication").value;
                 var reputation = document.getElementById("editUserInfo_reputation").value;
                 document.getElementById("editUserInfo_result").innerHTML="";
-                $('#editUserInfo_result').load("/index.php/index/Index/editUserInfo",{"quest":quest,"ans":ans,"depart":depart,"job":job,"tel":tel,"email":email,"achieve":achieve,"style":style,"publication":publication,"reputation":reputation});
+                $('#editUserInfo_result').load("/index.php/index/Index/editUserInfo",{"depart":depart,"job":job,"tel":tel,"email":email,"achieve":achieve,"style":style,"publication":publication,"reputation":reputation});  
             });
         </script>
     </div>

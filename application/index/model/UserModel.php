@@ -169,7 +169,7 @@ class UserModel extends Model
                     ['teach e', 'c.class_id=e.class_id'],
                     ['teacher f','e.t_id=f.t_id']
                 ];
-                $result = Db::table($user)->alias('a')->join($join)->where('a.stu_id',$id)->field('a.stu_name,a.pwd_question,a.pwd_answer,c.section_id,d.subject,f.t_name,c.class_id')->select();
+                $result = Db::table($user)->alias('a')->join($join)->where('a.stu_id',$id)->field('a.stu_name,c.section_id,d.subject,f.t_name,c.class_id,d.description')->select();
 
                 if(!$result){
                     $result = 'failure';
@@ -191,7 +191,7 @@ class UserModel extends Model
                             $index++;
                         }
                     }
-                    $result=array('id'=>$id,'name'=>$result[0]['stu_name'],'question'=>$result[0]['pwd_question'],'answer'=>$result[0]['pwd_answer'],'class'=>$arr);
+                    $result=array('id'=>$id,'name'=>$result[0]['stu_name'],'classnames'=>$arr);
                 }
             }else if($type=="2"){
                 $user = 'teacher';
@@ -201,7 +201,7 @@ class UserModel extends Model
                     ['class d','b.class_id=d.class_id'],
                     ['course c', 'd.course_id=c.course_id']
                 ];
-                $result = Db::table($user)->alias('a')->join($join)->where('a.t_id',$id)->field('a.t_id,t_name,pwd_question,pwd_answer,department,job_title,tel,email,achievement,style,publication,reputation,subject,section_id')->select();
+                $result = Db::table($user)->alias('a')->join($join)->where('a.t_id',$id)->field('a.t_id,t_name,department,job_title,tel,email,achievement,style,publication,reputation,subject,section_id,description')->select();
                 if(!$result){
                     $result = 'failure';
                 }else{
@@ -209,7 +209,7 @@ class UserModel extends Model
                     for ($i = 0; $i < count($result); $i++) {
                         $arr[$i] = $result[$i]['subject'].'-'.$result[$i]['section_id'].'班';
                     }
-                    $result=array('id'=>$id,'name'=>$result[0]['t_name'],'question'=>$result[0]['pwd_question'],'answer'=>$result[0]['pwd_answer'],'class'=>$arr,'department'=>$result[0]['department'],'job_title'=>$result[0]['job_title'],'tel'=>$result[0]['tel'],'email'=>$result[0]['email'],'achievement'=>$result[0]['achievement'],'style'=>$result[0]['style'],'publication'=>$result[0]['publication'],'reputation'=>$result[0]['reputation'],);
+                    $result=array('id'=>$id,'name'=>$result[0]['t_name'],'classnames'=>$arr,'department'=>$result[0]['department'],'job_title'=>$result[0]['job_title'],'tel'=>$result[0]['tel'],'email'=>$result[0]['email'],'achievement'=>$result[0]['achievement'],'style'=>$result[0]['style'],'publication'=>$result[0]['publication'],'reputation'=>$result[0]['reputation'],);
                 }
             }else{
                 $result='false_type';
@@ -221,7 +221,7 @@ class UserModel extends Model
         echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
 
-    public function editInfo($quest, $ans, $depart, $job, $tel, $email, $achieve, $style, $publication, $reputation){
+    public function editInfo($depart, $job, $tel, $email, $achieve, $style, $publication, $reputation){
         if (session('?login')) {
             $id=session('usr_id');
             $type=session('usr_type');
@@ -260,6 +260,76 @@ class UserModel extends Model
         }
         $arr = array('result' => $result);
         echo json_encode($arr);
+    }
+
+    public function setQuest($quest,$ans){
+        if (session('?login')) {
+            $id=session('usr_id');
+            $type=session('usr_type');
+
+            $str = array();
+            if($quest AND $ans){
+                $str['pwd_question']    =   $quest;
+                $str['pwd_answer']      =   $ans;
+            }
+            if($type=="1"){
+                $result=Db::table('student')->where('stu_id',$id)->update($str);
+                if(!$result) $result="failure";
+                else $result="success";                
+            }else if($type=="2"){
+                $result=Db::table('teacher')->where('t_id',$id)->update($str);
+                if(!$result) $result="failure";
+                else $result="success";
+            }else if($type=="3"){
+                $result=Db::table('admin')->where('admin_id',$id)->update($str);
+                if(!$result) $result="failure";
+                else $result="success";
+            }else{
+                $result='false_type';
+            }
+        }else{
+            $result='false_unlogin';
+        }
+        $arr = array('result' => $result);
+        echo json_encode($arr);
+    }
+
+    public function showQuest(){
+        if (session('?login')) {
+            $id=session('usr_id');
+            $type=session('usr_type');
+            
+            if($type=="1"||$type=="2"||$type=="3"){
+                $quest_str= 'pwd_question';
+                $ans_str = 'pwd_answer';
+                if($type=="1"){
+                    $user = 'student';
+                    $id_str='stu_id';
+                }else if($type=="2"){
+                    $user = 'teacher';
+                    $id_str='t_id';
+                }else if($type=="3"){
+                    $user = 'admin';
+                    $id_str='admin_id';
+                }
+
+                $result=Db::table($user)->where($id_str,$id)->find();
+                if (!$result) { 
+                    $result='false_id';
+                }else{
+                    $result=Db::table($user)->where($id_str,$id)->field('pwd_question,pwd_answer')->select();
+                    if (!$result) {
+                        $result="false_quest";
+                    }
+                }
+            }else{
+                $result='false_type';
+            }
+        }else{
+            $result='false_unlogin';
+        }
+        $arr = array("result" => $result);
+        echo json_encode($arr,JSON_UNESCAPED_UNICODE);
     }
 }
 ?>

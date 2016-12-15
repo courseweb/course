@@ -1,0 +1,334 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+    <style>
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+
+        .list .item.item-accordion {
+            line-height: 38px;
+            padding-top: 0;
+            padding-bottom: 0;
+            transition: 0.09s all linear;
+        }
+
+        .list .item.item-accordion.ng-hide {
+            line-height: 0px;
+        }
+
+        .list .item.item-accordion.ng-hide-add,
+        .list .item.item-accordion.ng-hide-remove {
+            display: block !important;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            text-decoration: none;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #232525;
+            margin-top: 20px;
+        }
+
+        #buttongroup {
+            height: 70px;
+        }
+
+        #left_word {
+            float: left;
+            padding-left: 50px;
+        }
+
+        #right_word {
+            float: right;
+            padding-right: 50px;
+        }
+
+        .redborder {
+            border:2px solid #3399FF;
+            border-radius:2px;
+        }
+
+        .row {
+            padding: 20px 0px;
+        }
+
+        .bigicon {
+            font-size: 97px;
+            color: #3399FF;
+        }
+
+        .loginpanel {
+            text-align: center;
+            width: 300px;
+            border-radius: 0.5rem;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 10px auto;
+            background-color: #555;
+            padding: 20px;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 17px;
+            padding: 15px;
+            background-color: #ECF4F4;
+            border-radius: 2px;
+            border: none;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-weight: normal;
+            color: #EFEFEF;
+        }
+
+        .btn span {
+            font-size: 27px;
+            color: white;
+        }
+
+        .buttonwrapper{
+            position:relative;
+            overflow:hidden;
+            height:50px;
+        }
+
+        .lockbutton {
+            font-size: 27px;
+            color: #3399FF;
+            padding: 10px;
+            width:100%;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+
+        .loginbutton {
+            background-color: #3399FF;
+            width: 100%;
+            -webkit-border-top-right-radius: 0;
+            -webkit-border-bottom-right-radius: 0;
+            -moz-border-radius-topright: 0;
+            -moz-border-radius-bottomright: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            left: -260px;
+            position:absolute;
+            top:0;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>    
+</head>
+
+
+<!-- 开始正文 -->
+<body ng-app="todo" ng-controller="TodoCtrl" ng-cloak>
+<!-- 导航栏 -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <div class= "row">
+              <div class="col-md-0 col-md-push-12" > -->
+                <a style="font-weight:bold;" class="navbar-brand" href="#"><span class="glyphicon glyphicon-th-large"></span>教学辅助系统测试版</a>
+              <!-- </div>  
+          </div> -->
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <!-- 向左对齐 -->
+          <ul class="nav navbar-nav navbar-left">
+            <li style="font-weight:bold;" class="active"><a href="#">主页</a></li>
+            <li style="font-weight:bold;"><a href="#about">关于我们</a></li>
+            <li style="font-weight:bold;"><a href="#contact">联系我们</a></li>
+            <li class="dropdown">
+              <a style="font-weight:bold;" href="#" class="dropdown-toggle" data-toggle="dropdown">不知道写什么 <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+        </ul>
+
+        <!-- 向右对其 -->
+        <ul class="nav navbar-nav navbar-right">
+
+        </ul>
+        <!-- 登录模块框 -->
+        <!-- <div class= "row">
+              <div class="col-md-12 col-md-push-10" >
+                <button style="font-weight:bold;" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >登录</button>
+              </div>  
+        </div> -->
+        <form class="navbar-form navbar-right" >
+           <button style="font-weight:bold;" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >登录</button>
+        </form>
+
+        
+      </div>
+    </nav>
+
+    <!-- 模态框（Modal） -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-body">
+
+                            <!-- Interactive Login - START -->
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="loginpanel">
+                                        <i id="loading" class="hidden fa fa-spinner fa-spin bigicon"></i>
+                                        <h2>
+                                            <span class="fa fa-quote-left "></span> 登录 <span class="fa fa-quote-right "></span>
+                                        </h2>
+                                        <div>
+                                            <input id="username" type="text" placeholder="登录账号" onkeypress="check_values();">
+                                            <input id="password" type="password" placeholder="输入密码" onkeypress="check_values();">
+                                             <!-- 选择学生or老师 -->
+                                            <div class="radio">
+                                              <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>老师
+                                              </label>
+                                              <label>
+                                              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">学生
+                                              </label>
+                                            </div>
+                                            <!-- <div>
+                                                <button type="button" class="btn btn-primary btn-lg btn-block">登录</button>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                 <button type="button" class="btn btn-default btn-lg btn-block">返回</button>
+                                            </div> -->
+                                            <!-- 密码相关选项 -->
+                                            
+                                            <!-- 配合动画 -->
+                                            <div class="buttonwrapper">
+                                                <button id="loginbtn" class="btn btn-primary loginbutton">
+                                                    <span class="fa fa-check"></span>
+                                                </button>
+                                                <span id="lockbtn" class="fa fa-lock lockbutton redborder"></span>
+                                            </div>
+
+                                            <div>
+                                                <label>
+                                                     <button type="button" class="btn btn-link" >忘记密码?</button>
+                                                </label>
+                                                <!-- <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox1" value="option1">记住密码
+                                                </label> -->
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 以下JS脚本是显示提交按钮的动画的 -->
+
+                            <script type="text/javascript">
+                                function check_values() {
+                                    if ($("#username").val().length != 0 && $("#password").val().length != 0) {
+                                        $("#loginbtn").animate({ left: '0' , duration: 'slow'});;
+                                        $("#lockbtn").animate({ left: '260px' , duration: 'slow'});;
+                                    }
+                                }
+
+                                $("#loginbtn").click(function(){
+                                    $('#loading').removeClass('hidden');
+                          //这里书写登录相关后台处理，例如: Ajax请求用户名和密码验证
+                                });
+                           </script>
+                           <!-- Interactive Login - END -->
+
+<!--  -->
+                            <!-- begin -->
+                            <!-- <div id="container">
+                                <form id="loginForm" action="/login" method="POST">
+                                  <div class="input-group">
+                                    <div class="input-group-addon">
+                                      <i class="fa fa-user"></i>
+                                    </div>
+                                    <input id="username" name="username" type="text" placeholder="Username" class="form-control">
+                                  </div>
+                                  <div class="input-group">
+                                    <div class="input-group-addon">
+                                       <i class="fa fa-lock"></i>
+                                    </div>
+                                    <input id="password" name="password" type="password" placeholder="Password" class="form-control">
+                                  </div>
+                                  <div class="submit">
+                                    <button id="submit" name="submit" type="submit">
+                                    <span class="glyphicon glyphicon-arrow-right"></span>
+                                    </button>
+                                  </div>
+                              </form>
+                          </div> -->
+                            <!-- end -->
+
+                        </div><!-- .modal-body -->
+                <!-- </div>/.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+<!-- 这一块在view的login.html中也有，以后直接用这个组装 -->
+
+
+
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>游客界面</h1>
+        <p>输入网址以后进入的第一个页面，待布局………………</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">点击进入 &raquo;</a></p>
+      </div>
+    </div>
+
+
+
+    
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- 压缩版改了不行…… -->
+    <script src="js/bootstrap.js"></script> 
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/mainpage.js"></script>
+    <script src="js/ionic.bundle.min.js"></script>
+   
+
+
+</body>
+
+</html>

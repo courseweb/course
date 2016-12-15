@@ -11,6 +11,20 @@ class Index extends Controller
         return $this->fetch();
     }
 
+    public function findBackCode()
+    {
+        return $this->fetch();
+    }
+
+    public function login()
+    {
+        return $this->fetch();
+    }
+
+    public function ShowInfo_student()
+    {
+        return $this->fetch();
+    }
     /** 
      * loginUser()用于登录
      * 
@@ -131,16 +145,12 @@ class Index extends Controller
      * 学生 $result={
      *         "id":"",
      *         "name":"",
-     *         "question":"",
-     *         "answer":"",
-     *         "class":["",""]
+     *         "classnames":["",""]
      *      }
      * 老师 $result={
      *         "id":"",
      *         "name":"",
-     *         "question":"",
-     *         "answer":"",
-     *         "class":["",""],
+     *         "classnames":["",""],
      *         "department":"",
      *         "job_title":"",
      *         "tel":"",
@@ -161,8 +171,6 @@ class Index extends Controller
      * editUserInfo()用于修改用户信息
      * 
      * 函数的参数如下:
-     *  密保问题:   $_POST['quest'];
-     *  密保答案:   $_POST['ans'];
      *  部门:       $_POST['depart'];
      *  职称:       $_POST['job'];
      *  电话:       $_POST['tel'];
@@ -178,8 +186,6 @@ class Index extends Controller
      * 修改信息成功:              {"result":"success"}
      */
     public function editUserInfo(){
-        $quest=$_POST['quest'];
-        $ans=$_POST['ans'];
         $depart=$_POST['depart'];
         $job=$_POST['job'];
         $tel=$_POST['tel'];
@@ -190,7 +196,34 @@ class Index extends Controller
         $reputation=$_POST['reputation'];
 
         $user = new \app\index\model\UserModel();
-        $result = $user->editInfo($quest, $ans, $depart, $job, $tel, $email, $achieve, $style, $publication, $reputation);
+        $result = $user->editInfo($depart, $job, $tel, $email, $achieve, $style, $publication, $reputation);
+        echo $result;
+    }
+
+    /**
+     * setUserQuest()用于修改用户密保
+     *
+     * 函数的参数如下：
+     *  密保问题:$_POST['quest'];
+     *  密保答案:$_POST['ans'];
+     * @return json_encode($arr)
+     * 用户没有登录:{"result":"false_unlogin"}
+     * 老师学生以外的用户进行操作:{"result":"false_type"}
+     * 修改信息失败:{"result":"failure"}
+     * 修改信息成功:{"result":"success"}
+     */
+    public function setUserQuest(){
+        $quest=$_POST['quest'];
+        $ans=$_POST['ans'];
+
+        $user = new \app\index\model\UserModel();
+        $result = $user->setQuest($quest,$ans);
+        echo $result;
+    }
+
+    public function showUserQuest(){
+        $user = new \app\index\model\UserModel();
+        $result = $user->showQuest();
         echo $result;
     }
 
