@@ -90,7 +90,6 @@ class Slides extends Model
         $this->slidespath="resource/$this->class_id/slides/$this->filename";
         return 1;
     }
-
     public function storeindb()
     {
         $arr=['class_id'=>$this->class_id,'n_th'=>$this->n_th,'filename'=>$this->filename,
@@ -101,17 +100,9 @@ class Slides extends Model
             return 1;
 
     }
-    
-    public function getbyn_th()
+    public function getnameaddr()
     {
-        $arry=Db::table('slides')->where('class_id',$this->class_id)->where('n_th',$this->n_th)->column('filename','addr');
-        if(isEmpty($arry))
-        {
-            return 0;
-        }
-        else
-        {
-            return 1;
-        }
+        $arr=Db::table('slides')->field('n_th,filename')->where('class_id',$this->class_id)->select();
+        return $arr;
     }
 }

@@ -4,6 +4,13 @@ namespace app\index\controller;
 
 use think\Controller;
 
+use app\index\model\Exampaper;
+use app\index\model\Notice;
+use app\index\model\Slides;
+use app\index\model\Homework;
+use app\index\model\Template;
+use app\index\model\Course;
+
 class Index extends Controller
 {
     public function index()
@@ -11,20 +18,301 @@ class Index extends Controller
         return $this->fetch();
     }
 
-    public function findBackCode()
+    public function getCourseInfo()
     {
-        return $this->fetch();
+        $p=new Course();
+//        $p->course_id=session('course_id');
+        $p->course_id='12345601';
+        $result=$p->getDecription();
+        echo urldecode ( json_encode($result, JSON_FORCE_OBJECT) );
     }
+    public function getAllTitles()
+    {
+        $p=new Notice();
+       // $p->class_id=session('class_id');
+        $p->notice_time=$_POST['notice_time'];
+        $p->class_id="1";
+        $arr=$p->getAlltitles();
+//        print_r($arr);
+        //echo urldecode ( json_encode($arr, JSON_FORCE_OBJECT) );
+        echo json_encode($arr, JSON_FORCE_OBJECT);
+    }
+    public function addNotice()
+    {
+        $p=new Notice();
+        $p->class_id=$_POST["class_id"];
+        $p->title=$_POST['notice_title'];
+        $p->content=$_POST['notice_content'];
+        $p->release_time=date("Y-m-d h:i:s");
+        $p->notice_id==$p->getNoticeId();
+      // $result='success';
+        if($p->insertNotice()==0)
+        {
+            echo '添加失败';
+        }
+        else
+        {
+            echo '添加成功';
+        }
+    }
+    public function getNoticeContent()
+    {
+        $notice_id = $_POST['notice_id'];
+        $p = new Notice();
+        $str = $p->getContent();
+        $arr = array('result' => $str);
+        echo urldecode ( json_encode($arr, JSON_FORCE_OBJECT) );
+    }
+    public function deleteNotice()
+    {
+        $p = new Notice();
+        $p->notice_id = $_POST['notice_id'];
+        $p->class_id =1;
+//        $p->class_id = $_POST['class_id'];
+        if($p->deleteOne()==0)
+            echo "条目已删除";
+        else
+            echo "删除成功";
 
-    public function login()
-    {
-        return $this->fetch();
     }
+    public function modifyNotice()
+    {
+        $p=new Notice();
+//        $p->class_id=$_POST("class_id");
+        $p->class_id="1";
+        $p->notice_id=$_POST['notice_id'];
+        $p->title=$_POST['notice_title'];
+        $p->content=$_POST['notice_content'];
+        $p->release_time=date("Y-m-d h:i:s");
+        $p->deleteOne();
+        if($p->insertNotice()==0)
+        {
+            echo 'Failure';
+        }
+        else{
+            echo 'Success';
+        }
+    }
+    public function uploadSlides()
+     {
+         $p=new Slides();
+         $p->class_id=session("class_id");
+         $p->n_th=$_POST("n_th");
+         //$p->class_id="1";
+         //$p->n_th="1";
+         if(!$p->storeindisk())
+             exit();
+         if($p->storeindb())
+         {
+            echo "上传成功";
+         }
+         else
+         {
+             echo "文件重复上传";
+         }
+    }
+    public function getAllSlides()
+    {
+//        $class_id=session("class_id");
+        $class_id="1";
+//        $dir="./resource/$class_id/slides";
+//        if(!is_dir($dir))
+//        {
+//            echo "This Class haven't uploaded any slides!";
+//            exit();
+//        }
+//        $arr = array();
+//        if ($headle=opendir($dir)){
+//            while ($file=readdir($headle)){
+//                $file=iconv("gb2312","utf-8",$file);
+//                if ($file!='.' &&  $file!='..')
+//                {
+//                    array_push($arr,$file);
+//                }
+//            }
+//            closedir($headle);
+//        }
+        $p=new Slides();
+        $p->class_id="1";
+        $arr=$p->getnameaddr();
+        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+    }
+    public function downloadSlides()
+    {
+        $class_id=session("class_id");
+        $filename=$_POST("filename");
+        $address="resource/$class_id/slides/$filename";
+        echo $address;
+    }
+    public function uploadExampaper()
+    {
+        $p=new Exampaper();
+        $p->class_id=session("class_id");
+        if(!$p->storeindisk())
+            exit();
+    }
+    public function downloadExampaper()
+    {
+        $class_id=session("class_id");
+        $filename=$_POST("filename");
+        $address="resource/$class_id/Exampaper/$filename";
+        echo $address;
+    }
+    public function getAllExampaper()
+    {
+        $class_id=session("class_id");
+        $dir="./resource/$class_id/Exampaper";
+        if(!is_dir($dir))
+        {
+            echo "This Class haven't uploaded any Exampaper!";
+            exit();
+        }
+        $arr = array();
+        if ($headle=opendir($dir)){
+            while ($file=readdir($headle)){
+                $file=iconv("gb2312","utf-8",$file);
+                if ($file!='.' &&  $file!='..')
+                {
+                    array_push($arr,$file);
+                }
+            }
+            closedir($headle);
+        }
+        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+    }
+    public function uploadVideo()
+    {
+        $p=new Video();
+        $p->class_id=session("class_id");
+        $p->n_th=$_POST("n_th");
+        //$p->class_id="1";
+        //$p->n_th="1";
+        if(!$p->storeindisk())
+            exit();
+        if($p->storeindb())
+        {
+            echo "上传成功";
+        }
+        else
+        {
+            echo "文件重复上传";
+        }
 
-    public function ShowInfo_student()
-    {
-        return $this->fetch();
     }
+    public function getVideoByn_th()
+    {
+        $p=new Video();
+        $p->class_id=session("class_id");
+        $p->n_th=$_POST("n_th");
+        if($p->getbyn_th())
+        {
+            $arr=$p->arry;
+            echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+        }
+        else
+        {
+            echo 'fail!';
+        }
+    }
+    public function getAllTemplate()
+    {
+        $class_id=session("class_id");
+        $dir="./resource/$class_id/Template";
+        if(!is_dir($dir))
+        {
+            echo "This Class haven't uploaded any Template!";
+            exit();
+        }
+        $arr = array();
+        if ($headle=opendir($dir)){
+            while ($file=readdir($headle)){
+                $file=iconv("gb2312","utf-8",$file);
+                if ($file!='.' &&  $file!='..')
+                {
+                    array_push($arr,$file);
+                }
+            }
+            closedir($headle);
+        }
+        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+    }
+    public function uploadTemplate()
+    {
+        $p=new Template();
+//        $p->class_id=session("class_id");
+        $p->class_id="1";
+        $p->n_th="1";
+        if(!$p->storeindisk())
+            exit();
+    }
+    public function downloadTemplate()
+    {
+        $class_id=session("class_id");
+        $filename=$_POST("filename");
+        $address="resource/$class_id/Exampaper/$filename";
+        echo $address;
+    }
+    public function issueOnlineHomework()
+    {
+        $p=new Homework();
+//        $p->class_id=$_POST["class_id"];
+//        $p->ddl=$_POST['ddl'];
+//        $data = '[{"app_slug":"123","app_version":"1.0.0.6"},{"app_slug":"456","app_version":"1.0.0.5"},{"app_slug":"789","app_version":"1.0.0.6"}]';
+        $p->class_id='1';
+        $p->ddl=$_POST['homeworkTime'];
+        $p->n_th=$_POST['homeworkTime'];
+        if($p->createHomework()==0)        //homework 之前已经布置过
+        {
+
+        }
+        else
+        {
+
+        }
+        $homework=$_POST['homeworkArray'];
+        $arr=json_decode($homework,true);
+        $row=array();
+        foreach( $arr as $row)
+        {
+            $type=$row["questionType"];
+            if($type==1)   //选择题
+            {
+                if($p->insertQuestion1($row['chooseScore'],$row['chooseQuestion'],$row['chooseAnswerA'],$row['chooseAnswerB'],$row['chooseAnswerC'],$row['chooseAnswerD'],$row['rightQuestionAnswer'])==1)
+                {
+
+                }
+                else
+                {
+                    echo "插入失败";
+                }
+            }
+            elseif($type==2)       //问答题
+            {
+                if($p->insertQuestion2($row['fillInScore'],$row['fillInQuestion'],$row['$fillInAnswer'])==1)
+                {
+
+                }
+                else
+                {
+                    echo "插入失败";
+                }
+            }
+
+        }
+    }
+    public function issueExperiment()
+    {
+
+    }
+    public function doOnlineQuestion()
+    {
+
+    }
+    public function doExperiment()
+    {
+
+    }
+    
     /** 
      * loginUser()用于登录
      * 
@@ -236,18 +524,47 @@ class Index extends Controller
         echo $result;
     }
 
-    public function getLearningExTitles(){
-        $learning_ex=new \app\index\model\LearningExModel();
-        $list = $learning_ex->getTitles();
-        
-        return $list;
-    }
-
-    public function getLearningExContent(){
+    public function editLearningEx(){
+        $title=$_POST['title'];
+        $content=$_POST['content'];
         $id=$_POST['id'];
 
         $learning_ex=new \app\index\model\LearningExModel();
-        $result = $learning_ex->getContent($id);
+        $result = $learning_ex->edit($id,$title,$content);
+        echo $result;
+    }
+
+    public function deleteLearningEx(){
+        $id=$_POST['id'];
+
+        $learning_ex=new \app\index\model\LearningExModel();
+        $result = $learning_ex->deleteEx($id);
+        echo $result;
+    }
+
+    public function getLearningExTitles(){
+        $pageNum=$_POST['start_num'];
+
+        $learning_ex=new \app\index\model\LearningExModel();
+        $result = $learning_ex->getTitles($pageNum);
+        
+        echo $result;
+    }
+
+    public function showHomeworkBlankAns(){
+        $homework_th=$_POST['onlineHomeworkTime'];
+        $class_id=$_POST['class_id'];
+
+        $homework=new \app\index\model\HomeworkModel();
+        $result = $homework->showBlankAns($homework_th,$class_id);
+        
+        echo $result;
+    }
+
+    public function getHomeworkComment(){
+        $homework=new \app\index\model\HomeworkModel();
+        $result = $homework->getComment();
+        
         echo $result;
     }
 }
