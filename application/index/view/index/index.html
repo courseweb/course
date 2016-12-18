@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/ShowInfo_stu.css" />
+    <link rel="stylesheet" href="css/ModifyInfo_stu.css" />
+    <link rel="stylesheet" href="css/t_uploadMaterial.css" />
+
     <style>
         [ng\:cloak],
         [ng-cloak],
@@ -60,8 +64,8 @@
         }
 
         .redborder {
-            border:2px solid #3399FF;
-            border-radius:2px;
+            border: 2px solid #3399FF;
+            border-radius: 2px;
         }
 
         .row {
@@ -106,20 +110,20 @@
             color: white;
         }
 
-        .buttonwrapper{
-            position:relative;
-            overflow:hidden;
-            height:50px;
+        .buttonwrapper {
+            position: relative;
+            overflow: hidden;
+            height: 50px;
         }
 
         .lockbutton {
             font-size: 27px;
             color: #3399FF;
             padding: 10px;
-            width:100%;
-            position:absolute;
-            top:0;
-            left:0;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .loginbutton {
@@ -132,319 +136,401 @@
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             left: -260px;
-            position:absolute;
-            top:0;
+            position: absolute;
+            top: 0;
         }
     </style>
-        <!-- 这个必须放在这里，要不然登陆的时候的那个等待符号就加载不出来了 -->
-        <script src="/js/jquery.min.js"></script>
+    <!-- 这个必须放在这里，要不然登陆的时候的那个等待符号就加载不出来了 -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#myNav").affix({
+                offset: { 
+                    top: 150 
+                }
+            });
+        });
+    </script>
 </head>
 
 
 <!-- 开始正文 -->
+
 <body ng-app="login_info" ng-controller="login_info_controller" ng-cloak>
-<!-- 导航栏 -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
                 <a style="font-weight:bold;" class="navbar-brand" href="#"><span class="glyphicon glyphicon-th-large"></span>教学辅助系统测试版</a>
-        </div>
+            </div>
 
 
-        <div id="navbar" class="navbar-collapse collapse">
-          <!-- 向左对齐 -->
-          <ul class="nav navbar-nav navbar-left">
-            <li style="font-weight:bold;"><a href="#">主页</a></li>
-            <li style="font-weight:bold;"><a href="#about">关于我们</a></li>
-            <li style="font-weight:bold;"><a href="#contact">联系我们</a></li>
-            <li class="dropdown">
-              <a style="font-weight:bold;" href="#" class="dropdown-toggle" data-toggle="dropdown">不知道写什么 <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-        </ul>
+            <div id="navbar" class="navbar-collapse collapse">
+                <!-- 向左对齐 -->
+                <ul class="nav navbar-nav navbar-left">
+                    <li style="font-weight:bold;"><a href="#">主页</a></li>
+                    <li style="font-weight:bold;"><a href="#about">关于我们</a></li>
+                    <li style="font-weight:bold;"><a href="#contact">联系我们</a></li>
+                    <li class="dropdown">
+                        <a style="font-weight:bold;" href="#" class="dropdown-toggle" data-toggle="dropdown">不知道写什么 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-        <!-- 向右对其 -->
-        <ul class="nav navbar-nav navbar-right">
-
-        </ul>
-
-        <form class="navbar-form navbar-right" >
-           <button style="font-weight:bold;" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >登录</button>
-        </form>
-
-        
-      </div>
-  </nav><!-- end of 导航栏-->
+                <!-- 向右对其 -->
+                <div ng-include="dynamic_bar"><!--有ng的地方不需要花括号{}，直接“”引用即可-->
+                </div>
+            </div>
+    </nav>
+    <!-- end of 导航栏-->
 
     <!-- 模态框1-登录窗口（Modal） -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-body">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+            <div class="modal-body">
 
-                            <!-- Interactive Login - START -->
-                            <div class="container-fluid" style="margin-top: 30%;">
-                                <div class="row">
-                                    <div class="loginpanel">
-                                        <i id="loading" class="hidden fa fa-spinner fa-spin bigicon"></i>
-                                        <h2>
+                <!-- Interactive Login - START -->
+                <div class="container-fluid" style="margin-top: 30%;">
+                    <div class="row">
+                        <div class="loginpanel">
+                            <i id="loading" class="hidden fa fa-spinner fa-spin bigicon"></i>
+                            <h2>
                                             <span class="fa fa-quote-left "></span> 登录 <span class="fa fa-quote-right "></span>
                                         </h2>
-                                        <div>
-                                            <div class="row">
-                                                <div class="col-md-0"></div>
-                                                <div class="col-md-12">
-                                                    <input ng-model="user.id" id="username" type="text" placeholder="登录账号" onkeypress="check_values();">
-                                                    <p style="color: #FF6633; text-align:left;">
-                                                        {{err_username}}
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-0"></div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-0"></div>
+                                    <div class="col-md-12">
+                                        <input ng-model="user.id" id="username" type="text" placeholder="登录账号" onkeypress="check_values();">
+                                        <p style="color: #FF6633; text-align:left;">
+                                            {{err_username}}
+                                        </p>
+                                    </div>
+                                    <div class="col-md-0"></div>
 
-                                                <div class="col-md-0"></div>
-                                                <div class="col-md-12">
-                                                   <input ng-model="user.pwd" id="password" type="password" placeholder="输入密码" onkeypress="check_values();">
-                                                   <p style="color: #FF6633;text-align:left;">
-                                                    {{err_pwd}}
-                                                   </p>
-                                                </div>
-                                                <div class="col-md-0"></div>
+                                    <div class="col-md-0"></div>
+                                    <div class="col-md-12">
+                                        <input ng-model="user.pwd" id="password" type="password" placeholder="输入密码" onkeypress="check_values();">
+                                        <p style="color: #FF6633;text-align:left;">
+                                            {{err_pwd}}
+                                        </p>
+                                    </div>
+                                    <div class="col-md-0"></div>
 
-                                                <div class="col-md-0"></div>
-                                                <div class="col-md-12">
-                                                    <div class="radio">
-                                                      <label>
+                                    <div class="col-md-0"></div>
+                                    <div class="col-md-12">
+                                        <div class="radio">
+                                            <label>
                                                         <input type="radio" name="optionsRadios" value="1" ng-model="user.type" style="width: auto;">学生
                                                       </label>
-                                                      <label>
+                                            <label>
                                                         <input type="radio" name="optionsRadios" value="2" ng-model="user.type" style="width: auto;">老师
                                                       </label>
-                                                      <label>
+                                            <label>
                                                         <input type="radio" name="optionsRadios" value="3" ng-model="user.type" style="width: auto;">管理员
                                                       </label>
-                                                   </div>
-                                                </div>
-                                                <div class="col-md-0"></div>
-                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-0"></div>
+                                </div>
 
-                    
-                                            <div class="buttonwrapper">
-                                                <button id="loginbtn" class="btn btn-primary loginbutton" ng-click="getLoginResult()">
+
+                                <div class="buttonwrapper">
+                                    <button id="loginbtn" class="btn btn-primary loginbutton" ng-click="getLoginResult()">
                                                     <span class="fa fa-check"></span>
                                                 </button>
-                                                <span id="lockbtn" class="fa fa-lock lockbutton redborder"></span>
-                                            </div>
+                                    <span id="lockbtn" class="fa fa-lock lockbutton redborder"></span>
+                                </div>
 
-                                            <div>
-                                                <label>
+                                <div>
+                                    <label>
                                                      <button style="font-weight:bold;" class="btn btn-link" data-toggle="modal" data-target="#myModal2" id="FindbackPwd" >忘记密码？</button>
                                                 </label>
-                                            </div>
-
-                                        </div>
-                                    </div>
                                 </div>
+
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- 以下JS脚本是显示提交按钮的动画的 -->
-                            <script type="text/javascript">
-                                function check_values() {
-                                    if ($("#username").val().length != 0 && $("#password").val().length != 0) 
-                                    {
-                                        $("#loginbtn").animate({ left: '0' , duration: 'slow'});;
-                                        $("#lockbtn").animate({ left: '260px' , duration: 'slow'});;
-                                    }
-                                }
+                <!-- 以下JS脚本是显示提交按钮的动画的 -->
+                <script type="text/javascript">
+                    function check_values() {
+                        if ($("#username").val().length != 0 && $("#password").val().length != 0) {
+                            $("#loginbtn").animate({
+                                left: '0',
+                                duration: 'slow'
+                            });;
+                            $("#lockbtn").animate({
+                                left: '260px',
+                                duration: 'slow'
+                            });;
+                        }
+                    }
 
-                                $("#loginbtn").click(function(){
-                                    $('#loading').removeClass('hidden');
-                                     //这里书写登录相关后台处理，例如: Ajax请求用户名和密码验证
-                               });
-                           </script>
-                           <!-- Interactive Login - END -->
+                    $("#loginbtn").click(function() {
+                        $('#loading').removeClass('hidden');
+                        //这里书写登录相关后台处理，例如: Ajax请求用户名和密码验证
+                    });
+                </script>
+                <!-- Interactive Login - END -->
 
-                        </div><!-- .modal-body -->
-                <!-- </div>/.modal-content -->
-        </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+            </div>
+            <!-- .modal-body -->
+            <!-- </div>/.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
 
 
-    <!-- 模态框2-找回密码窗口 -->
+    <!-- 模态框2-找回密码窗口 之 传回密保问题-->
     <!-- 模态框（Modal） -->
     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                    <div class="modal-body">
+        <div class="modal-dialog">
+            <div class="modal-body">
 
-                            <!-- Interactive Login - START -->
-                            <div class="container-fluid" style="overflow-y:auto">
-                                <div class="row" style="overflow-y:auto">
-                                    <div class="loginpanel" style="overflow-y:auto">
-                                        <i id="loading2" class="hidden fa fa-spinner fa-spin bigicon"></i>
-                                        <h2>
+                <!-- Interactive Login - START -->
+                <div class="container-fluid" style="overflow-y:auto">
+                    <div class="row" style="overflow-y:auto">
+                        <div class="loginpanel" style="overflow-y:auto">
+                            <i id="loading2" class="hidden fa fa-spinner fa-spin bigicon"></i>
+                            <h2>
                                             <span class="fa fa-quote-left "></span> 找回密码 <span class="fa fa-quote-right "></span>
                                         </h2>
-                                        <div>
-                                            <input ng-model="user.id" id="username2" type="text" placeholder="输入用户名" onkeypress="check_values_user2();">
-                                    
-                                            <p style="color: #FF6633; text-align:left;">
-                                                {{err_username}}
-                                            </p>     
+                            <div>
+                                <input ng-model="findbackPwd_user.id" id="username2" type="text" placeholder="输入用户名" onkeypress="check_values_user2();">
 
-                                            <div class="radio">
-                                              <label>
-                                                <input type="radio" name="optionsRadios" value="2" ng-model="FindbackPwd_user.type">老师
-                                              </label>
-                                              <label>
-                                              <input type="radio" name="optionsRadios" value="1" checked ng-model="FindbackPwd_user.type">学生
-                                              </label>
-                                              <label>
-                                              <input type="radio" name="optionsRadios" value="3" ng-model="FindbackPwd_user.type">管理员
-                                              </label>
-                                            </div>
+                                <p style="color: #FF6633; text-align:left;">
+                                    {{findbackPwd_user.err_getUserQuest}}
+                                </p>
 
-                                            <div class="buttonwrapper">
-                                                <button id="loginbtn2" class="btn btn-primary loginbutton" ng-click="getbackPwd()">
+                                <div class="radio">
+                                    <label>
+                                              <input type="radio" name="optionsRadios1" value="1" checked ng-model="findbackPwd_user.type" style="width: auto;">学生
+                                    </label>
+                                    <label>
+                                                <input type="radio" name="optionsRadios1" value="2" ng-model="findbackPwd_user.type" style="width: auto;">老师
+                                    </label>
+                                    <label>
+                                              <input type="radio" name="optionsRadios1" value="3" ng-model="findbackPwd_user.type" style="width: auto;">管理员
+                                    </label>
+                                </div>
+
+                                <div class="buttonwrapper">
+                                    <button id="loginbtn2" class="btn btn-primary loginbutton" ng-click="getbackPwd()">
                                                 <span class="fa fa-check"></span>
                                                 </button>
-                                                <span id="lockbtn2" class="fa fa-lock lockbutton redborder"></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <span id="lockbtn2" class="fa fa-lock lockbutton redborder"></span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- 以下JS脚本是显示提交按钮的动画的 -->
-                            <script type="text/javascript">
-                                function check_values_user2() {
-                                    if ($("#username2").val().length != 0) {
-                                        $("#loginbtn2").animate({ left: '0' , duration: 'slow'});;
-                                        $("#lockbtn2").animate({ left: '260px' , duration: 'slow'});;
-                                    }
-                                }
+                <!-- 以下JS脚本是显示提交按钮的动画的 -->
+                <script type="text/javascript">
+                    function check_values_user2() {
+                        if ($("#username2").val().length != 0) {
+                            $("#loginbtn2").animate({
+                                left: '0',
+                                duration: 'slow'
+                            });;
+                            $("#lockbtn2").animate({
+                                left: '260px',
+                                duration: 'slow'
+                            });;
+                        }
+                    }
 
-                                $("#loginbtn2").click(function(){
-                                    $('#loading2').removeClass('hidden');
-                          //这里书写登录相关后台处理，例如: Ajax请求用户名和密码验证
-                                });
-                           </script>
-                           <!-- Interactive Login - END -->
+                    $("#loginbtn2").click(function() {
+                        $('#loading2').removeClass('hidden');
+                        //这里书写登录相关后台处理，例如: Ajax请求用户名和密码验证
+                    });
+                </script>
+                <!-- Interactive Login - END -->
 
-                        </div><!-- .modal-body -->
-                <!-- </div>/.modal-content -->
-            </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-
-<!-- 这一块在view的login.html中也有，以后直接用这个组装 -->
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>游客界面</h1>
-        <p>输入网址以后进入的第一个页面，待布局………………</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">点击进入 &raquo;</a></p>
-      </div>
+            </div>
+            <!-- .modal-body -->
+            <!-- </div>/.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
     </div>
-<!-- <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br> -->
-    <!-- 轮播幻灯片 -->
-    <!-- <div id="myCarousel" class="carousel slide"> -->
-    <!-- 轮播（Carousel）指标 -->
-    <!-- <ol class="carousel-indicators"> -->
-       <!--  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li> -->
-    <!-- </ol>    -->
-    <!-- 轮播（Carousel）项目 -->
-    <!-- <div class="carousel-inner"> -->
-        <!-- <div class="item active">
-            <img src="images/1.jpg" alt="First slide">
-            <div class="carousel-caption">标题 1</div>
+    <!-- /.modal -->
+
+    
+
+    <!-- 模态框3-找回密码窗口 之 输入密保答案-->
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-body">
+
+                <!-- Interactive Login - START -->
+                <div class="container-fluid" style="overflow-y:auto">
+                    <div class="row" style="overflow-y:auto">
+                        <div class="loginpanel" style="overflow-y:auto">
+                            <i id="loading3" class="hidden fa fa-spinner fa-spin bigicon"></i>
+                            <h2>
+                                <span class="fa fa-quote-left "></span> 找回密码 <span class="fa fa-quote-right "></span>
+                            </h2>
+                            <div>
+                                <p style="color: white; text-align:left; font-weight:800; font-style:italic; font-size: 20px;">
+                                    {{findbackPwd_user.result_getUserQuest}}
+                                </p>
+
+                                <input ng-model="findbackPwd_user.user_ans" id="answer" type="text" placeholder="输入密保问题答案" onkeypress="check_values_user3();">
+
+                                <p style="color: #FF6633; text-align:left; font-weight:bold;">
+                                    {{findbackPwd_user.wrong_user_ans}}
+                                </p>
+
+                                <div class="buttonwrapper">
+                                    <button id="loginbtn3" class="btn btn-primary loginbutton" ng-click="verifyUserAns()">
+                                        <span class="fa fa-check"></span>
+                                    </button>
+                                    <span id="lockbtn3" class="fa fa-lock lockbutton redborder"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 以下JS脚本是显示提交按钮的动画的 -->
+                <script type="text/javascript">
+                    function check_values_user3() {
+                        if ($("#answer").val().length != 0) {
+                            $("#loginbtn3").animate({
+                                left: '0',
+                                duration: 'slow'
+                            });;
+                            $("#lockbtn3").animate({
+                                left: '260px',
+                                duration: 'slow'
+                            });;
+                        }
+                    }
+
+                    $("#loginbtn3").click(function() {
+                        $('#loading3').removeClass('hidden');
+                        //这里书写登录相关后台处理，例如: Ajax请求用户名和密码验证
+                    });
+                </script>
+                <!-- Interactive Login - END -->
+
+            </div>
+            <!-- .modal-body -->
+            <!-- </div>/.modal-content -->
         </div>
-        <div class="item">
-            <img src="images/1.jpg" alt="Second slide">
-            <div class="carousel-caption">标题 2</div>
-        </div>
-        <div class="item">
-            <img src="images/1.jpg" alt="Third slide">
-            <div class="carousel-caption">标题 3</div>
-        </div> -->
-    <!-- </div> -->
-    <!-- 轮播（Carousel）导航 -->
-    <!-- <a class="carousel-control left" href="#myCarousel" 
-       data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" 
-       data-slide="next">&rsaquo;</a>
-   </div>  -->
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
 
- <script type="text/javascript">
-     $("#FindbackPwd").click(function(){
-        $("#myModal").modal("hide");
-     });
- </script>
- 
-                 
+    <!-- 模态框4-找回密码窗口 之 重置新密码-->
+    <!-- 模态框（Modal） -->
+     <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-body">
+
+                <!-- Interactive Login - START -->
+                <div class="container-fluid" style="overflow-y:auto">
+                    <div class="row" style="overflow-y:auto">
+                        <div class="loginpanel" style="overflow-y:auto">
+                            <i id="loading4" class="hidden fa fa-spinner fa-spin bigicon"></i>
+                            <h2>
+                                <span class="fa fa-quote-left "></span> 重置密码 <span class="fa fa-quote-right "></span>
+                            </h2>
+                            <div>
+                                <input ng-model="findbackPwd_user.new_pwd1" id="pwd1" type="password" placeholder="输入新密码" onkeypress="check_values_user4();">
+                                <input ng-model="findbackPwd_user.new_pwd2" id="pwd2" type="password" placeholder="再次输入新密码" onkeypress="check_values_user4();">
+
+                                <p style="color: #FF6633; text-align:left;">
+                                    {{findbackPwd_user.result_of_modify}}
+                             </p>
+
+                                <div class="buttonwrapper">
+                                    <button id="loginbtn4" class="btn btn-primary loginbutton" ng-click="setNewPwd()">
+                                        <span class="fa fa-check"></span>
+                                    </button>
+                                    <span id="lockbtn4" class="fa fa-lock lockbutton redborder"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 以下JS脚本是显示提交按钮的动画的 -->
+                <script type="text/javascript">
+                    function check_values_user4() {
+                        if ($("#pwd1").val().length != 0 && $("#pwd2").val().length != 0) {
+                            $("#loginbtn4").animate({
+                                left: '0',
+                                duration: 'slow'
+                            });;
+                            $("#lockbtn4").animate({
+                                left: '260px',
+                                duration: 'slow'
+                            });;
+                        }
+                    }
+
+                    $("#loginbtn4").click(function() {
+                        $('#loading4').removeClass('hidden');
+                        //这里书写登录相关后台处理，例如: Ajax请求用户名和密码验证
+                    });
+                </script>
+                <!-- Interactive Login - END -->
+
+            </div>
+            <!-- .modal-body -->
+            <!-- </div>/.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+
+
+    <ui-view></ui-view>
+    <script type="text/javascript">
+        $("#FindbackPwd").click(function() {
+            $("#myModal").modal("hide");
+        });
+    </script>
 
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- 压缩版改了不行…… -->
-    <script src="/js/bootstrap.js"></script> 
-    <script src="/js/angular.min.js"></script>
-    <script src="/js/angular-ui-router.min.js"></script>
-    <script src="/js/login.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/login.js"></script>
+    
+    <script>
+      $(function (){
+        $("[data-toggle='popover']").popover({
+        html:true  //这样就可以在内容里面添加HTML代码了
+        });
+      });
+   </script>
 
-   
+
 </body>
 
 </html>

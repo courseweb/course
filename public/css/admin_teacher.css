@@ -1,0 +1,92 @@
+.updateTea .addTea h4 {
+    color: rgb(53, 1, 71);
+}
+
+.updateTea .addTea {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 2px rgb(175, 175, 175);
+    box-shadow: 5px 5px 2px rgb(53, 1, 71);
+    height: auto;
+    width: 97%;
+    float: left;
+}
+
+.updateTea .addTea .input {
+    margin-left: -20px;
+    margin-top: -20px;
+    padding: 20px;
+    width: 33%;
+    float: left;
+}
+
+.updateTea .addTea .select {
+    margin-top: -20px;
+    padding: 20px;
+    width: 33%;
+    float: left;
+}
+
+.updateTea .addTea .show {
+    margin-top: -20px;
+    padding: 20px;
+    width: 33%;
+    float: left;
+}
+
+.updateTea {
+    padding: 30px;
+}
+
+.updateTea .deleteTea {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 2px rgb(175, 175, 175);
+    box-shadow: 5px 5px 2px rgb(53, 1, 71);
+    height: auto;
+    width: 97%;
+    float: left;
+    margin-top: 30px;
+}
+
+.updateTea .firstRow {
+    padding: 20px;
+    height: 10%;
+    width: 100%;
+    float: left;
+}
+
+.updateTea .firstRow .id_label {
+    margin-left: -20px;
+    width: 45%;
+    height: auto;
+    float: left;
+}
+
+.updateTea .firstRow .error {
+    width: 45%;
+    height: auto;
+    float: left;
+    margin-left: 8%;
+}
+
+.updateTea .secondRow {
+    padding: 20px;
+    width: 100%;
+    height: 10%;
+    float: left;
+}
+
+.updateTea .secondRow .id {
+    margin-left: -20px;
+    width: 45%;
+    height: auto;
+    float: left;
+}
+
+.updateTea .secondRow .submit {
+    width: 45%;
+    height: auto;
+    float: left;
+    margin-left: 8%;
+}

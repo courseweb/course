@@ -1,0 +1,146 @@
+<div>
+    <div class="updateStu" >
+        <div class="batchImport" ng-controller="studentBatchAdmin">
+
+            <h4>批量导入</h4>
+            <hr />
+
+            <label>选择学年</label>
+            <select class="form-control" ng-model="importedData.selectedYear" ng-change="updateBatchSelect('semester')">
+                <option ng-repeat="yearItem in batch.years" value="{{yearItem}}">{{yearItem}}</option>
+              </select>
+
+            <label>选择学期</label>
+            <select class="form-control" ng-model="importedData.selectedSemester" ng-change="updateBatchSelect('class')">
+                <option ng-repeat="semesterItem in batch.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
+              </select>
+
+            <label>选择教学班</label>
+            <select class="form-control" ng-model="importedData.selectedClass">
+                <option ng-repeat="classItem in batch.classes" value="{{classItem}}">{{classItem}}</option>
+              </select>
+
+            <p class="help-block">请按照指定格式上传Excel</p>
+            <div class="form-group">
+                <input type="file" ng-model="importedData.selectedExcel" onchange="angular.element(this).scope().upload(this.files)" />
+            </div>
+
+            <div class="a-upload" >
+                <input type="file" onchange="angular.element(this).scope().upload(this.files)">请选择
+            </div>{{importedData.selectedExcel.name}}
+
+            <div ng-show="batch.successTip" style="height:21%">
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功导入数据！
+                </div>
+            </div>
+
+            <div ng-show="batch.errorTip">
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> excel表格格式不正确！
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-lg btn-block" ng-click="imporStuData();" ng-disabled="((!importedData.selectedYear) || (!importedData.selectedSemester) || (!importedData.selectedClass) || (!importedData.selectedExcel))">导入</button>
+        </div>
+        <div ng-controller="studentSingleAdmin">
+            <div class="addStu">
+                <h4 style="">新增学生账户</h4>
+                <hr />
+                <div class="input">
+                    <label for="name">姓名</label>
+                    <input type="text" class="form-control" ng-model="addStuData.name" placeholder="请输入学生姓名">
+                    <label for="name">学号</label>
+                    <input type="text" class="form-control" ng-model="addStuData.id" placeholder="请输入学生学号">
+                    <div ng-show="addStu.successTip" style="margin-top:110px">
+                        <div class="alert alert-success alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功添加学生账户！
+                        </div>
+                    </div>
+
+                    <div ng-show="addStu.errorTip" style="margin-top:110px">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 添加学生账户失败，请重试！
+                        </div>
+                    </div>
+                </div>
+                <div class="select">
+                    <label>选择学年</label>
+                    <select class="form-control" ng-model="addStuData.selectedYear" ng-change="updateAddStuSelect('semester')">
+                      <option ng-repeat="yearItem in addStu.years" value="{{yearItem}}">{{yearItem}}</option>
+                    </select>
+
+                    <label>选择学期</label>
+                    <select class="form-control" ng-model="addStuData.selectedSemester" ng-change="updateAddStuSelect('class')">
+                      <option ng-repeat="semesterItem in addStu.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
+                    </select>
+
+                    <label>选择教学班</label>
+                    <select class="form-control" ng-model="addStuData.selectedClass">
+                      <option ng-repeat="classItem in addStu.classes" value="{{classItem}}">{{classItem}}</option>
+                    </select>
+                    <label>点击继续选择教学班</label>
+                    <a href="" class="btn btn-info btn-block" ng-click="addClass()">
+                        <span class="glyphicon glyphicon-plus"></span>添加
+                    </a>
+                    <button class="btn btn-default btn-block" ng-click="submitStuInfo()" ng-disabled="((!addStuData.name) || (!addStuData.id))">提交</button>
+                </div>
+                <div class="show">
+                    <table class="table">
+                        <label>已关联教学班</label>
+                        <thead>
+                            <tr>
+                                <th>学年</th>
+                                <th>学期</th>
+                                <th>教学班</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="classItem in stuSelectedAllClasses">
+                                <td>{{classItem.selectedYear}}</td>
+                                <td>{{classItem.selectedSemester}}</td>
+                                <td>{{classItem.selectedClass}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="deleteStu">
+                <h4 style="">删除学生账户</h4>
+                <hr />
+                <div class="firstRow">
+                  <div class="id_label">
+                    <label>学号</label>
+                  </div>
+                  <div class="error">
+                    <div ng-show="deleteStu.successTip">
+                        <div class="alert alert-success alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除成功!
+                        </div>
+                    </div>
+
+                    <div ng-show="deleteStu.errorTip">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除失败，请重试！
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="secondRow">
+                  <div class="id">
+                    <input type="text" class="form-control" ng-model="deleteStu.id" placeholder="请输入学生学号">
+                  </div>
+                  <div class="submit">
+                      <button class="btn btn-default btn-block" ng-click="deleteStuInfo()" ng-disabled="(!deleteStu.id)">删除</button>
+                  </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+</div>

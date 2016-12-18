@@ -1,0 +1,60 @@
+.updateClass .addClass h4 {
+    color: rgb(53, 1, 71);
+}
+
+.updateClass .addClass {
+  margin-left: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border: 2px rgb(175, 175, 175);
+  box-shadow: 5px 5px 2px rgb(53, 1, 71);
+  height: auto;
+  width: 45%;
+  float: left;
+}
+
+.updateClass .addClass .firstCol {
+  margin-left: -20px;
+  margin-top: -20px;
+  padding: 20px;
+  width: 33%;
+  float: left;
+}
+
+.updateClass .addClass .firstCol .addClassTip {
+    margin-top: 6%;
+    height: 50%;
+}
+.updateClass .addClass .firstCol .addClassInfo {
+    height: 24%;
+}
+
+.updateClass {
+    padding: 30px;
+}
+
+
+.updateClass .deleteClass {
+  margin-left: 30px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 2px rgb(175, 175, 175);
+    box-shadow: 5px 5px 2px rgb(53, 1, 71);
+    height: auto;
+    width: 45%;
+    float: left;
+}
+
+.updateClass .deleteClass h4 {
+    color: rgb(53, 1, 71);
+}
+
+.updateClass .deleteClass .tip {
+    height: 22%;
+    margin-bottom: auto;
+}
+
+.updateClass .deleteClass .select {
+    height: 40%;
+    margin-bottom: 5%;
+}

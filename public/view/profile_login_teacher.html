@@ -1,0 +1,15 @@
+<ul class="nav navbar-nav navbar-right">
+    <div type="button" class="btn" data-container="body" data-toggle="popover" data-placement="bottom"
+    data-content= '<ul class="nav nav-list"><li><a href="#">{{teacher_info.name}} 老师</a></li><hr><li><a href="#">切换用户</a></li><li><a href="#">退出</a></li></ul>' >
+        <img src="images/teacher1_hh.png" alt="Trolltunga Norway" width="45" height="45"/>
+    </div>
+    <a href="#"><img src="images/ring.png" width="55" height="55"/></a>
+</ul>
+  
+<script>
+      $(function (){
+        $("[data-toggle='popover']").popover({
+        html:true  //这样就可以在内容里面添加HTML代码了
+        });
+      });
+</script>

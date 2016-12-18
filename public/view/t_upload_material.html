@@ -1,0 +1,289 @@
+<div ng-controller="t_upload_material_controller">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">资料上传</h3>
+    </div>
+  </div>
+  <ul id="myTab" class="nav nav-tabs">
+  	<li class="active">
+  		<a href="" data-toggle="tab">
+  			实验报告
+  		</a>
+  	</li>
+  	<li class="dropdown">
+  		<a href="" id="myTabDrop1" class="dropdown-toggle"
+  		   data-toggle="dropdown">课程资料
+  			<b class="caret"></b>
+  		</a>
+  		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+  			<li><a href="/#slide" tabindex="-1" data-toggle="tab" ng-click="downloadSlideList()">课件</a></li>
+  			<li><a href="/#video" tabindex="-1" data-toggle="tab" ng-click="downloadVideoList()">视频</a></li>
+  		</ul>
+  	</li>
+    <li class="dropdown">
+  		<a href="" id="myTabDrop1" class="dropdown-toggle"
+  		   data-toggle="dropdown">其他资料
+  			<b class="caret"></b>
+  		</a>
+  		<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+  			<li><a href="/#referrence" tabindex="-1" data-toggle="tab" ng-click="downloadReferrenceList()">参考资料</a></li>
+  			<li><a href="/#goodWork" tabindex="-1" data-toggle="tab" ng-click="downloadGoodWorkList()">优秀作业</a></li>
+  		</ul>
+  	</li>
+  </ul>
+  <br>
+  <br>
+  <div id="myTabContent" class="tab-content">
+  	<div class="tab-pane fade in active" id="report">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <table class="table table-striped">
+            <caption>已上传实验报告</caption>
+            <thead>
+              <tr>
+                <th>第几次</th>
+                <th>名字</th>
+                <th>上传日期</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="x in reportAlready">
+              <tr>
+                <td>{{x.time}}</td>
+                <td>{{x.fileName}}</td>
+                <td>{{x.uploadDate}}</td>
+                <td><button type="button" class="btn btn-danger" ng-click="deleteReport(x.time)">删除</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+          <h5>请选择上传第几次实验报告模板</h5>
+        </div>
+        <div class="col-md-2 col-md-offset-0">
+            <select class="form-control" id="chooseReportTime">
+              <option value="1">第一次</option>
+              <option value="2">第二次</option>
+              <option value="3">第三次</option>
+              <option value="4">第四次</option>
+            </select>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="reportInstance">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+          <h5>请选择上交截止日期：</h5>
+        </div>
+        <div class="col-md-2 col-md-offset-0">
+          <input type="text" class="form-control" ng-model="reportDDL">
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-9">
+          <button type="button" class="btn btn-primary" ng-click="uploadReport(reportDDL)">提交</button>
+        </div>
+      </div>
+  	</div>
+  	<div class="tab-pane fade" id="slide">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <table class="table table-striped">
+            <caption>已上传课件</caption>
+            <thead>
+              <tr>
+                <th>第几次</th>
+                <th>名字</th>
+                <th>上传日期</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="x in slideAlready">
+              <tr>
+                <td>{{x.time}}</td>
+                <td>{{x.fileName}}</td>
+                <td>{{x.uploadDate}}</td>
+                <td><button type="button" class="btn btn-danger" ng-click="deleteSlide(x.time)">删除</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+          <h5>请选择上传第几次课件</h5>
+        </div>
+        <div class="col-md-2 col-md-offset-0">
+            <select class="form-control" id="chooseSlideTime">
+              <option value="1">第一次</option>
+              <option value="2">第二次</option>
+              <option value="3">第三次</option>
+              <option value="4">第四次</option>
+            </select>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="slideInstance">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-9">
+          <button type="button" class="btn btn-primary" ng-click="uploadSlide()">提交</button>
+        </div>
+      </div>
+  	</div>
+  	<div class="tab-pane fade" id="video">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <table class="table table-striped">
+            <caption>已上传视频</caption>
+            <thead>
+              <tr>
+                <th>第几次</th>
+                <th>名字</th>
+                <th>上传日期</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="x in videoAlready">
+              <tr>
+                <td>{{x.time}}</td>
+                <td>{{x.fileName}}</td>
+                <td>{{x.uploadDate}}</td>
+                <td><button type="button" class="btn btn-danger" ng-click="deleteVideo(x.time)">删除</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+          <h5>请选择上传第几次课程视频</h5>
+        </div>
+        <div class="col-md-2 col-md-offset-0">
+          <select class="form-control" id="chooseVideoTime">
+            <option value="1">第一次</option>
+            <option value="2">第二次</option>
+            <option value="3">第三次</option>
+            <option value="4">第四次</option>
+          </select>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="videoInstance">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-9">
+          <button type="button" class="btn btn-primary" ng-click="uploadVideo()">提交</button>
+        </div>
+      </div>
+  	</div>
+    <div class="tab-pane fade" id="referrence">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <table class="table table-striped">
+            <caption>已上传参考资料</caption>
+            <thead>
+              <tr>
+                <th>第几次</th>
+                <th>名字</th>
+                <th>上传日期</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="x in referrenceAlready">
+              <tr>
+                <td>{{x.time}}</td>
+                <td>{{x.fileName}}</td>
+                <td>{{x.uploadDate}}</td>
+                <td><button type="button" class="btn btn-danger" ng-click="deleteReferrence(x.time)">删除</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+          <h5>参考资料</h5>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="referrenceInstance">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-9">
+          <button type="button" class="btn btn-primary" ng-click="uploadReferrence()">提交</button>
+        </div>
+      </div>
+  	</div>
+  	<div class="tab-pane fade" id="goodWork">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <table class="table table-striped">
+            <caption>已上传优秀作业</caption>
+            <thead>
+              <tr>
+                <th>第几次</th>
+                <th>名字</th>
+                <th>上传日期</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="x in goodWorkAlready">
+              <tr>
+                <td>{{x.time}}</td>
+                <td>{{x.fileName}}</td>
+                <td>{{x.uploadDate}}</td>
+                <td><button type="button" class="btn btn-danger" ng-click="deleteGoodWork(x.time)">删除</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+          <h5>优秀作业</h5>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="goodWorkInstance">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-9">
+          <button type="button" class="btn btn-primary" ng-click="uploadGoodWork()">提交</button>
+        </div>
+      </div>
+  	</div>
+  </div>

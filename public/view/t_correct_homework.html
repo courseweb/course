@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <style>
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            text-decoration: none;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #232525;
+            margin-top: 0px;
+        }
+
+        /*a  upload */
+        .a-upload {
+            padding: 4px 10px;
+            height: 30px;
+            line-height: 20px;
+            position: relative;
+            cursor: pointer;
+            color: #888;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1
+        }
+
+        .a-upload  input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            cursor: pointer
+        }
+
+        .a-upload:hover {
+            color: #444;
+            background: #eee;
+            border-color: #ccc;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body ng-app="correct_homework" ng-controller="correct_homework_controller">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">批改作业</h3>
+    </div>
+  </div>
+  <ul id="myTab" class="nav nav-tabs">
+  	<li class="active">
+  		<a href="/#onlineHomework" data-toggle="tab">
+  			理论作业
+  		</a>
+  	</li>
+    <li><a href="/#reportHomework" data-toggle="tab">实验作业</a></li>
+  </ul>
+  <br>
+  <br>
+  <div id="myTabContent" class="tab-content">
+  	<div class="tab-pane fade in active" id="onlineHomework">
+      <br/>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+          <h4>请选择批改第几次理论作业：</h4>
+        </div>
+        <div class="col-md-2 col-md-offset-0">
+            <select class="form-control" id="chooseHomeworkTime">
+              <option value=1>第一次</option>
+              <option value=2>第二次</option>
+              <option value=3>第三次</option>
+              <option value=4>第四次</option>
+            </select>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="col-md-10 col-md-offset-1">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>姓名</th>
+              <th>题号</th>
+              <th>答案</th>
+              <th>给分</th>
+              <th>点评</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="i in studentOnlineAnswer">
+              <td>{{i.studentName}}</td>
+              <td>{{i.questionID}}</td>
+              <td>{{i.studentAnswer}}</td>
+              <td>
+                <div class="col-md-3 col-md-offset-0">
+                  <input type="text" class="form-control" ng-model="score">
+                </div>
+              </td>
+              <td>
+                <div class="col-md-8 col-md-offset-0">
+                  <input type="text" class="form-control" ng-model="comment">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <row>
+        <div class="col-md-1 col-md-offset-4">
+          <button type="button" class="btn btn-primary" ng-click="beforeFillInQuestion()"><span class="glyphicon glyphicon-hand-left"></span> &nbsp 上一题</button>
+        </div>
+        <div class="col-md-1 col-md-offset-0">
+          <button type="button" class="btn btn-primary" ng-click="nextFillInQuestion(fillInScore,fillInQuestion,fillInAnswer)"><span class="glyphicon glyphicon-hand-right"></span> &nbsp 下一题</button>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <button type="button" class="btn btn-primary" ng-click="uploadFillInQuestion(fillInScore,fillInQuestion,fillInAnswer)"><span class="glyphicon glyphicon-ok"></span>提交</button>
+        </div>
+      </row>
+  	</div>
+  	<div class="tab-pane fade" id="reportHomework">
+      <br/>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+          <h4>请选择批改第几次实验作业：</h4>
+        </div>
+        <div class="col-md-2 col-md-offset-0">
+            <select class="form-control" id="chooseHomeworkTime">
+              <option value=1>第一次</option>
+              <option value=2>第二次</option>
+              <option value=3>第三次</option>
+              <option value=4>第四次</option>
+            </select>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="col-md-10 col-md-offset-1">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>姓名</th>
+              <th>下载链接</th>
+              <th>给分</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="i in studentReport">
+              <td>{{i.studentName}}</td>
+              <td>
+                <div class="col-md-4 col-md-offset-0">
+                  <a href="#" class="a-upload" id="goodWorkEvent">
+                    <input type="file" name="" id="goodWorkInstance"><span class="glyphicon glyphicon-download-alt"></span>请下载</input>
+                  </a>
+                  <a href="/uploadfolder/xxxx.txt" download="文件名.txt">点击下载</a>
+                </div>
+              </td>
+              <td>
+                <div class="col-md-2 col-md-offset-0">
+                  <input type="text" class="form-control" ng-model="comment">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <br/>
+      <row>
+        <div class="col-md-1 col-md-offset-8">
+          <button type="button" class="btn btn-primary" ng-click="uploadFillInQuestion(fillInScore,fillInQuestion,fillInAnswer)"><span class="glyphicon glyphicon-ok"></span>提交</button>
+        </div>
+      </row>
+  	</div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../uploadMaterialScript.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/angular-ui-router.min.js"></script>
+  <script src="../js/teacherController.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学生课程信息</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="css/student_class.css">
+</head>
+
+<body ng-app="student" ng-controller="classController">
+    <div id="class_intro" class="box-shadow1 container" style="width:100%; height:250px; background-color:#E8E8E8; position:relative; margin-top:4%;">
+        <table  style="margin-top:25px; margin-left:5%;">
+            <tr>
+                <td class="col-md-1 col-md-offset-1">
+                    <img src="images/talk.jpg" style="width:200px; height:200px; border-radius:100%;">
+                </td>
+                <td valign="top">
+                    <div class="col-md-8 col-md-offset-1">
+                        <ul style="font-size:40px;">{{course_name}}</ul>
+                        <ul style="color:#666666,font-size:40px;">课程介绍</ul>
+                        <ul style="font-size:20px;">{{course_introduce}}</ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="class_cont" class="container box-shadow3" style="width:850px; height:900px; position:relative; margin-top:30px; margin-left: 30px; margin-bottom: 100px;">
+        <div style="position:relative; margin-top:50px; height: 850px; margin-left: 20px;" ui-view="">
+            <!-- <table ng-repeat="item in lesson" style="position:relative; margin-top:15px; margin-left: 10px;">
+                <tr >
+                    <th style="font-size:20px;">第{{$index+1}}课时</th>
+                    <th style="font-size:20px; color:#1874CD;" ng-click="downloadLessonMaterial(item.lesson_material)"><a>{{item.lesson_material}}</a></th>
+                </tr>
+                <tr>
+                    <td style="font-size:25px; width:500px;">{{item.lesson_name}}</td>
+                    <td >
+                        <button  class="btn btn-primary box-shadow2" ng-click="watchVedio(item.lesson_name)" style="margin-left: 150px; font-size:15px;">开始学习</button>
+                    </td>
+                </tr>
+            </table> -->
+
+        </div>
+        <div class="container" style="position:absolute; top:6px; left:250px;">
+            <button type="button" class="btn btn-default" ui-sref="lesson"><a href="" ng-click="getLesson()">章节</a></button>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">作业
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li role="presentation">
+                        <span ui-sref="theory"><a role="menuitem" tabindex="-1" href="" ng-click="getTheory()">理论</a></span>
+                    </li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation">
+                        <span ui-sref="experiment"><a role="menuitem" tabindex="-1" href="" ng-click="getExperiment()">实验</a></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">作业反馈
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li role="presentation">
+                        <span ui-sref="theory_comment"><a role="menuitem" tabindex="-1" href="" ng-click="getTheoryComment()">理论反馈</a></span>
+                    </li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation">
+                        <span ui-sref="experiment_comment"><a role="menuitem" tabindex="-1" href="" ng-click="getExperimentComment()">实验反馈</a></span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 分页 没做好！-->
+        <nav style="position:absolute; left: 350px;top: 800px;">
+        <ul class="pagination">
+        <li>
+        <a ng-click="Previous()">
+        <span>上一页</span>
+        </a>
+        </li>
+        <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}" >
+        <a ng-click="selectPage(page)" >{{ page }}</a>
+        </li>
+        <li>
+        <a ng-click="Next()">
+        <span>下一页</span>
+        </a>
+        </li>
+        </ul>
+        </nav>
+
+    </div>
+    <br/>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/studentClass.js"></script>
+
+</body>
+</html>

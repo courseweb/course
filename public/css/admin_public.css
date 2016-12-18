@@ -1,0 +1,142 @@
+#admin_sidebar .centered {
+    text-align: center;
+}
+
+#admin_sidebar ul.sidebar-menu, ul.sidebar-menu li ul.sub {
+    margin: 0 0;
+    padding: 0;
+}
+
+#admin_sidebar ul.sidebar-menu {
+    margin-top: 75px;
+}
+
+#admin_sidebar ul.sidebar-menu>li>ul.sub>li>a {
+    display: block;
+}
+
+#admin_sidebar ul.sidebar-menu li ul.sub li {
+    background: #424a5d;
+    margin-bottom: 0;
+    margin-left: 10;
+    margin-right: 0;
+}
+
+#admin_sidebar ul.sidebar-menu li ul.sub li a:hover {
+    color: white;
+    background: transparent;
+}
+
+#admin_sidebar ul.sidebar-menu li ul.sub li.active a {
+    color: #68dff0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+#admin_sidebar ul.sidebar-menu li {
+    /*line-height: 20px !important;*/
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#admin_sidebar ul.sidebar-menu li a span {
+    display: inline-block;
+}
+
+#admin_sidebar ul.sidebar-menu li a {
+    color: #aeb2b7;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0 15px 10px;
+    font-size: 12px;
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#admin_sidebar ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+    background: #68dff0;
+    color: #fff;
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+/*sidebar navigation*/
+
+#admin_sidebar {
+    height: 100%;
+    background: #424a5d;
+    overflow: auto;
+    position: fixed;
+    width: 12%;
+}
+
+#admin_sidebar h5 {
+    color: #f2f2f2;
+    font-weight: 700;
+}
+
+#admin_sidebar ul li {
+    position: relative;
+}
+
+#admin_sidebar>ul>li>a, #admin_sidebar>ul>li>ul.sub>li {
+    width: 100%;
+}
+
+#admin_sidebar>ul>li>ul.sub>li>a {
+    background: transparent !important;
+}
+
+#admin_sidebar>ul>li>ul.sub>li>a:hover {}
+
+.adminpage {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.adminpage .mt {
+    margin-top: 25px;
+}
+
+.admin_main_content .wrapper {
+    display: inline-block;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.adminpage  {
+    color: #797979;
+    background-color: rgb(241, 241, 241);
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 13px;
+}
+
+
+/* MAIN CONTENT CONFIGURATION */
+
+.admin_main_content {
+    margin-left: 12%;
+}
+
+.admin_main_content hr{
+  height:2px;
+  border:none;
+  border-top:2px ridge rgb(53, 1, 71);
+}

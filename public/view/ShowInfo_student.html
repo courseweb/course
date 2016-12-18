@@ -1,0 +1,161 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<br>
+<br>
+<!-- 面板布局 -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+              <div>
+                  <br>
+              </div>
+              <div class="row">
+                 <div class="col-md-2 col-md-offset-0">
+                     <img src="/images/stu_wyf.png" width="180" height="180" style="margin-bottom:30px"/>
+                 </div>
+                 <div class="col-md-9 col-md-offset-1" style="margin-left:50px;">
+                     <p style="font-weight:bold;">&nbsp &nbsp {{student_info.name}}同学：你好！</p>
+                     <p>
+                        <blockquote>
+                            <p style="font-weight:bold;">
+                                Stay hungry, stay foolish.
+                            </p> 
+                            <small>
+                                Steven Jobs
+                            </small>
+                        </blockquote>
+                    </p>
+                    <p><a class="btn btn-link" href="#" role="button" ng-click="turnToModify()">&nbsp &nbsp修改个人信息 &raquo;</a></p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-primary shade">
+                    <div class="panel-heading">
+                        <h4>信息与动态</h4>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-primary shade">
+                    <div class="panel-heading">
+                        <h4>我的课程</h4>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default shade fix">
+                    <div class="panel-body">
+                        <h4><span class="glyphicon glyphicon-user"></span>个人信息</h4>
+                        <div>
+                            <br>
+                        </div>
+                        <p style="font-weight:bold;">姓名：<span style="font-weight:normal;">{{student_info.name}}</span></p>
+                        <p style="font-weight:bold;">教学班：<br><span style="font-weight:normal;color: #428bca" ng-repeat="x in student_info.classnames">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{{x}}<br></span></p>
+                        <p style="font-weight:bold;">学院：计算机科学与技术学院</p>
+                        <p style="font-weight:bold;">一句话描述自己：
+                        <blockquote>
+                            <p style="font-weight:bold;">
+                                Stay hungry, stay foolish.
+                            </p> 
+                            <small>
+                                Steven Jobs
+                            </small>
+                        </blockquote></p>
+                        <div>
+                            <a class="btn btn-primary" href="#" role="button" ng-click="turnToModify()">修改信息 &raquo;</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="panel panel-default shade fix">
+                    <div class="panel-body">
+                    <!-- 第一门课 -->
+                        <div class="panel panel-default shade">
+                            <div class="panel-body">
+                              <h4>{{student_info.classnames[0]}}</h4>
+                              <div>
+                              <p style="font-size: 90%; margin-left:20px;margin-right: 20px;">&nbsp &nbsp 本课程的主要任务是在软件工程整体知识的基础上，深入学习并实践软件需求获取与管理的原理、方法和过程，学习并掌握使用UML工具对软件需求进行分析、表达与系统设计。课程内容包括两部分：一是需求获取和维护的过程和方法；二是UML概念、方法和工具。课程配合案例性实践环节进行教学。</p>
+                              </div>
+                              <div >
+                                <a href="#" class="btn btn-primary pull-right" role="button" ng-click="jump_course();">进入课程 &raquo;</a>
+                              </div>
+                            </div>
+                        </div>
+
+                        <!-- 第二门课 -->
+                         <div class="panel panel-default shade">
+                          <div class="panel-body">
+                            <h4>{{student_info.classnames[1]}}</h4>
+                            <div>
+                              <p style="font-size: 90%;margin-left:20px;margin-right: 20px;">&nbsp &nbsp 软件项目管理的对象是软件工程项目。它所涉及的范围覆盖了整个软件工程过程。软件项目管理是为了使软件项目能够按照预定的成本、进度、质量顺利完成，而对人员（People）、产品（Product）、过程（Process）和项目(Project)进行分析和管理的活动。本课程结合CMMI模型，介绍软件工程管理的步骤与方法。</p>
+                            </div>
+                            <div >
+                              <a href="#" class="btn btn-primary pull-right" role="button" ng-click="jump_course();">进入课程 &raquo;</a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <nav style="text-align: center">
+                            <ul class="pagination pagination-sm">
+                                <li><a href="#">&laquo;</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default shade">
+                    <div class="panel-body">
+                        <div>
+                            <h4>教师心得</h4>
+                        </div>
+                        <br>
+                        <br>
+                        <ol class="list-unstyled">
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【最新消息】邢卫老师访问XXX心得</a></li>
+                          <li><a href="#">【课程消息】邢卫老师教学心得</a></li>
+                          <li><a href="#">【课程消息】邢卫老师教学心得</a></li>
+                          <br>
+                          <br>
+                          <li><a class="btn btn-primary" href="#" role="button">更多 &raquo;</a></li>
+                      </ol>
+                    </div>
+            </div>
+        </div><!--end of 教师心得列表-->
+        
+        <div class="col-md-8">
+           <div class="panel panel-default shade">
+             <br>
+             <p>
+                 <h4 class="text-center">【最新消息】张校长访问xxx心得</h4>
+             </p>
+             <p class="time text-center">
+                 时间：2016/11/14 &nbsp 地点：xxxx &nbsp 编辑：xxx
+             </p>
+             <p style="margin-left: 40px; margin-right: 40px;">&nbsp &nbsp 本课程的主要任务是在软件工程整体知识的基础上，深入学习并实践软件需求获取与管理的原理、方法和过程，学习并掌握使用UML工具对软件需求进行分析、表达与系统设计。课程内容包括两部分：一是需求获取和维护的过程和方法；二是UML概念、方法和工具。课程配合案例性实践环节进行教学。
+             </p>
+           </div>
+        </div><!--end of 具体消息信息-->
+
+
+    </div>
+</div>
+

@@ -1,0 +1,37 @@
+<div>
+    <div class="container-fluid teacher">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0">
+                <div class="jumbotron">
+                    <h1>欢迎登陆页面！</h1>
+                    <p>这是一个超大屏幕（Jumbotron）的实例。</p>
+                    <p><a class="btn btn-primary btn-lg" role="button">
+    			    学习更多</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-md-offset-0" ng-controller="t_navigation_controller">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li class="active"><a href="">公告管理</a></li>
+                    <li><a href="" ng-click="judge_href(1)">公告查看</a></li>
+                    <li><a href="" ng-click="judge_href(2)">公告发布</a></li>
+                    <li class="active"><a href="">心得管理</a></li>
+                    <li><a href="" ng-click="judge_href(3)">心得查看</a></li>
+                    <li><a href="" ng-click="judge_href(4)">心得发布</a></li>
+                    <li class="active"><a href="">作业管理</a></li>
+                    <li><a href="" ng-click="judge_href(5)">作业查看</a></li>
+                    <li><a href="" ng-click="judge_href(6)">作业发布</a></li>
+                    <li><a href="" ng-click="judge_href(7)">作业批改</a></li>
+                    <li><a href="" ng-click="judge_href(8)">作业跟踪</a></li>
+                    <li class="active"><a href="">资料管理</a></li>
+                    <li><a href="" ng-click="judge_href(9)">资料上传</a></li>
+                </ul>
+            </div>
+            <div class="col-md-11 col-md-offset-0">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+</div>

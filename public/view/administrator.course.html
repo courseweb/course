@@ -1,0 +1,85 @@
+<div>
+    <div class="updateCourse">
+        <div ng-controller="courseSingleAdmin">
+            <div class="addCourse">
+                <h4 style="">新增课程</h4>
+                <hr />
+                <div class="firstCol">
+                    <label>课程名称</label>
+                    <input type="text" class="form-control" ng-model="addedCourse.subject" placeholder="请输入课程名称">
+                    <label>学分</label>
+                    <input type="text" class="form-control" ng-model="addedCourse.credits" placeholder="请输入学分">
+                    <label>课时安排</label>
+                    <input type="text" class="form-control" ng-model="addedCourse.teach_hours" placeholder="请输入课时安排">
+                    <label>教材</label>
+                    <input type="text" class="form-control" ng-model="addedCourse.textbook" placeholder="请输入教材">
+                    <label>教学背景</label>
+                    <input type="text" class="form-control" ng-model="addedCourse.background" placeholder="请输入背景">
+                </div>
+                <div class="secondCol">
+                  <label>考核方式</label>
+                  <input type="text" class="form-control" ng-model="addedCourse.assess" placeholder="请输入考核方式">
+                  <label>预修课程</label>
+                  <input type="text" class="form-control" ng-model="addedCourse.prerequ" placeholder="请输入预修课程">
+
+                  <label>教学计划</label>
+                  <textarea  rows="10" class="form-control" ng-model="addedCourse.outline" placeholder="请输入教学计划"></textarea>
+
+                </div>
+                <div class="thirdCol">
+                  <div class="project">
+                    <label>大作业介绍</label>
+                    <textarea  rows="8" class="form-control" ng-model="addedCourse.project" placeholder="请输入大作业介绍"></textarea>
+                  </div>
+                  <div class="addCourseTip">
+                    <div ng-show="addCourse.successTip">
+                      <div class="alert alert-success alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功添加课程！
+                      </div>
+                    </div>
+
+                    <div ng-show="addCourse.errorTip">
+                      <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 添加课程失败，请重试！
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-lg btn-block" ng-click="addCourseInfo();" ng-disabled="">添加</button>
+
+                  </div>
+                </div>
+            </div>
+
+            <div class="deleteCourse">
+                <h4 style="">删除课程</h4>
+                <hr />
+                <div class="firstRow">
+                  <div class="id_label">
+                    <label>输入课程名</label>
+                  </div>
+                  <div class="error">
+                    <div ng-show="deleteCourse.successTip">
+                        <div class="alert alert-success alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除成功!
+                        </div>
+                    </div>
+
+                    <div ng-show="deleteCourse.errorTip">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除失败，请重试！
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="secondRow">
+                  <div class="id">
+                    <input type="text" class="form-control" ng-model="deletedCourse.id" placeholder="请输入课程名">
+                  </div>
+                  <div class="submit">
+                      <button class="btn btn-default btn-block" ng-click="deleteCourseInfo()" ng-disabled="(!deleteCourse.id)">删除</button>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

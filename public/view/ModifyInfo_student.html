@@ -1,0 +1,151 @@
+<script type="text/javascript">
+        $(document).ready(function(){
+            $("#myNav").affix({
+                offset: { 
+                    top: 150 
+                }
+            });
+        });
+</script>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<br>
+<br>
+<!-- 面板布局 -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="jumbotron">
+
+              <div class="row">
+                <div class="col-md-3 col-xs-4 sidebar" id="myScrollspy">
+                    <ul class="nav nav-tabs nav-stacked" id="myNav">
+                        <li class="active"><a href="/#section-1">基本信息</a></li>
+                        <li><a href="/#section-2">修改密码</a></li>
+                        <li><a href="/#section-3">修改密保问题</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-7 col-xs-7">
+                    <h4 id="section-1" style="font-size:25px;"><span class="fa fa-magic"></span>基本资料</h4>
+                    <div class="row">
+                       <div class="col-md-2 col-md-offset-0">
+                           <img src="images/stu_wyf.png" width="160" height="160" style="margin-bottom:30px"/>
+                           <p><button class="btn btn-link">&nbsp &nbsp &nbsp &nbsp &nbsp 修改头像</button></p>
+                           <p><button class="btn btn-link">&nbsp &nbsp &nbsp &nbsp &nbsp 修改一句话描述自己</button></p>
+                       </div>
+                       <div class="col-md-1"></div>
+                       <div class="col-md-6 col-md-offset-1" style="margin-left:50px;">
+                           <p style="font-weight:bold;margin-top: 10px;">&nbsp &nbsp {{student_info.name}}同学：你好！</p>
+                           <p>
+                            <blockquote>
+                                <p style="font-weight:bold;">
+                                    Stay hungry, stay foolish.
+                                </p> 
+                                <small>
+                                    Steven Jobs
+                                </small>
+                            </blockquote>
+                        </p>
+                       </div>
+                    </div>
+
+                    <h4 id="section-2" style="font-size:25px;"><span class="fa fa-lock"></span>修改密码</h4>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-9">
+                           <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">原密码</label>
+                                <div class="col-sm-9">
+                                    <input ng-model="edit_stu_info.oldPwd" type="password" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-sm-3 control-label">新密码</label>
+                                <div class="col-sm-9">
+                                <!-- 问题：我这里判断一致性已解决，可是要如何解决传输给后台的问题？ -->
+                                    <input id="pwd1" ng-model="edit_stu_info.newPwd" type="password" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-sm-3 control-label">再次输入</label>
+                                <div class="col-sm-9">
+                                    <input id="pwd2" type="password" class="form-control" placeholder="">
+                                </div>
+                                <span id="warning"></span>  
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-6 col-sm-10">
+                                    <button onkeypress="check_pwd();" ng-click="editStuCode()" type="submit" class="btn btn-primary">提交</button>
+                                    <font ng-class="{true:'success',false:'failure'}[className2]">&nbsp {{edit_stu_info.return_of_modify2}}</font>
+                                </div>
+                            </div>
+                           </form>
+                        </div>
+                    </div><!--end of row-->
+
+                     <script type="text/javascript">
+                        function check_pwd(){  
+                            if(document.getElementById("pwd1").value!=  
+                                document.getElementById("pwd2").value)  
+                            {  
+                                document.getElementById("warning").innerHTML="   两次密码的输入不一致";  
+                            }else{  
+                                document.getElementById("warning").innerHTML="   ";  
+                            }  
+                        }  
+                     </script>
+
+
+
+
+
+
+
+
+
+                    <h4 id="section-3" style="font-size:25px;"><span class="fa fa-lock"></span>修改密保问题</h4>
+                    <div class="row">
+                        <div class="col-md-0"></div>
+                        <div class="col-md-10">
+                           <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">新密保问题</label>
+                                <div class="col-sm-8">
+                                    <!-- 输入新密保问题传到后台 -->
+                                    <input ng-model="edit_stu_info.new_quest" type="text" class="form-control" placeholder="{{edit_stu_info.old_quest}}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">新密保答案</label>
+                                <div class="col-sm-8">
+                                    <input ng-model="edit_stu_info.new_ans" type="text" class="form-control" placeholder="{{edit_stu_info.old_ans}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6"></div>
+                                    <div class="col-sm-offset-6 col-sm-10">
+                                        <button ng-click="editStuInfo()" type="submit" class="btn btn-primary">提交</button>
+
+                                        <font ng-class="{true:'success',false:'failure'}[className]">&nbsp {{edit_stu_info.return_of_modify}}</font>
+
+                                    </div>
+                                </div>
+                            </div>
+                           </form>
+                        </div>
+                    </div><!--end of row-->
+                </div>
+              </div>
+
+            </div><!-- end of jumbotron-->
+        </div>
+
+    </div>
+</div>
+
+
+

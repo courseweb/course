@@ -1,0 +1,84 @@
+<div ng-controller="t_check_info_controller">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">公告查看</h3>
+    </div>
+  </div>
+
+  <div class="panel-group" ng-repeat="i in noticeInstance">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-0">
+              <a data-toggle="collapse" data-parent="#accordion"
+                 href="#{{i.notice_id}}" ng-click="showNoticeContent(i.notice_id)">
+                <row>
+                  <span>标题：{{i.notice_title}} &nbsp 发布日期：{{i.release_time}}</span>
+                </row>
+              </a>
+            </div>
+            <div class="col-md-1 col-md-offset-0">
+              <a href="#" ng-click="showReviseView(i.notice_id)">
+                 <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span>修改</button>
+              </a>
+            </div>
+            <div class="col-md-1 col-md-offset-0">
+              <button type="button" class="btn btn-danger" ng-click="submitDeleteNotice(i.notice_id)"><span class="glyphicon glyphicon-remove"></span>删除</button>
+            </div>
+        </div>
+        </h4>
+      </div>
+      <div id="{{i.notice_id}}" class="panel" ng-hide="hideContent[{{i.notice_id}}]">
+        <div class="panel-body">
+          <span ng-bind="i.content"></span>
+        </div>
+      </div>
+      <div id="{{i.notice_title}}" class="panel" ng-hide="hideRevise[{{i.notice_id}}]">
+        <div class="panel-body">
+          <row>
+            <div class="col-md-1 col-md-offset-0">
+              <span>标题</span>
+            </div>
+            <div class="col-md-11 col-md-offset-0">
+              <input type="text" class="form-control" placeholder="{{i.notice_title}}" ng-model="i.notice_title">
+            </div>
+          </row>
+          <br/>
+          <br/>
+          <row>
+            <div class="col-md-1 col-md-offset-0">
+              <span>内容</span>
+            </div>
+            <div class="col-md-11 col-md-offset-0">
+              <textarea class="form-control" rows="6" placeholder="{{i.content}}" ng-model="i.content"></textarea>
+            </div>
+          </row>
+          <row>
+            <span>&nbsp</span>
+          </row>
+          <row>
+            <div class="col-md-1 col-md-offset-11">
+              <button type="button" class="btn btn-primary" ng-click="submitReviseNotice(i.notice_id,i.notice_title,i.content)"><span class="glyphicon glyphicon-ok"></span>提交</button>
+            </div>
+          </row>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+      <div class="col-md-2 col-md-offset-10">
+        <ul class="pagination">
+      	<li><a href="#" ng-click="showPageBefore()">&laquo;</a></li>
+      	<li><a href="#" ng-click="showPage(1)">1</a></li>
+      	<li><a href="#" ng-click="showPage(2)">2</a></li>
+      	<li><a href="#" ng-click="showPage(3)">3</a></li>
+      	<li><a href="#" ng-click="showPage(4)">4</a></li>
+      	<li><a href="#" ng-click="showPage(5)">5</a></li>
+      	<li><a href="#" ng-click="showPageNext()">&raquo;</a></li>
+        </ul>
+      </div>
+  </div>
+
+</div>

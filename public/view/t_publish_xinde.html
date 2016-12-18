@@ -1,0 +1,41 @@
+<div ng-app="courseApp" ng-controller="t_publish_xinde_controller">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">心得发布</h3>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">新心得</h3>
+    </div>
+    <div class="panel-body">
+      <row>
+        <div class="col-md-1 col-md-offset-0">
+          <span>文章名</span>
+        </div>
+        <div class="col-md-11 col-md-offset-0">
+          <input type="text" class="form-control" ng-model="publish_xinde_title">
+        </div>
+      </row>
+      <br>
+      <br>
+      <row>
+        <div class="col-md-1 col-md-offset-0">
+          <span>内容</span>
+        </div>
+        <div class="col-md-11 col-md-offset-0">
+          <textarea class="form-control" rows="6" ng-model="publish_xinde_content"></textarea>
+        </div>
+      </row>
+      <row>
+        <span>&nbsp</span>
+      </row>
+      <row>
+        <div class="col-md-1 col-md-offset-11">
+          <button type="button" class="btn btn-primary" ng-click="submitPublishNotice(publish_xinde_title,publish_xinde_content)"><span class="glyphicon glyphicon-ok"></span>发布</button>
+        </div>
+      </row>
+    </div>
+  </div>
+</div>

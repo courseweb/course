@@ -1,0 +1,220 @@
+<div ng-app="courseApp" ng-controller="t_publish_homework_controller">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">作业发布</h3>
+    </div>
+  </div>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">新作业</h3>
+      </div>
+      <div class="panel" ng-hide="chooseHomeworkPanel">
+        <div class="panel-body">
+          <br/>
+          <br/>
+          <row>
+            <div class="col-md-2 col-md-offset-4">
+              <h4>请选择发布作业的次数：</h4>
+            </div>
+            <div class="col-md-2 col-md-offset-0">
+                <select class="form-control" id="chooseHomeworkTime">
+                  <option value=1>第一次</option>
+                  <option value=2>第二次</option>
+                  <option value=3>第三次</option>
+                  <option value=4>第四次</option>
+                </select>
+            </div>
+          </row>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <row>
+            <div class="col-md-2 col-md-offset-4">
+              <h4>请选择作业截止日期：</h4>
+            </div>
+            <div class="col-md-2 col-md-offset-0">
+                <input type="date" ng-model="a.datepicker"/>
+            </div>
+          </row>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <row>
+            <div class="col-md-2 col-md-offset-7">
+              <button type="button" class="btn btn-primary" ng-click="nextStep()"><span class="glyphicon glyphicon-hand-right"></span> &nbsp 下一步</button>
+            </div>
+          </row>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-body">
+          <br/>
+          <br/>
+          <br/>
+          <row ng-hide="writeHomeworkPanel">
+            <div class="col-md-2 col-md-offset-4">
+              <h4>请选择发布作业的题型：</h4>
+            </div>
+            <div class="col-md-2 col-md-offset-0">
+                <select class="form-control" ng-model="question" id="chooseQuestionType" ng-change="showQuestion()">
+                  <option value="1">选择题</option>
+                  <option value="2">填空题</option>
+                </select>
+            </div>
+          </row>
+          <br/>
+          <br/>
+          <br/>
+          <div ng-hide="fillInQuestionPanel">
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>请输入分值：</h4>
+              </div>
+              <div class="col-md-2 col-md-offset-0">
+                <input type="text" class="form-control" ng-model="fillInScore">
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>请输入题目：</h4>
+              </div>
+              <div class="col-md-6 col-md-offset-0">
+                <textarea class="form-control" rows="4" ng-model="fillInQuestion"></textarea>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>请输入答案：</h4>
+              </div>
+              <div class="col-md-6 col-md-offset-0">
+                <textarea class="form-control" rows="5" ng-model="fillInAnswer"></textarea>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-1 col-md-offset-6">
+                <button type="button" class="btn btn-primary" ng-click="beforeFillInQuestion(fillInScore,fillInQuestion,fillInAnswer)"><span class="glyphicon glyphicon-hand-left"></span> &nbsp 上一题</button>
+              </div>
+              <div class="col-md-1 col-md-offset-0">
+                <button type="button" class="btn btn-primary" ng-click="nextFillInQuestion(fillInScore,fillInQuestion,fillInAnswer)"><span class="glyphicon glyphicon-hand-right"></span> &nbsp 下一题</button>
+              </div>
+              <div class="col-md-1 col-md-offset-1">
+                <button type="button" class="btn btn-primary" ng-click="uploadFillInQuestion(fillInScore,fillInQuestion,fillInAnswer)"><span class="glyphicon glyphicon-ok"></span>提交</button>
+              </div>
+            </row>
+          </div>
+          <div ng-hide="ChooseQuestionPanel">
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>请输入分值：</h4>
+              </div>
+              <div class="col-md-2 col-md-offset-0">
+                <input type="text" class="form-control" ng-model="chooseScore">
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>请输入题目：</h4>
+              </div>
+              <div class="col-md-6 col-md-offset-0">
+                <textarea class="form-control" rows="4" ng-model="chooseQuestion"></textarea>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>A：</h4>
+              </div>
+              <div class="col-md-6 col-md-offset-0">
+                <textarea class="form-control" rows="1" ng-model="chooseAnswerA"></textarea>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>B：</h4>
+              </div>
+              <div class="col-md-6 col-md-offset-0">
+                <textarea class="form-control" rows="1" ng-model="chooseAnswerB"></textarea>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>C：</h4>
+              </div>
+              <div class="col-md-6 col-md-offset-0">
+                <textarea class="form-control" rows="1" ng-model="chooseAnswerC"></textarea>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>D：</h4>
+              </div>
+              <div class="col-md-6 col-md-offset-0">
+                <textarea class="form-control" rows="1" ng-model="chooseAnswerD"></textarea>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-2 col-md-offset-2">
+                <h4>请选择正确答案：</h4>
+              </div>
+              <div class="col-md-2 col-md-offset-0">
+                  <select class="form-control" id="chooseHomeworkCorrectAnswer">
+                    <option value=1>A</option>
+                    <option value=2>B</option>
+                    <option value=3>C</option>
+                    <option value=4>D</option>
+                  </select>
+              </div>
+            </row>
+            <br/>
+            <br/>
+            <br/>
+            <row>
+              <div class="col-md-1 col-md-offset-6">
+                <button type="button" class="btn btn-primary" ng-click="beforeChooseQuestion(chooseScore,chooseQuestion,chooseAnswerA,chooseAnswerB,chooseAnswerC,chooseAnswerD)"><span class="glyphicon glyphicon-hand-left"></span> &nbsp 上一题</button>
+              </div>
+              <div class="col-md-1 col-md-offset-0">
+                <button type="button" class="btn btn-primary" ng-click="nextChooseQuestion(chooseScore,chooseQuestion,chooseAnswerA,chooseAnswerB,chooseAnswerC,chooseAnswerD)"><span class="glyphicon glyphicon-hand-right"></span> &nbsp 下一题</button>
+              </div>
+              <div class="col-md-1 col-md-offset-1">
+                <button type="button" class="btn btn-primary" ng-click="uploadChooseQuestion(chooseScore,chooseQuestion,chooseAnswerA,chooseAnswerB,chooseAnswerC,chooseAnswerD)"><span class="glyphicon glyphicon-ok"></span>提交</button>
+              </div>
+            </row>
+          </div>
+          <br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

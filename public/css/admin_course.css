@@ -1,0 +1,100 @@
+.updateCourse .addCourse h4 {
+    color: rgb(53, 1, 71);
+}
+
+.updateCourse .addCourse {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border: 2px rgb(175, 175, 175);
+  box-shadow: 5px 5px 2px rgb(53, 1, 71);
+  height: auto;
+  width: 97%;
+  float: left;
+}
+
+.updateCourse .addCourse .firstCol {
+  margin-left: -20px;
+  margin-top: -20px;
+  padding: 20px;
+  width: 33%;
+  float: left;
+}
+
+.updateCourse .addCourse .secondCol {
+  margin-top: -20px;
+  padding: 20px;
+  width: 33%;
+  float: left;
+}
+
+.updateCourse .addCourse .thirdCol {
+  margin-top: -20px;
+  padding: 20px;
+  width: 33%;
+  float: left;
+}
+
+.updateCourse .addCourse .thirdCol .addCourseTip {
+    height: 22%;
+    margin-bottom: auto;
+}
+
+.updateCourse .addCourse .thirdCol .project {
+    height: 40%;
+    margin-bottom: 10%;
+}
+
+.updateCourse {
+    padding: 30px;
+}
+
+.updateCourse .deleteCourse {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border: 2px rgb(175, 175, 175);
+  box-shadow: 5px 5px 2px rgb(53, 1, 71);
+  height: auto;
+  width: 97%;
+  float: left;
+  margin-top: 30px;
+}
+
+.updateCourse .deleteCourse .firstRow{
+  padding: 20px;
+  height: 10%;
+  width: 100%;
+  float: left;
+}
+.updateCourse .deleteCourse .firstRow .id_label {
+  margin-left: -20px;
+  width: 45%;
+  height: auto;
+  float: left;
+}
+
+.updateCourse .deleteCourse .firstRow .error{
+  width: 45%;
+  height: auto;
+  float: left;
+  margin-left: 8%;
+}
+
+.updateCourse .deleteCourse .secondRow{
+  padding: 20px;
+  width: 100%;
+  height: 10%;
+  float: left;
+}
+.updateCourse .deleteCourse .secondRow .id {
+  margin-left: -20px;
+  width: 45%;
+  height: auto;
+  float: left;
+}
+
+.updateCourse .deleteCourse .secondRow .submit{
+  width: 45%;
+  height: auto;
+  float: left;
+  margin-left: 8%;
+}

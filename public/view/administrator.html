@@ -1,0 +1,73 @@
+<div class="adminpage">
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside ng-controller="sidebar">
+        <div id="admin_sidebar">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu">
+                <p class="centered"><img src="images/stu1.png" class="img-circle" width="60"></p>
+                <h5 class="centered">萌萌</h5>
+
+                <!-- <li class="mt">
+                    <a href="javascript:;" data-toggle="collapse" data-target="#showStuAdmin" aria-expanded="true" aria-controls="showStuAdmin">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span>管理学生信息</span>
+                    </a>
+                    <ul class="sub collapse" id="showStuAdmin">
+                        <li><a href="javascript:;" ng-click="toggleGroup(0)"><span class="glyphicon glyphicon-star"></span>批量管理</a></li>
+                        <li><a href="javascript:;" ng-click="toggleGroup(1)"><span class="glyphicon glyphicon-star"></span>单独管理</a></li>
+                    </ul>
+                </li> -->
+                <li class="mt" ng-click="toggleGroup(0)">
+                    <a href="javascript:;">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span>管理学生信息</span>
+                    </a>
+                </li>
+
+                <li class="mt" ng-click="toggleGroup(1)">
+                    <a href="javascript:;">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span>管理教师信息</span>
+                    </a>
+                </li>
+
+                <li class="mt" ng-click="toggleGroup(2)">
+                    <a href="javascript:;">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span>管理课程信息</span>
+                    </a>
+                </li>
+
+                <li class="mt" ng-click="toggleGroup(3)">
+                    <a href="javascript:;">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span>管理班级信息</span>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section class="admin_main_content">
+        <section class="wrapper">
+            <!-- <h2 ng-controller="title"><span class="glyphicon glyphicon-chevron-right" style="font-size:30px"></span>{{mainTitle}}</h2> -->
+
+            <!-- different main content -->
+            <section>
+              <ui-view></ui-view>
+            </section>
+        </section>
+    </section>
+    <!--main content end-->
+
+</div>
