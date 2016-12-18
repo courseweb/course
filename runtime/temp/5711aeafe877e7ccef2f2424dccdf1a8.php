@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\xampp\htdocs\course\public/../application/index\view\index\index.html";i:1482055752;}*/ ?>
 <html>
 
 <head>

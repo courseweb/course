@@ -1,7 +1,4 @@
-var app =  angular.module('courseApp', ['ui.router']);
 app.config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.when("", "administrator");
-
         $stateProvider
             .state("administrator", {
                 url: "/administrator",
