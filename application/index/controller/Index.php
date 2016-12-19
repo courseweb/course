@@ -3,6 +3,8 @@
 namespace app\index\controller;
 
 use think\Controller;
+use think\Cache;
+
 use app\index\model\Exampaper;
 use app\index\model\Notice;
 use app\index\model\Slides;
@@ -14,6 +16,7 @@ class Index extends Controller
 {
     public function index()
     {
+        Cache::clear();
         return $this->fetch();
     }
 
