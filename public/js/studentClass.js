@@ -1,55 +1,60 @@
-app.controller("classController", ['$scope', '$rootScope', function($scope, $rootScope) {
+app.controller("classController", ['$scope', '$rootScope', '$state', function($scope, $rootScope, $state) {
 
-    $rootScope.lesson = [{
-        filename: '汪汪汪',
-        n_th: 1
-    }, {
-        filename: '咩咩咩',
-        n_th: 2
-    }, {
-        filename: '喵喵喵',
-        n_th: 3
-    }, {
-        filename: '咩咩咩',
-        n_th: '都是你大爷'
-    }, {
-        filename: '啾啾啾',
-        n_th: '你大舅'
-    }, {
-        filename: '啊啊啊',
-        n_th: '你二舅'
-    }, {
-        filename: '嗷嗷嗷',
-        n_th: '你三舅'
-    }, {
-        filename: '嘭嘭嘭',
-        n_th: '都是你舅'
-    }, {
-        filename: '编不下去了我的哥',
-        n_th: '再来一个'
-    }, {
-        filename: '好吧我还是可以的',
-        n_th: '那你很棒哦：）'
-    }, ];
+    // $rootScope.lesson = [{
+    //     filename: '汪汪汪',
+    //     n_th: 1
+    // }, {
+    //     filename: '咩咩咩',
+    //     n_th: 2
+    // }, {
+    //     filename: '喵喵喵',
+    //     n_th: 3
+    // }, {
+    //     filename: '咩咩咩',
+    //     n_th: '都是你大爷'
+    // }, {
+    //     filename: '啾啾啾',
+    //     n_th: '你大舅'
+    // }, {
+    //     filename: '啊啊啊',
+    //     n_th: '你二舅'
+    // }, {
+    //     filename: '嗷嗷嗷',
+    //     n_th: '你三舅'
+    // }, {
+    //     filename: '嘭嘭嘭',
+    //     n_th: '都是你舅'
+    // }, {
+    //     filename: '编不下去了我的哥',
+    //     n_th: '再来一个'
+    // }, {
+    //     filename: '好吧我还是可以的',
+    //     n_th: '那你很棒哦：）'
+    // }, ];
 
-    $rootScope.theoryList = [{
-        theory_duedate: '2016-12-14',
-        theory_tip: '该作业已过期限'
-    }, {
-        theory_duedate: '2016-12-15',
-        theory_tip: '请尽快完成'
-    }, {
-        theory_duedate: '2016-12-16',
-        theory_tip: '请尽快完成'
-    }];
+    $rootScope.lesson = [];
 
-    // $rootScope.theory_commentList=[
-    // {given_score:'1',total_score:'5',remark:'辣鸡'},
-    // {given_score:'2',total_score:'5',remark:'我不想跟你说话'},
-    // {given_score:'3',total_score:'5',remark:'你一点都不酷'},
-    // {given_score:'4',total_score:'5',remark:'不错哟'},
-    // {given_score:'5',total_score:'5',remark:'你都5.0了能不能别学了'}
-    // ];
+    // $rootScope.theoryList = [{
+    //     theory_duedate: '2016-12-14',
+    //     theory_tip: '该作业已过期限'
+    // }, {
+    //     theory_duedate: '2016-12-15',
+    //     theory_tip: '请尽快完成'
+    // }, {
+    //     theory_duedate: '2016-12-16',
+    //     theory_tip: '请尽快完成'
+    // }];
+
+    $rootScope.theoryList = [];
+
+    $rootScope.theory_commentList=[
+    {given_score:'1',total_score:'5',remark:'辣鸡'},
+    {given_score:'2',total_score:'5',remark:'我不想跟你说话'},
+    {given_score:'3',total_score:'5',remark:'你一点都不酷'},
+    {given_score:'4',total_score:'5',remark:'不错哟'},
+    {given_score:'5',total_score:'5',remark:'你都5.0了能不能别学了'}
+    ];
+    
 
     $rootScope.experiment_commentList = [{
         given_score: '1',
@@ -92,15 +97,7 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
     }];
 
     $rootScope.course_name = "软件需求工程";
-    $rootScope.course_introduce = "谁上谁知道balabalabalabalabalabalabalabalabala,我上我知道balabalabalabalabalabalabalabalabala，你上你知道balabalabalabalabalabalabalabalabala";
-
-    if (window.XMLHttpRequest) { //XHR创建对象
-        // IE7+, Firefox, Chrome, Opera, Safari 代码
-        $rootScope.xmlhttp = new XMLHttpRequest();
-    } else {
-        // IE6, IE5 代码
-        $rootScope.xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
+    $rootScope.course_introduce = "谁上谁知道";
 
     $rootScope.getClass = function() { //课程信息
         $.ajax({
@@ -130,13 +127,13 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
                 $rootScope.$apply(function() {
                     $rootScope.lesson = result;
                 });
-                console.log(result);
                 console.log($rootScope.lesson);
             },
             error: function() {
                 alert('获取数据失败！(Err:P-1)');
             },
         });
+        $state.go("student_course.lesson");
     };
     $rootScope.getLesson();
 
@@ -155,8 +152,8 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
                 // alert('获取数据失败！(Err:P-1)');
             },
         });
+        $state.go("student_course.theory");
     };
-    $rootScope.getTheory();
 
     $rootScope.getExperiment = function() {
         $.ajax({
@@ -173,8 +170,8 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
                 // alert('获取数据失败！(Err:P-1)');
             },
         });
+        $state.go("student_course.experiment");
     };
-    $rootScope.getExperiment();
 
     $rootScope.getTheoryComment = function() { //课时信息
         $.ajax({
@@ -193,8 +190,8 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
                 alert(component);
             },
         });
+        $state.go("student_course.theory_comment");
     };
-    $rootScope.getTheoryComment();
 
     $rootScope.getExperimentComment = function() { //课时信息
         $.ajax({
@@ -211,17 +208,19 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
                 // alert('获取数据失败！(Err:P-1)');
             },
         });
+        $state.go("student_course.experiment_comment");
     };
-    $rootScope.getExperimentComment();
 
     $rootScope.downloadLessonMaterial = function(filename) { //下载文件名
-        var FormData = new FormData();
-        FormData.append("filename", filename);
+        var fd = new FormData();
+        fd.append("filename", filename);
         $.ajax({
             type: "post",
             url: "/index.php/index/Index/downloadSlides",
-            data: FormData,
-            dataType: "json",
+            data: fd,
+            cache: false,
+            contentType: false,
+            processData: false,
             error: function() {
                 // alert('获取数据失败！(Err:P-1)');
             },
@@ -231,7 +230,6 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
             }
         });
     };
-    $rootScope.downloadLessonMaterial();
 
     $rootScope.downloadExperimentTemplate = function(experimentID) { //下载模板ID
         $.ajax({
@@ -250,7 +248,6 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
             }
         });
     };
-    $rootScope.downloadExperimentTemplate();
 
     $rootScope.uploadReport = function(experimentID) { //下载模板ID
         $.ajax({
@@ -269,7 +266,6 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
             }
         });
     };
-    $rootScope.uploadReport();
 
     $rootScope.watchVedio = function(filename) { //由课程名得到播放链接
         $.ajax({
@@ -287,7 +283,6 @@ app.controller("classController", ['$scope', '$rootScope', function($scope, $roo
             }
         });
     };
-    $rootScope.watchVedio();
 
     //分页---------------------------------------------------
     $scope.pageSize = 10;

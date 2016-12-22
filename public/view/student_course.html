@@ -33,18 +33,18 @@
 
         </div>
         <div class="container" style="position:absolute; top:6px; left:250px;">
-            <button type="button" class="btn btn-default" ui-sref="lesson"><a href="" ng-click="getLesson()">章节</a></button>
+            <button type="button" class="btn btn-default" ui-sref="student_course.lesson"><a href="" ng-click="getLesson()">章节</a></button>
 
             <div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">作业
                 <span class="caret"></span></button>
                 <ul class="dropdown-menu">
                     <li role="presentation">
-                        <span ui-sref="theory"><a role="menuitem" tabindex="-1" href="" ng-click="getTheory()">理论</a></span>
+                        <span ui-sref="student_course.theory"><a role="menuitem" tabindex="-1" href="" ng-click="getTheory()">理论</a></span>
                     </li>
                     <li role="presentation" class="divider"></li>
                     <li role="presentation">
-                        <span ui-sref="experiment"><a role="menuitem" tabindex="-1" href="" ng-click="getExperiment()">实验</a></span>
+                        <span ui-sref="student_course.experiment"><a role="menuitem" tabindex="-1" href="" ng-click="getExperiment()">实验</a></span>
                     </li>
                 </ul>
             </div>
@@ -54,11 +54,11 @@
                 <span class="caret"></span></button>
                 <ul class="dropdown-menu">
                     <li role="presentation">
-                        <span ui-sref="theory_comment"><a role="menuitem" tabindex="-1" href="" ng-click="getTheoryComment()">理论反馈</a></span>
+                        <span ui-sref="student_course.theory_comment"><a role="menuitem" tabindex="-1" href="" ng-click="getTheoryComment()">理论反馈</a></span>
                     </li>
                     <li role="presentation" class="divider"></li>
                     <li role="presentation">
-                        <span ui-sref="experiment_comment"><a role="menuitem" tabindex="-1" href="" ng-click="getExperimentComment()">实验反馈</a></span>
+                        <span ui-sref="student_course.experiment_comment"><a role="menuitem" tabindex="-1" href="" ng-click="getExperimentComment()">实验反馈</a></span>
                     </li>
                 </ul>
             </div>
