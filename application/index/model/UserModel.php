@@ -209,7 +209,7 @@ class UserModel extends Model
                     for ($i = 0; $i < count($result); $i++) {
                         $arr[$i] = $result[$i]['subject'].'-'.$result[$i]['section_id'].'班';
                     }
-                    $result=array('id'=>$id,'name'=>$result[0]['t_name'],'classnames'=>$arr,'department'=>$result[0]['department'],'job_title'=>$result[0]['job_title'],'tel'=>$result[0]['tel'],'email'=>$result[0]['email'],'achievement'=>$result[0]['achievement'],'style'=>$result[0]['style'],'publication'=>$result[0]['publication'],'reputation'=>$result[0]['reputation'],);
+                    $result=array('id'=>$id,'name'=>$result[0]['t_name'],'classnames'=>$arr,'department'=>$result[0]['department'],'job_title'=>$result[0]['job_title'],'tel'=>$result[0]['tel'],'email'=>$result[0]['email'],'achievement'=>$result[0]['achievement'],'style'=>$result[0]['style'],'publication'=>$result[0]['publication'],'reputation'=>$result[0]['reputation']);
                 }
             }else{
                 $result='false_type';

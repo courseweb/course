@@ -560,6 +560,33 @@ class Index extends Controller
         echo $result;
     }
 
+    public function setHomeworkBlankComment(){
+        $json = $_POST['onlineHomeworkComment'];
+
+        $homework=new \app\index\model\HomeworkModel();
+        $result = $homework->setComment($json);
+        
+        echo $result;
+    }
+
+    public function showExperimentAns(){
+        $n_th=$_POST['reportHomeworkTime'];
+
+        $experiment=new \app\index\model\ExperimentModel();
+        $result = $experiment->showAns($n_th);
+        
+        echo $result;
+    }
+
+    public function setExperimentComment(){
+        $json = $_POST['reportHomeworkComment'];
+
+        $experiment=new \app\index\model\ExperimentModel();
+        $result = $experiment->setComment($json);
+        
+        echo $result;
+    }
+
     public function getHomeworkComment(){
         $homework=new \app\index\model\HomeworkModel();
         $result = $homework->getComment();
