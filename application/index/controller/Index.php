@@ -3,7 +3,6 @@
 namespace app\index\controller;
 
 use think\Controller;
-
 use app\index\model\Exampaper;
 use app\index\model\Notice;
 use app\index\model\Slides;
