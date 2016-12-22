@@ -50,21 +50,21 @@ app
         $scope.judge_href = function(condition) {
             alert(condition);
             if (condition == 1) {
-                $state.go('t_check_info');
+                $state.go('showinfo_teacher.t_check_info');
                 $rootScope.getNoticeTitleAndContent("1");
             } else if (condition == 2) {
-                $state.go('t_publish_info');
+                $state.go('showinfo_teacher.t_publish_info');
             } else if (condition == 3) {
-                $state.go('t_check_xinde');
+                $state.go('showinfo_teacher.t_check_xinde');
                 $rootScope.getXindeTitleAndContent("1");
             } else if (condition == 4) {
-                $state.go('t_publish_xinde');
+                $state.go('showinfo_teacher.t_publish_xinde');
             } else if (condition == 6) {
-                $state.go('t_publish_homework');
+                $state.go('showinfo_teacher.t_publish_homework');
             } else if (condition == 7) {
-                $state.go('t_correct_homework');
+                $state.go('showinfo_teacher.t_correct_homework');
             } else if (condition == 9) {
-                $state.go('t_upload_material');
+                $state.go('showinfo_teacher.t_upload_material');
                 $rootScope.downloadReportList();
             }
         };

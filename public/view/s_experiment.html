@@ -1,0 +1,22 @@
+<div style="position:relative; margin-top: 100px; margin-left: 100px;">
+	<form role="form">
+		<div>
+			<label for="experimentID" style="font-size:35px; font-weight:bold;">实验编号:</label>
+			<select class="form-control ex_option" ng-click="getExperiment()">
+				<option class="ex_option" ng-repeat="item in experimentList">实验{{index+1}}</option>
+			</select>
+		</div>
+	</form>
+	<br/>
+	<div class="form-group">
+		<input type="file" id="inputreport">
+		<p class="help-block" style="font-size:15px;">文件最大(20M)</p>
+	</div>
+	<div style="font-size:20px;">
+		<button type="submit" class="btn btn-default" style="width: 100px;" ng-click="uploadReport()">上传</button>
+	</div>
+	<br/>
+	<div style="font-size:20px;">
+		<a ng-click="downloadExperimentTemplate(item.experimentID)">下载本次实验报告模板</a>
+	</div>
+</div>

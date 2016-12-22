@@ -1,15 +1,23 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\xampp\htdocs\course\public/../application/index\view\index\index.html";i:1482055752;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\xampp\htdocs\course\public/../application/index\view\index\index.html";i:1482377417;}*/ ?>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/ShowInfo_stu.css" />
     <link rel="stylesheet" href="css/ModifyInfo_stu.css" />
     <link rel="stylesheet" href="css/t_uploadMaterial.css" />
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/admin_public.css">
+    <link rel="stylesheet" href="css/admin_class.css">
+    <link rel="stylesheet" href="css/admin_course.css">
+    <link rel="stylesheet" href="css/admin_public.css">
+    <link rel="stylesheet" href="css/admin_student.css">
+    <link rel="stylesheet" href="css/admin_teacher.css">
     <style>
         [ng\:cloak],
         [ng-cloak],
@@ -29,7 +37,7 @@
     </style>
     <!-- 这个必须放在这里，要不然登陆的时候的那个等待符号就加载不出来了 -->
     <script src="js/jquery.min.js"></script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
             $("#myNav").affix({
                 offset: {
@@ -408,6 +416,8 @@
     <script src="js/administrator.js"></script>
     <script src="js/teacher_router.js"></script>
     <script src="js/teacher.js"></script>
+    <script src="js/studentClass.js">
+    </script>
 
     <script>
         $(function() {

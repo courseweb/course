@@ -1,0 +1,4811 @@
+[ 2016-12-22T10:50:20+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.184011s][吞吐率：5.43req/s] [内存消耗：1,650.23kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:50:25+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：1,335.77kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:50:25+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,335.78kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:50:45+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,335.77kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:50:45+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,335.79kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:08+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.535031s][吞吐率：1.87req/s] [内存消耗：2,528.29kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryIyLsnBbtD1RUKAZs',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.209011s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.055003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.045003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.046002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:08+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.221012s][吞吐率：4.52req/s] [内存消耗：2,530.77kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqdqXgCWJ6pSKn3oh',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.070004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.046002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:31+08:00 ] ::1 ::1 GET /css/student_class.css
+[ log ] localhost/css/student_class.css [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：1,336.37kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'student_class.css',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:31+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482375020681
+[ log ] localhost/js/bootstrap.min.js?_=1482375020681 [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：1,336.99kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375020681',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:31+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:31+08:00 ] ::1 ::1 GET /js/studentClass.js?_=1482375020684
+[ log ] localhost/js/studentClass.js?_=1482375020684 [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,336.96kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'studentClass.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375020684',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:31+08:00 ] ::1 ::1 GET /images/talk.jpg
+[ log ] localhost/images/talk.jpg [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,336.37kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'talk.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:31+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:52+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.032001s][吞吐率：31.25req/s] [内存消耗：1,650.71kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:52+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:52+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.019002s][吞吐率：52.63req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:57+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.266015s][吞吐率：3.76req/s] [内存消耗：2,528.30kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryf9RFQdkjI6Q4cKmu',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.072004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.046002s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.046003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:52:58+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.257015s][吞吐率：3.89req/s] [内存消耗：2,530.77kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryf7zGX0HGvotilyxB',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.054003s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.054003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:53:08+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:53:09+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,335.92kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:53:09+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:53:23+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.280016s][吞吐率：3.57req/s] [内存消耗：2,534.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryUSOMfxyLB4IRezqH',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '20123456001',
+  'pwd' => '123456',
+  'type' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.066004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `teacher` [ RunTime:0.045003s ]
+[ sql ] [ SQL ] SELECT * FROM `teacher` WHERE  `t_id` = 20123456001 LIMIT 1    [ RunTime:0.046002s ]
+[ sql ] [ SQL ] SELECT * FROM `teacher` WHERE  `t_id` = 20123456001  AND `t_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.047003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:53:23+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.282016s][吞吐率：3.55req/s] [内存消耗：2,535.68kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarylnRhlskfWlLA13bD',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.091006s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `teacher` [ RunTime:0.064003s ]
+[ sql ] [ SQL ] SELECT `a`.`t_id`,`t_name`,`department`,`job_title`,`tel`,`email`,`achievement`,`style`,`publication`,`reputation`,`subject`,`section_id`,`description` FROM `teacher` `a` INNER JOIN `teach` `b` ON `a`.`t_id`=`b`.`t_id` INNER JOIN `class` `d` ON `b`.`class_id`=`d`.`class_id` INNER JOIN `course` `c` ON `d`.`course_id`=`c`.`course_id` WHERE  `a`.`t_id` = '20123456001'  [ RunTime:0.062004s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:16+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.084005s][吞吐率：11.90req/s] [内存消耗：1,829.13kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:16+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:17+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:29+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:29+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:29+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,335.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:36+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.282016s][吞吐率：3.55req/s] [内存消耗：2,534.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7J58verXkMLoR1Fz',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '20123456001',
+  'pwd' => '123456',
+  'type' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `teacher` [ RunTime:0.050003s ]
+[ sql ] [ SQL ] SELECT * FROM `teacher` WHERE  `t_id` = 20123456001 LIMIT 1    [ RunTime:0.049003s ]
+[ sql ] [ SQL ] SELECT * FROM `teacher` WHERE  `t_id` = 20123456001  AND `t_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.045002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:36+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.215012s][吞吐率：4.65req/s] [内存消耗：2,535.68kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8EXZpRBdlPBZvl7v',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.056003s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `teacher` [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT `a`.`t_id`,`t_name`,`department`,`job_title`,`tel`,`email`,`achievement`,`style`,`publication`,`reputation`,`subject`,`section_id`,`description` FROM `teacher` `a` INNER JOIN `teach` `b` ON `a`.`t_id`=`b`.`t_id` INNER JOIN `class` `d` ON `b`.`class_id`=`d`.`class_id` INNER JOIN `course` `c` ON `d`.`course_id`=`c`.`course_id` WHERE  `a`.`t_id` = '20123456001'  [ RunTime:0.038002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:41+08:00 ] ::1 ::1 POST /index.php/index/Index/getAllTitles
+[ log ] localhost/index.php/index/Index/getAllTitles [运行时间：0.312018s][吞吐率：3.20req/s] [内存消耗：2,478.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getAllTitles',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '143',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKeQv2nAj2GBPH8XZ',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'notice_time' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->getAllTitles[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `course_notice` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `course_notice` WHERE  `class_id` = 1 LIMIT 0,5    [ RunTime:0.060004s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:48+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,335.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:48+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:58:58+08:00 ] ::1 ::1 POST /index.php/index/Index/getAllTitles
+[ log ] localhost/index.php/index/Index/getAllTitles [运行时间：0.223013s][吞吐率：4.48req/s] [内存消耗：2,478.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getAllTitles',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '143',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarywArxcZLmfWAwEVYx',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'notice_time' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->getAllTitles[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `course_notice` [ RunTime:0.048003s ]
+[ sql ] [ SQL ] SELECT * FROM `course_notice` WHERE  `class_id` = 1 LIMIT 0,5    [ RunTime:0.049003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:01+08:00 ] ::1 ::1 POST /index.php/index/Index/getAllTitles
+[ log ] localhost/index.php/index/Index/getAllTitles [运行时间：0.208012s][吞吐率：4.81req/s] [内存消耗：2,478.45kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getAllTitles',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '143',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary19UbQXJ5XYDubR0O',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'notice_time' => '6',
+)
+[ info ] [ RUN ] app\index\controller\Index->getAllTitles[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `course_notice` [ RunTime:0.046003s ]
+[ sql ] [ SQL ] SELECT * FROM `course_notice` WHERE  `class_id` = 1 LIMIT 5,5    [ RunTime:0.047002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:07+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.045002s][吞吐率：22.22req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:07+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:07+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,335.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:13+08:00 ] ::1 ::1 POST /index.php/index/Index/getLearningExTitles
+[ log ] localhost/index.php/index/Index/getLearningExTitles [运行时间：0.211012s][吞吐率：4.74req/s] [内存消耗：2,490.24kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getLearningExTitles',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '141',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary0UEu2DS9mlJMOwhk',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'start_num' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->getLearningExTitles[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.066004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `learning_ex` [ RunTime:0.048003s ]
+[ sql ] [ SQL ] SELECT t_name as name,learning_ex_id as id,`title`,release_time as time,`content` FROM `learning_ex` `a` INNER JOIN `teacher` `b` ON `a`.`t_id`=`b`.`t_id` ORDER BY release_time desc LIMIT 0,5   [ RunTime:0.045003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:28+08:00 ] ::1 ::1 GET /uploadMaterialScript.js?_=1482375547534
+[ log ] localhost/uploadMaterialScript.js?_=1482375547534 [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：1,337.01kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadMaterialScript.js',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375547534',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:28+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482375547535
+[ log ] localhost/js/bootstrap.min.js?_=1482375547535 [运行时间：0.019002s][吞吐率：52.63req/s] [内存消耗：1,336.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375547535',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:28+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:28+08:00 ] ::1 ::1 GET /js/teacherController.js?_=1482375547538
+[ log ] localhost/js/teacherController.js?_=1482375547538 [运行时间：0.019002s][吞吐率：52.63req/s] [内存消耗：1,336.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'teacherController.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375547538',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:29+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:43+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:43+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T10:59:44+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:00:12+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:00:12+08:00 ] ::1 ::1 GET /uploadMaterialScript.js?_=1482375547540
+[ log ] localhost/uploadMaterialScript.js?_=1482375547540 [运行时间：0.019002s][吞吐率：52.63req/s] [内存消耗：1,337.01kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadMaterialScript.js',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375547540',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:00:12+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482375547541
+[ log ] localhost/js/bootstrap.min.js?_=1482375547541 [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,336.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375547541',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:00:12+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:00:12+08:00 ] ::1 ::1 GET /js/teacherController.js?_=1482375547544
+[ log ] localhost/js/teacherController.js?_=1482375547544 [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,336.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'teacherController.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375547544',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:36+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:36+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:37+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:37+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:37+08:00 ] ::1 ::1 GET /uploadMaterialScript.js?_=1482375696846
+[ log ] localhost/uploadMaterialScript.js?_=1482375696846 [运行时间：0.019002s][吞吐率：52.63req/s] [内存消耗：1,337.01kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadMaterialScript.js',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696846',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:37+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482375696847
+[ log ] localhost/js/bootstrap.min.js?_=1482375696847 [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：1,336.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696847',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:37+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.024001s][吞吐率：41.67req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:37+08:00 ] ::1 ::1 GET /js/teacherController.js?_=1482375696850
+[ log ] localhost/js/teacherController.js?_=1482375696850 [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,336.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'teacherController.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696850',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:45+08:00 ] ::1 ::1 GET /uploadMaterialScript.js?_=1482375696852
+[ log ] localhost/uploadMaterialScript.js?_=1482375696852 [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,337.01kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadMaterialScript.js',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696852',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:45+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482375696853
+[ log ] localhost/js/bootstrap.min.js?_=1482375696853 [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,336.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696853',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:45+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:45+08:00 ] ::1 ::1 GET /js/teacherController.js?_=1482375696856
+[ log ] localhost/js/teacherController.js?_=1482375696856 [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,336.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'teacherController.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696856',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:01:45+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:04:11+08:00 ] ::1 ::1 GET /uploadMaterialScript.js?_=1482375696858
+[ log ] localhost/uploadMaterialScript.js?_=1482375696858 [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,337.01kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'uploadMaterialScript.js',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696858',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:04:11+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482375696859
+[ log ] localhost/js/bootstrap.min.js?_=1482375696859 [运行时间：0.026001s][吞吐率：38.46req/s] [内存消耗：1,336.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696859',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:04:11+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:04:11+08:00 ] ::1 ::1 GET /js/teacherController.js?_=1482375696862
+[ log ] localhost/js/teacherController.js?_=1482375696862 [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,336.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'teacherController.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375696862',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:04:11+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:05:30+08:00 ] ::1 ::1 POST /index.php/index/Class/getAllReports
+[ log ] localhost/index.php/index/Class/getAllReports [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,337.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Class',
+    2 => 'getAllReports',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryzuF3bue3DwbEUWGS',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:05:33+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：1,650.55kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:05:53+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,650.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:06:12+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.282016s][吞吐率：3.55req/s] [内存消耗：2,525.33kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '331',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryKzFJZl3ySXkTjsM7',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.085005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.060004s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 1123456001 LIMIT 1    [ RunTime:0.056003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:06:20+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.324019s][吞吐率：3.09req/s] [内存消耗：2,527.99kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4oPtI68HAbwSFTb0',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.058003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.056003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:06:20+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.217013s][吞吐率：4.61req/s] [内存消耗：2,530.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarySPYpDyN90rUvuAuH',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.073004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.045003s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.045003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:06:22+08:00 ] ::1 ::1 GET /css/student_class.css
+[ log ] localhost/css/student_class.css [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,336.04kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'student_class.css',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:06:22+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482375954047
+[ log ] localhost/js/bootstrap.min.js?_=1482375954047 [运行时间：0.017001s][吞吐率：58.82req/s] [内存消耗：1,336.73kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375954047',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:06:23+08:00 ] ::1 ::1 GET /js/studentClass.js?_=1482375954050
+[ log ] localhost/js/studentClass.js?_=1482375954050 [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：1,336.63kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'studentClass.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482375954050',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:06:23+08:00 ] ::1 ::1 GET /images/talk.jpg
+[ log ] localhost/images/talk.jpg [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,336.10kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'talk.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:25+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,829.05kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:25+08:00 ] ::1 ::1 GET /css/student_class.css
+[ log ] localhost/css/student_class.css [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,336.04kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'student_class.css',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:25+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482376405486
+[ log ] localhost/js/bootstrap.min.js?_=1482376405486 [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：1,336.73kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482376405486',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:25+08:00 ] ::1 ::1 GET /images/talk.jpg
+[ log ] localhost/images/talk.jpg [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,336.10kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'talk.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:30+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：1,650.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:34+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.190011s][吞吐率：5.26req/s] [内存消耗：2,525.33kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '331',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryChX3DKi6wvAMZgLi',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.054003s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 1123456001 LIMIT 1    [ RunTime:0.036002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:40+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.271015s][吞吐率：3.69req/s] [内存消耗：2,527.99kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryGjmKKsE6QAsgwz3d',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.046003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.045003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.044002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:41+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：1.226070s][吞吐率：0.82req/s] [内存消耗：2,530.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryRaWQWGeh2BIHGiZV',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.064061s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.045002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:43+08:00 ] ::1 ::1 GET /css/student_class.css
+[ log ] localhost/css/student_class.css [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,336.04kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'student_class.css',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:43+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482376410339
+[ log ] localhost/js/bootstrap.min.js?_=1482376410339 [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：1,336.73kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482376410339',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:43+08:00 ] ::1 ::1 GET /images/talk.jpg
+[ log ] localhost/images/talk.jpg [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,336.10kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'talk.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:46+08:00 ] ::1 ::1 GET /css/student_class.css
+[ log ] localhost/css/student_class.css [运行时间：0.024001s][吞吐率：41.66req/s] [内存消耗：1,336.04kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'student_class.css',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:46+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:46+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.024001s][吞吐率：41.66req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:13:46+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:15:36+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,650.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:15:46+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.257015s][吞吐率：3.89req/s] [内存消耗：2,525.33kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '331',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqFI3ychU1PyCLnMl',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.088005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.048003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 1123456001 LIMIT 1    [ RunTime:0.050003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:15:50+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.313018s][吞吐率：3.19req/s] [内存消耗：2,527.99kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarysz7MeT3kkKDDNmJY',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.083005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.056003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.058004s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.057003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:15:50+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.215012s][吞吐率：4.65req/s] [内存消耗：2,530.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjaiv1XAHTABfSOmj',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.070004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.046002s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.046003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:15:53+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:15:53+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:04+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:04+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.026001s][吞吐率：38.46req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:04+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:08+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,650.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:08+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:08+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:08+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：1,335.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:15+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.276016s][吞吐率：3.62req/s] [内存消耗：2,525.64kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '331',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryUWnAvtSupg9prMLx',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.099005s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 1123456001 LIMIT 1    [ RunTime:0.052003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:17+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.283016s][吞吐率：3.53req/s] [内存消耗：2,525.64kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '331',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryjJbIA0NFcsWm0iK8',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.071004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.046003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 1123456001 LIMIT 1    [ RunTime:0.097006s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:22+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.307017s][吞吐率：3.26req/s] [内存消耗：2,528.30kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryrlvBiwAessjCwYOw',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.108006s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.048003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.049003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:23+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.204011s][吞吐率：4.90req/s] [内存消耗：2,530.77kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryY8lkOdIUbmdOvepO',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052003s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.040002s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.035002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:23+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：1.711098s][吞吐率：0.58req/s] [内存消耗：2,528.30kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarycZt9wyAM1HI75p2u',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.465084s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.049003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.053003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:36+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,650.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:45+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.283017s][吞吐率：3.53req/s] [内存消耗：2,527.99kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryV0xZSl23jJKXufsH',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.048002s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.045002s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.055003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:45+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.258015s][吞吐率：3.88req/s] [内存消耗：2,530.44kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyeguaHtNR7FLAfGV',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.082004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.057004s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.064003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:48+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:48+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:22:59+08:00 ] ::1 ::1 GET /css/student_class.css
+[ log ] localhost/css/student_class.css [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,336.04kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'student_class.css',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:23:00+08:00 ] ::1 ::1 GET /js/bootstrap.min.js?_=1482376956779
+[ log ] localhost/js/bootstrap.min.js?_=1482376956779 [运行时间：0.024001s][吞吐率：41.67req/s] [内存消耗：1,336.73kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'bootstrap.min.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1482376956779',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:23:00+08:00 ] ::1 ::1 GET /images/talk.jpg
+[ log ] localhost/images/talk.jpg [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,336.10kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'talk.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:23:02+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.019001s][吞吐率：52.63req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:23:02+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:23:02+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.024001s][吞吐率：41.67req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:24:10+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.023002s][吞吐率：43.47req/s] [内存消耗：1,335.95kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:24:10+08:00 ] ::1 ::1 GET /angular.min.js.map
+[ log ] localhost/angular.min.js.map [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,335.87kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'angular.min.js.map',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:24:10+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:27:54+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.022002s][吞吐率：45.45req/s] [内存消耗：1,650.30kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:27:55+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:27:55+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:27:55+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:28:02+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.256015s][吞吐率：3.91req/s] [内存消耗：2,528.26kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarye3YKN3y6vttNZ6Xn',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '30123456001',
+  'pwd' => '123456',
+  'type' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.073004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.046003s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `admin_id` = 30123456001 LIMIT 1    [ RunTime:0.045002s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `admin_id` = 30123456001  AND `admin_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.046002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:28:02+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.061004s][吞吐率：16.39req/s] [内存消耗：2,335.45kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryhlppnVHJT2B7BGQG',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:28:08+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,650.55kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:28:10+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：1,650.55kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:28:18+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.020002s][吞吐率：50.00req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:28:18+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.021001s][吞吐率：47.62req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:30:18+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.044002s][吞吐率：22.73req/s] [内存消耗：1,829.83kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:30:44+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:30:44+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:30:49+08:00 ] ::1 ::1 GET /
+[ log ] localhost/ [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,650.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\xampp\htdocs\course\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:30:49+08:00 ] ::1 ::1 GET /css/bootstrap.min.css.map
+[ log ] localhost/css/bootstrap.min.css.map [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'css',
+    1 => 'bootstrap.min.css.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:30:50+08:00 ] ::1 ::1 GET /js/angular.min.js.map
+[ log ] localhost/js/angular.min.js.map [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,335.94kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'angular.min.js.map',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:01+08:00 ] ::1 ::1 POST /index.php/index/Index/loginUser
+[ log ] localhost/index.php/index/Index/loginUser [运行时间：0.262015s][吞吐率：3.82req/s] [内存消耗：2,528.30kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'loginUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '332',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryvAUqZg9z8yNqdPUD',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+  'id' => '10123456001',
+  'pwd' => '123456',
+  'type' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginUser[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.067003s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.049003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001 LIMIT 1    [ RunTime:0.049003s ]
+[ sql ] [ SQL ] SELECT * FROM `student` WHERE  `stu_id` = 10123456001  AND `stu_pwd` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1     [ RunTime:0.043003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:01+08:00 ] ::1 ::1 POST /index.php/index/Index/showUserInfo
+[ log ] localhost/index.php/index/Index/showUserInfo [运行时间：0.249014s][吞吐率：4.02req/s] [内存消耗：2,530.77kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'showUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '44',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydNGq80NDc8ZxvVgF',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showUserInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.071004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `student` [ RunTime:0.064003s ]
+[ sql ] [ SQL ] SELECT `a`.`stu_name`,`c`.`section_id`,`d`.`subject`,`f`.`t_name`,`c`.`class_id`,`d`.`description` FROM `student` `a` INNER JOIN `take` `b` ON `a`.`stu_id`=`b`.`stu_id` INNER JOIN `class` `c` ON `b`.`class_id`=`c`.`class_id` INNER JOIN `course` `d` ON `c`.`course_id`=`d`.`course_id` INNER JOIN `teach` `e` ON `c`.`class_id`=`e`.`class_id` INNER JOIN `teacher` `f` ON `e`.`t_id`=`f`.`t_id` WHERE  `a`.`stu_id` = '10123456001'  [ RunTime:0.063003s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:15+08:00 ] ::1 ::1 GET /images/talk.jpg
+[ log ] localhost/images/talk.jpg [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,336.37kb] [文件加载：38]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'talk.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:15+08:00 ] ::1 ::1 GET /index.php/index/Index/getHomeworkInfo
+[ log ] localhost/index.php/index/Index/getHomeworkInfo [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：1,668.93kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getHomeworkInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:15+08:00 ] ::1 ::1 GET /index.php/index/Index/getExperimentComment
+[ log ] localhost/index.php/index/Index/getExperimentComment [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：1,669.05kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getExperimentComment',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:15+08:00 ] ::1 ::1 GET /index.php/index/Index/getHomeworkComment
+[ log ] localhost/index.php/index/Index/getHomeworkComment [运行时间：0.144008s][吞吐率：6.94req/s] [内存消耗：2,293.66kb] [文件加载：48]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getHomeworkComment',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getHomeworkComment[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:15+08:00 ] ::1 ::1 GET /index.php/index/Index/getHomeworkInfo
+[ log ] localhost/index.php/index/Index/getHomeworkInfo [运行时间：0.043002s][吞吐率：23.25req/s] [内存消耗：1,668.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getHomeworkInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:15+08:00 ] ::1 ::1 GET /index.php/index/Index/getCourseInfo
+[ log ] localhost/index.php/index/Index/getCourseInfo [运行时间：0.198011s][吞吐率：5.05req/s] [内存消耗：2,471.73kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getCourseInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getCourseInfo[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.058003s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `course` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `description` FROM `course` WHERE  `course_id` = 12345601 LIMIT 1    [ RunTime:0.034002s ]
+
+---------------------------------------------------------------
+[ 2016-12-22T11:31:15+08:00 ] ::1 ::1 GET /index.php/index/Index/getAllSlides
+[ log ] localhost/index.php/index/Index/getAllSlides [运行时间：0.287016s][吞吐率：3.48req/s] [内存消耗：2,486.89kb] [文件加载：51]
+[ info ] [ LANG ] D:\xampp\htdocs\course\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'getAllSlides',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Bugzilla_login=1; Bugzilla_logincookie=w0QjylnfRg; PHPSESSID=ud76o2c5gaasu51dtbiht06qt3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->getAllSlides[ D:\xampp\htdocs\course\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.068004s ] mysql:dbname=SECourseWebsite;host=115.28.173.183;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slides` [ RunTime:0.046002s ]
+[ sql ] [ SQL ] SELECT `n_th`,`filename` FROM `slides` WHERE  `class_id` = 1   [ RunTime:0.043003s ]
+
+---------------------------------------------------------------

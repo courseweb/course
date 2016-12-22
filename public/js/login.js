@@ -76,8 +76,7 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
                 $scope.return = JSON.parse($rootScope.xmlhttp.responseText).result;
             }
 
-            if ($scope.return === "success") //三个等号表示值和变量类型都相等
-            {
+            if ($scope.return === "success") {//三个等号表示值和变量类型都相等
                 $scope.$apply(function() {
                     $scope.err_pwd = "";
                     $scope.err_username = "";
@@ -85,8 +84,7 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
 
                 $("#myModal").modal("hide");
 
-                if ($scope.user.type === "2") //教师
-                {
+                if ($scope.user.type === "2") { //教师
                     //跳转到教师主界面
                     $state.go('showinfo_teacher');
                     $rootScope.dynamic_bar = "view/profile_login_teacher.html";
@@ -102,8 +100,7 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
                             $scope.teacher_info.email = $scope.return.email;
                         }
                     });
-                } else if ($scope.user.type === "1") //学生
-                {
+                } else if ($scope.user.type === "1"){ //学生
                     //跳转到学生主界面
                     // alert("3123");
                     $state.go('showinfo_student');
@@ -119,8 +116,7 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
                             });
                         }
                     });
-                } else if ($scope.user.type === "3") //管理员
-                {
+                } else if ($scope.user.type === "3") {//管理员
                     //跳转到管理员主界面
                     $state.go('showinfo_admin');
                     $rootScope.dynamic_bar = "view/profile_login_admin.html";
@@ -135,15 +131,11 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
                 } //写函数，取得用户名、信息等
 
             } else if ($scope.return === "false_id") {
-                $scope.$apply(function() {
                     $scope.err_username = "用户名错误";
                     $scope.err_pwd = "";
-                });
             } else if ($scope.return === "false_pwd") {
-                $scope.$apply(function() {
                     $scope.err_pwd = "密码错误";
                     $scope.err_username = "";
-                });
             }
         });
     };

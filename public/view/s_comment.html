@@ -1,0 +1,16 @@
+<div style="height:110px; width:750px; border:1px solid #cccccc; position:relative; margin-top:30px; margin-left: 20px;" 
+	<table style="position:relative; margin-top:30px; margin-left: 20px;">
+		<tr>
+			<th>作业ID</th>
+			<th>获得分数</th>
+			<th>总分</th>
+			<th>评语</th>
+		</tr>
+		<tr ng-repeat="item in commentList">
+			<td>{{$index+1}}</td>
+			<td>{{item.given_score}}</td>
+			<td>{{item.total_score}}</td>
+			<td>{{item.remark}}</td>
+		</tr>
+	</table>
+</div>

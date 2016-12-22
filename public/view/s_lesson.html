@@ -1,0 +1,12 @@
+<table ng-repeat="item in lesson" style="position:relative; margin-top:15px; margin-left: 10px;">
+    <tr >
+        <th style="font-size:20px;">第{{item.n_th}}课时</th>
+        <th style="font-size:20px; color:#1874CD;"><a ng-click="downloadLessonMaterial(item.filename)">{{item.filename}}</a></th>
+    </tr>
+    <tr>
+        <td style="font-size:25px; width:500px;">{{item.filename}}</td>
+        <td >
+            <button  class="btn btn-primary box-shadow2" ng-click="watchVedio(item.lesson_name)" style="margin-left: 150px; font-size:15px;">开始学习</button>
+        </td>
+    </tr>
+</table>

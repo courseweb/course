@@ -1,0 +1,7 @@
+<div  ui-view="" style="height:700px; width:750px; position:relative; margin-top:30px; margin-left: 20px;">
+	<div style="height:110px; width:750px; border:1px solid #cccccc; position:relative; margin-top:30px;" ng-repeat="item in theoryList">
+		    <div style="color:#0099cc" class="theoryItem" ui-sref="theory.theoryitem"><a href="">第{{index+1}}章</a></div>
+		    <div class="theoryItem">本次作业期限为{{item.theory_duedate}}</div>
+		    <div class="theoryItem">{{item.theory_tip}}</div>
+	</div>
+</div>

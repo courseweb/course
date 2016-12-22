@@ -1,0 +1,16 @@
+<div align="center" style="height:700px; width:750px; border:1px solid #cccccc; position:relative; margin-top:30px; margin-left: 20px;" >
+	<table align="center" style="width:750px; position:relative; margin-top:30px; margin-left: 80px;">
+		<tr style="height: 30px;">
+			<th>作业ID</th>
+			<th>获得分数</th>
+			<th>总分</th>
+			<th>评语</th>
+		</tr>
+		<tr style="height: 0px;" ng-repeat="item in expriment_commentList">
+			<td>实验{{$index+1}}</td>
+			<td>{{item.given_score}}</td>
+			<td>{{item.total_score}}</td>
+			<td>{{item.remark}}</td>
+		</tr>
+	</table>
+</div>
