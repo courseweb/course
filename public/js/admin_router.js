@@ -1,9 +1,5 @@
 app.config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state("administrator", {
-                url: "/administrator",
-                templateUrl: "view/administrator.html"
-            })
             .state("administrator.student", {
                 url: "/student",
                 templateUrl: "view/administrator.student.html"

@@ -54,7 +54,7 @@ app.controller("classController", ['$scope', '$rootScope', '$state', function($s
     {given_score:'4',total_score:'5',remark:'不错哟'},
     {given_score:'5',total_score:'5',remark:'你都5.0了能不能别学了'}
     ];
-    
+
 
     $rootScope.experiment_commentList = [{
         given_score: '1',

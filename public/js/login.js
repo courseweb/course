@@ -28,18 +28,18 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
 
     $scope.login = false;
 
-    $scope.teacher_info = {
+    $rootScope.teacher_info = {
         name: "",
         department: "",
         job_title: "",
         tel: "",
         email: ""
     };
-    $scope.student_info = {
-        name: "王懿芳",
-        classnames: ["软件需求工程-1班", "软件工程管理-2班", "操作系统-1班", "计算机网络-1班"]
+    $rootScope.student_info = {
+        name: "",
+        classnames: []
     };
-    $scope.admin_info = {
+    $rootScope.admin_info = {
         name: ""
     };
 
@@ -74,69 +74,75 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
         $rootScope.sendData("/index.php/index/Index/loginUser", fd, function() {
             if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
                 $scope.return = JSON.parse($rootScope.xmlhttp.responseText).result;
-            }
-
-            if ($scope.return === "success") {//三个等号表示值和变量类型都相等
-                $scope.$apply(function() {
-                    $scope.err_pwd = "";
-                    $scope.err_username = "";
-                });
-
-                $("#myModal").modal("hide");
-
-                if ($scope.user.type === "2") { //教师
-                    //跳转到教师主界面
-                    $state.go('showinfo_teacher');
-                    $rootScope.dynamic_bar = "view/profile_login_teacher.html";
-
-                    var fd2 = new FormData();
-                    $rootScope.sendData("/index.php/index/Index/showUserInfo", fd2, function() {
-                        if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                            $scope.return = JSON.parse($rootScope.xmlhttp.responseText).result;
-                            $scope.teacher_info.name = $scope.return.name;
-                            $scope.teacher_info.department = $scope.return.department;
-                            $scope.teacher_info.job_title = $scope.return.job_title;
-                            $scope.teacher_info.phonenumber = $scope.return.tel;
-                            $scope.teacher_info.email = $scope.return.email;
-                        }
+                if ($scope.return === "success") { //三个等号表示值和变量类型都相等
+                    $scope.$apply(function() {
+                        $scope.err_pwd = "";
+                        $scope.err_username = "";
                     });
-                } else if ($scope.user.type === "1"){ //学生
-                    //跳转到学生主界面
-                    // alert("3123");
-                    $state.go('showinfo_student');
-                    $rootScope.dynamic_bar = "view/profile_login_stu.html";
 
-                    var fd3 = new FormData();
-                    $rootScope.sendData("/index.php/index/Index/showUserInfo", fd3, function() {
-                        if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                            $scope.$apply(function() {
+                    $("#myModal").modal("hide");
+
+                    if ($scope.user.type === "2") {
+                        $state.go('showinfo_teacher');
+                        $rootScope.dynamic_bar = "view/profile_login_teacher.html";
+
+                        var fd2 = new FormData();
+                        $rootScope.sendData("/index.php/index/Index/showUserInfo", fd2, function() {
+                            if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
                                 $scope.return = JSON.parse($rootScope.xmlhttp.responseText).result;
-                                $scope.student_info.name = $scope.return.name;
-                                $scope.student_info.classnames = $scope.return.classnames; //数组这样写对不对？
-                            });
-                        }
-                    });
-                } else if ($scope.user.type === "3") {//管理员
-                    //跳转到管理员主界面
-                    $state.go('showinfo_admin');
-                    $rootScope.dynamic_bar = "view/profile_login_admin.html";
-                    var fd4 = new FormData();
-                    $rootScope.sendData("/index.php/index/Index/showUserInfo", fd4, function() {
-                        if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                            $scope.return = JSON.parse($rootScope.xmlhttp.responseText).result;
-                            $scope.admin_info.name = $scope.return.name;
-                        }
-                    });
+                                $scope.$apply(function() {
+                                    $rootScope.teacher_info.name = $scope.return.name;
+                                    $rootScope.teacher_info.department = $scope.return.department;
+                                    $rootScope.teacher_info.job_title = $scope.return.job_title;
+                                    $rootScope.teacher_info.phonenumber = $scope.return.tel;
+                                    $rootScope.teacher_info.email = $scope.return.email;
+                                });
+                            }
+                        });
+                    } else if ($scope.user.type === "1") {
+                        $state.go('showinfo_student');
+                        $rootScope.dynamic_bar = "view/profile_login_stu.html";
 
-                } //写函数，取得用户名、信息等
+                        var fd3 = new FormData();
+                        $rootScope.sendData("/index.php/index/Index/showUserInfo", fd3, function() {
+                            if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
+                                $scope.$apply(function() {
+                                    $scope.return = JSON.parse($rootScope.xmlhttp.responseText).result;
+                                    console.log($scope.return);
+                                    $rootScope.student_info.name = $scope.return.name;
+                                    $rootScope.student_info.classnames = $scope.return.classnames; //数组这样写对不对？
+                                });
+                            }
+                        });
+                    } else if ($scope.user.type === "3") { //管理员
+                        $state.go('administrator.student');
+                        $rootScope.dynamic_bar = "view/profile_login_admin.html";
+                        var fd4 = new FormData();
+                        $rootScope.sendData("/index.php/index/Index/showUserInfo", fd4, function() {
+                            if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
+                                $scope.return = JSON.parse($rootScope.xmlhttp.responseText).result;
+                                console.log("sdsd");
+                                console.log($scope.return);
+                                $scope.$apply(function() {
+                                    $rootScope.admin_info.name = $scope.return.name;
+                                });
+                            }
+                        });
 
-            } else if ($scope.return === "false_id") {
-                    $scope.err_username = "用户名错误";
-                    $scope.err_pwd = "";
-            } else if ($scope.return === "false_pwd") {
-                    $scope.err_pwd = "密码错误";
-                    $scope.err_username = "";
+                    }
+                } else if ($scope.return === "false_id") {
+                    $scope.$apply(function() {
+                        $scope.err_username = "用户名错误";
+                        $scope.err_pwd = "";
+                    });
+                } else if ($scope.return === "false_pwd") {
+                    $scope.$apply(function() {
+                        $scope.err_pwd = "密码错误";
+                        $scope.err_username = "";
+                    });
+                }
             }
+
         });
     };
 
@@ -364,8 +370,8 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
         templateUrl: "view/teacher.html"
     })
 
-    .state("showinfo_admin", {
-        url: "/showinfo_admin",
+    .state("administrator", {
+        url: "/administrator",
         templateUrl: "view/administrator.html"
     })
 

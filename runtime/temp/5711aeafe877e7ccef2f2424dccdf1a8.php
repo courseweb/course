@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\xampp\htdocs\course\public/../application/index\view\index\index.html";i:1482377417;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:72:"D:\xampp\htdocs\course\public/../application/index\view\index\index.html";i:1482407621;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -69,19 +69,19 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <!-- 向左对齐 -->
                 <ul class="nav navbar-nav navbar-left">
-                    <li style="font-weight:bold;"><a href="#">主页</a></li>
-                    <li style="font-weight:bold;"><a href="#about">关于我们</a></li>
-                    <li style="font-weight:bold;"><a href="#contact">联系我们</a></li>
+                    <li style="font-weight:bold;"><a href="javascript:">主页</a></li>
+                    <li style="font-weight:bold;"><a href="javascript:">关于我们</a></li>
+                    <li style="font-weight:bold;"><a href="javascript:">联系我们</a></li>
                     <li class="dropdown">
                         <a style="font-weight:bold;" href="#" class="dropdown-toggle" data-toggle="dropdown">不知道写什么 <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="javascript:">Action</a></li>
+                            <li><a href="javascript:">Another action</a></li>
+                            <li><a href="javascript:">Something else here</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="javascript:">Separated link</a></li>
+                            <li><a href="javascript:">One more separated link</a></li>
                         </ul>
                     </li>
                 </ul>
