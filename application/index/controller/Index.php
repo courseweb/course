@@ -407,7 +407,7 @@ class Index extends Controller
 
     }
 
-    
+
     /** 
      * loginUser()用于登录
      * 

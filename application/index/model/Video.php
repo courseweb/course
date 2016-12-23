@@ -8,7 +8,8 @@
 
 namespace app\index\model;
 
-
+use think\Model;
+use think\Db;
 class Video
 {
     public $class_id;
@@ -88,21 +89,20 @@ class Video
         $this->Videopath="resource/$this->class_id/Video/$this->filename";
         return 1;
     }
-
     public function storeindb()
     {
         $arr=['class_id'=>$this->class_id,'n_th'=>$this->n_th,'filename'=>$this->filename,
-            'addr'=>$this->Videopath];
-        
+            'addr'=>$this->Videopath]
+            'video_addr'=>$this->Videopath];
+>>>>>>> 1bab1cb46049de51aea0067278d911cf31ddf518
         if(Db::table('Video')->insert($arr)==0)
             return 0;
         else
             return 1;
     }
-    
     public function getbyn_th()
     {
-        $arry=Db::table('Video')->where('class_id',$this->class_id)->where('n_th',$this->n_th)->column('filename','addr');
+        $arry=Db::table('Video')->field('filename','video_addr')->where('class_id',$this->class_id)->where('n_th',$this->n_th)->select();
         if(isEmpty($arry))
         {
             return 0;
@@ -111,6 +111,11 @@ class Video
         {
             return 1;
         }
+    }
+    public function getall()
+    {
+        $arr=Db::table('video')->where('class_id','=',$this->class_id)->select();
+        return $arr;
     }
 
 }
