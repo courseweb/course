@@ -23,6 +23,7 @@ class Notice extends Model
         $start=$this->notice_time;
         $start=($start-1)/5+1;
         $arr=Db::table('course_notice')->where('class_id',"=",$this->class_id)->page($start,5)->select();
+        print_r($arr);
         return $arr;
     }
     public function insertNotice()

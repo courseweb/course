@@ -17,7 +17,8 @@ class Index extends Controller
     {
         return $this->fetch();
     }
-    
+
+
     public function login()
     {
 //        $id=$_POST['id'];
@@ -405,6 +406,7 @@ class Index extends Controller
         }
 
     }
+
     
     /** 
      * loginUser()用于登录

@@ -8,6 +8,7 @@
 namespace app\index\model;
 use think\Db;
 use think\Model;
+
 class Exampaper extends Model
 {
     public $class_id;
