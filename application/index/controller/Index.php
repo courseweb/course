@@ -337,7 +337,7 @@ class Index extends Controller
     public function doExperiment()
     {
         $p=new Report();
-        $p->class_id=session['class_id'];
+        $p->class_id=session['class_id'];//session('class_id')括号，慢慢改吧。
         $p->stu_id  =session['stu_id'];
         $p->n_th=$_POST['n_th'];
         $p->submitreport();
