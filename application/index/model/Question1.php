@@ -30,6 +30,6 @@ class Question1
         $this->chooseAnswerD=$AD;
         $this->answer=$RA;
         $this->type=1;
-        $this->question=($this->chooseQuestion.'&&&'.$this->chooseAnswerA.'&&&'.$this->chooseAnswerB.'&&&'.$this->chooseAnswerC.'&&&'.$this->chooseAnswerD);
+        $this->question=$this->chooseQuestion;
     }
 }

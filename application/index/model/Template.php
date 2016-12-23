@@ -7,13 +7,17 @@
  */
 
 namespace app\index\model;
-
+use think\Model;
+use think\Db;
 
 class Template
 {
     public $class_id;
+    public $n_th;
     public $filename;
     public $Templatepath;
+    public $uploaddate;
+    public $ddl;
     public function storeindisk()
     {
         $allowedExts = array("pdf" ,"rar", "zip","doc","docx");
@@ -37,7 +41,8 @@ class Template
             if ($_FILES ['file'] ['error'] > 0)
             {
                 echo 'Problem: ';
-                switch ($_FILES ['file'] ['error']) {
+                switch ($_FILES ['file'] ['error'])
+                {
                     case 1 :
                         echo '上传文件过大:<a href='.$reurl.'>请重试</a>';
                         break;
@@ -89,5 +94,27 @@ class Template
             return 0;
         }
         $this->Templatepath="resource/$this->class_id/Template/ $this->filename";
+        return 1;
     }
+    public function storeindatabase()
+    {
+        $this->uploaddate=date("Y-m-d h:i:s");
+        $arr=["class_id"=>$this->class_id,'n_th'=>$this->n_th,'url'=>$this->Templatepath,'ddl'=>$this->ddl,'uploaddate'=>$this->uploaddate];
+        $result=Db::table('experiment')->insert($arr);
+        if($result==1)
+            return 1;
+        else
+            return 0;
+    }
+    public function getall()
+    {
+        $arr=Db::table('experiment')->field('n_th,filename,uploaddate,ddl')->where('class_id','=',$this->class_id)->select();
+        return $arr;
+    }
+    public function deleteone()
+    {
+        $result=Db::table('experiment')->where('n_th','=',$this->n_th)->delete();
+        return $result;
+    }
+
 }

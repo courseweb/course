@@ -25,7 +25,7 @@ class Slides extends Model
             || ($_FILES["file"]["type"] == "application/vnd.openxmlformats-officedocument.presentationml.presentation")
             || ($_FILES["file"]["type"] == "application/x-zip-compressed")
             || ($_FILES["file"]["type"] == "application/x-zip-compressed")
-            || ($_FILES["file"]["type"] == "")
+            || ($_FILES["file"]["type"] == "application/pdf")
             ||($_FILES["file"]["type"] == "application/octet-")
             || ($_FILES["file"]["type"] == "application/msword")
             || ($_FILES["file"]["type"] == "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
@@ -93,16 +93,16 @@ class Slides extends Model
     public function storeindb()
     {
         $arr=['class_id'=>$this->class_id,'n_th'=>$this->n_th,'filename'=>$this->filename,
-            'addr'=>$this->slidespath];
+            'ppt_addr'=>$this->slidespath];
         if(Db::table('slides')->insert($arr)==0)
             return 0;
         else
             return 1;
 
     }
-    public function getnameaddr()
+    public function getall()
     {
-        $arr=Db::table('slides')->field('n_th,filename')->where('class_id',$this->class_id)->select();
+        $arr=Db::table('slides')->where('class_id',$this->class_id)->select();
         return $arr;
     }
 }
