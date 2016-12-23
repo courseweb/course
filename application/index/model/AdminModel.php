@@ -13,7 +13,7 @@ class AdminModel extends Model{
                     ['teach e', 'a.class_id=e.class_id'],
                     ['teacher f','e.t_id=f.t_id']
                 ];
-                $result = Db::table('class')->alias('a')->join($join)->field('a.semester,a.year,a.section_id,d.subject,f.t_name,a.class_id')->select();
+                $result = Db::table('class')->alias('a')->join($join)->field('a.semester,a.year,a.time,d.subject,f.t_name,a.class_id')->select();
 
                 if(!$result){
                     $result = 'failure';
@@ -33,7 +33,7 @@ class AdminModel extends Model{
                         if($teacher[$i]){
                             $arr[$index]['year'] = $result[$i]['year'];
                             $arr[$index]['semester'] = $result[$i]['semester'];
-                            $arr[$index]['class'] = $result[$i]['subject'].'-'.$teacher[$i].'-'.$result[$i]['section_id'].'班';
+                            $arr[$index]['class'] = $result[$i]['subject'].'-'.$teacher[$i].'-'.$result[$i]['time'];
                             $arr[$index]['class_id'] = $result[$i]['class_id'];
                             $index++;
                         }
@@ -142,10 +142,76 @@ class AdminModel extends Model{
         }else{
             $result='success';
         }
+        $this->clearStudents();//删除没有教学班的学生
         return $result;
     }
 
     public function clearStudents(){
-        
+        $join=[['take b','a.stu_id=b.stu_id','left']];
+        $result=Db::table('student')->join($join)->alias('a')->where('b.stu_id',NULL)->field('a.stu_id')->select();
+        foreach ($result as $key => $value) {
+            Db::table('do_experiment')->where('stu_id',$value['stu_id'])->delete();
+            Db::table('do_question')->where('stu_id',$value['stu_id'])->delete();
+            Db::table('do_homework')->where('stu_id',$value['stu_id'])->delete();
+            Db::table('student')->where('stu_id',$value['stu_id'])->delete();
+        }//这里简便起见只清理了数据库，没有清理学生上传的文件。
     }
+
+    public function addStudent($stu_id,$stu_name,$class){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="3"){
+                $stu_pwd=md5("123456");
+                $result=Db::table('student')->where('stu_id',$stu_id)->find();
+                if($result){
+                    $result=Db::table('student')->where('stu_id',$stu_id)->update(['stu_id'=>$stu_id,'stu_name'=>$stu_name,'stu_pwd'=>$stu_pwd]);
+                }else{
+                    $result=Db::table('student')->insert(['stu_id'=>$stu_id,'stu_name'=>$stu_name,'stu_pwd'=>$stu_pwd]);
+                }
+
+                $classArr=json_decode($class);
+                foreach ($classArr as $key => $value) {
+                    $result=Db::table('take')->where('stu_id',$stu_id)->where('class_id',$value)->find();
+                    if(!$result){
+                        $data=[
+                            'stu_id'=>$stu_id,
+                            'class_id'=>$value
+                        ]; 
+                        $result=Db::table('take')->insert($data);
+                    }
+                }
+                $result="success";
+            }else{
+                $result="false_type";
+            }
+        }else{
+            $result="false_unlogin";
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr);
+    }
+
+    public function deleteStudent($stu_id){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="3"){
+                Db::table('do_experiment')->where('stu_id',$stu_id)->delete();
+                Db::table('do_question')->where('stu_id',$stu_id)->delete();
+                Db::table('do_homework')->where('stu_id',$stu_id)->delete();
+                Db::table('student')->where('stu_id',$stu_id)->delete();
+                Db::table('take')->where('stu_id',$stu_id)->delete();
+                //这里简便起见只清理了数据库，没有清理学生上传的文件。
+                $result="success";
+            }else{
+                $result="false_type";
+            }
+        }else{
+            $result="false_unlogin";
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr);
+    }
+
 }

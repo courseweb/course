@@ -723,7 +723,7 @@ class Index extends Controller
             $id=session('usr_id');
             $type=session('usr_type');
             if($type=="3"){
-                $file = request()->file('image');
+                $file = request()->file('excel');
                 $class_id = request()->param('class_id');
 
                 $admin=new \app\index\model\AdminModel();
@@ -737,6 +737,26 @@ class Index extends Controller
             $result="false_unlogin";
         }
         $arr = array('result' => $result);
-        return json_encode($arr);
+        echo json_encode($arr);
+    }
+
+    public function addAdminStudent(){
+        $stu_id=$_POST['stu_id'];
+        $stu_name=$_POST['stu_name'];
+        $class_id=$_POST['class_id'];
+
+        $admin=new \app\index\model\AdminModel();
+        $result = $admin->addStudent($stu_id,$stu_name,$class_id);
+
+        echo $result;
+    }
+
+    public function deleteAdminStudent(){
+        $stu_id=$_POST['stu_id'];
+
+        $admin=new \app\index\model\AdminModel();
+        $result = $admin->deleteStudent($stu_id);
+
+        echo $result;
     }
 }
