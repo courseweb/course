@@ -93,4 +93,34 @@ class ExperimentModel extends Model
         $arr = array('result' => $result);
         return json_encode($array,JSON_UNESCAPED_UNICODE);
     }
+
+    public function getTracer(){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="2"){
+                if (session('?class_id')) {
+                    $class_id=session('class_id');
+                    $result = Db::table('do_experiment')->where('class_id',$class_id)->field('n_th as experiment_th,COUNT(stu_id) as done')->group('n_th')->select();
+                    if(!$result){
+                        $result='failure';
+                    }
+                    $array=$result;
+                    $result = Db::table('take')->where('class_id',$class_id)->count();
+                    for ($i=0; $i < count($array); $i++) { 
+                        $array[$i]['total']=$result;
+                    }
+                    $result=$array;
+                }else{
+                    $result='false_noClassID';
+                }
+            }else{
+                $result='false_type';
+            }
+        }else{
+            $result='false_unlogin';
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr,JSON_UNESCAPED_UNICODE);
+    }
 }

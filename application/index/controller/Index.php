@@ -695,4 +695,48 @@ class Index extends Controller
         
         echo $result;
     }
+
+
+    public function getHomeworkTracer(){
+        $homework=new \app\index\model\HomeworkModel();
+        $result = $homework->getTracer();
+        
+        echo $result;
+    }
+
+    public function getExperimentTracer(){
+        $experiment=new \app\index\model\ExperimentModel();
+        $result = $experiment->getTracer();
+        
+        echo $result;
+    }
+
+    public function getAdminClassInfo(){
+        $admin=new \app\index\model\AdminModel();
+        $result = $admin->getClassInfo();
+        
+        echo $result;
+    }
+
+    public function addAdminStudents(){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="3"){
+                $file = request()->file('image');
+                $class_id = request()->param('class_id');
+
+                $admin=new \app\index\model\AdminModel();
+                $saveName= "resource/temp". DS . $admin->uploadTemp($file);
+                $stuArr = $admin->importExcel($saveName);
+                $result = $admin->addStudents($stuArr,$class_id);
+            }else{
+                $result="false_type";
+            }
+        }else{
+            $result="false_unlogin";
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr);
+    }
 }
