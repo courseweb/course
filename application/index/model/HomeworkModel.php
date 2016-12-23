@@ -70,7 +70,7 @@ class HomeworkModel extends Model
         if(session('?login')){
             $id=session('usr_id');
             $type=session('usr_type');
-            if($type==2){
+            if($type=="2"){
                 if(session('?homework_id')){
                     $homework_id=session('homework_id');
 
@@ -124,8 +124,27 @@ class HomeworkModel extends Model
             if($type=="1"){
                 if (session('?class_id')) {
                     $class_id=session('class_id');
+                    $result = Db::table('take')->where('class_id',$class_id)->count();
+                    $student_num = $result;
+
                     $join = [['homework b','a.homework_id=b.homework_id']];
                     $result = Db::table('do_homework')->alias('a')->join($join)->where('b.class_id',$class_id)->where('a.stu_id',$id)->field('homework_th,a.grade as given_score,b.sum_grade as total_score,a.comment as remark')->order('homework_th')->select();
+
+                    $array=$result;
+                    $join = [['homework b','a.homework_id=b.homework_id']];
+                    $result = Db::table('do_homework')->alias('a')->join($join)->where('b.class_id',$class_id)->field('homework_th,truncate(avg(grade),1) as average,truncate(max(grade),1) as highest,truncate(min(grade),1) as lowest')->group('a.homework_id')->order('homework_th')->select();
+
+                    for ($i=0; $i < count($result); $i++) { 
+                        $array[$i]['average']=$result[$i]['average'];
+                        $array[$i]['highest']=$result[$i]['highest'];
+                        $array[$i]['lowest']=$result[$i]['lowest'];
+
+                        $join = [['homework b','a.homework_id=b.homework_id']];
+                        $array[$i]['rank']=Db::table('do_homework')->alias('a')->join($join)->where('b.class_id',$class_id)->where('homework_th',$result[$i]['homework_th'])->where('a.grade','>',$array[$i]['given_score'])->count()+1;
+
+                        $array[$i]['student_num']=$student_num;
+                    }
+                    $result=$array;
                     if(!$result){
                         $result='failure';
                     }

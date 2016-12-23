@@ -116,11 +116,15 @@ class AdminModel extends Model{
         $data=array();
         $take=array();
         foreach ($stuArr as $key => $value) {
-            $data[]=[
-                'stu_id'=>$value[0],
-                'stu_name'=>$value[1],
-                'stu_pwd'=>$pwd
-            ];
+            $result=Db::table('student')->where('stu_id',$value[0])->find();
+            if(!$result){
+                $data[]=[
+                    'stu_id'=>$value[0],
+                    'stu_name'=>$value[1],
+                    'stu_pwd'=>$pwd
+                ]; 
+            }
+
             $take[]=[
                 'class_id'=>$class_id,
                 'stu_id'=>$value[0]

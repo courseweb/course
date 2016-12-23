@@ -11,10 +11,27 @@ class ExperimentModel extends Model
             if($type=="1"){
                 if (session('?class_id')) {
                     $class_id=session('class_id');
-                    $join = [
-                        ['experiment b','a.class_id=b.class_id and a.n_th=b.n_th']
-                    ];
+                    $result = Db::table('take')->where('class_id',$class_id)->count();
+                    $student_num = $result;
+
+                    $join = [['experiment b','a.class_id=b.class_id and a.n_th=b.n_th']];
                     $result = Db::table('do_experiment')->alias('a')->join($join)->where('b.class_id',$class_id)->where('a.stu_id',$id)->field('b.n_th,a.score as given_score,b.sum_grade as total_score,a.comment as remark')->order('n_th')->select();
+                    $array=$result;
+
+                    $join = [['experiment b','a.class_id=b.class_id and a.n_th=b.n_th']];
+                    $result = Db::table('do_experiment')->alias('a')->join($join)->where('b.class_id',$class_id)->field('b.n_th,truncate(avg(score),1) as average,truncate(max(score),1) as highest,truncate(min(score),1) as lowest')->group('b.class_id,b.n_th')->order('n_th')->select();
+
+                    for ($i=0; $i < count($result); $i++) { 
+                        $array[$i]['average']=$result[$i]['average'];
+                        $array[$i]['highest']=$result[$i]['highest'];
+                        $array[$i]['lowest']=$result[$i]['lowest'];
+
+                        $join = [['experiment b','a.class_id=b.class_id and a.n_th=b.n_th']];
+                        $array[$i]['rank']=Db::table('do_experiment')->alias('a')->join($join)->where('b.class_id',$class_id)->where('b.n_th',$result[$i]['n_th'])->where('a.score','>',$array[$i]['given_score'])->count()+1;
+
+                        $array[$i]['student_num']=$student_num;
+                    }
+                    $result=$array;
                     if(!$result){
                         $result='failure';
                     }
@@ -64,7 +81,7 @@ class ExperimentModel extends Model
         if(session('?login')){
             $id=session('usr_id');
             $type=session('usr_type');
-            if($type==2){
+            if($type=="2"){
                 if (session('class_id')) {
                     $class_id=session('class_id');
                     if(session('?experiment_th')){
