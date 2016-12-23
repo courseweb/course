@@ -92,9 +92,7 @@ class Video
     public function storeindb()
     {
         $arr=['class_id'=>$this->class_id,'n_th'=>$this->n_th,'filename'=>$this->filename,
-            'addr'=>$this->Videopath]
             'video_addr'=>$this->Videopath];
->>>>>>> 1bab1cb46049de51aea0067278d911cf31ddf518
         if(Db::table('Video')->insert($arr)==0)
             return 0;
         else
