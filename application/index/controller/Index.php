@@ -17,7 +17,18 @@ class Index extends Controller
     {
         return $this->fetch();
     }
-
+    
+    public function login()
+    {
+//        $id=$_POST['id'];
+//        $pwd=$_POST['pwd'];
+//        session('id',$id);
+//        session('pwd',$pwd);
+//        session('class_id','1');
+        $arry=array('result' => 'success');
+        $vas=date("Y-m-d h:i:s");
+        echo $vas;
+    }
     public function getCourseInfo()
     {
         $p=new Course();
@@ -29,9 +40,9 @@ class Index extends Controller
     public function getAllTitles()
     {
         $p=new Notice();
-       // $p->class_id=session('class_id');
+        // $p->class_id=session('class_id');
         $p->notice_time=$_POST['notice_time'];
-        $p->class_id="1";
+        $p->class_id="12345601";
         $arr=$p->getAlltitles();
 //        print_r($arr);
         //echo urldecode ( json_encode($arr, JSON_FORCE_OBJECT) );
@@ -45,7 +56,7 @@ class Index extends Controller
         $p->content=$_POST['notice_content'];
         $p->release_time=date("Y-m-d h:i:s");
         $p->notice_id==$p->getNoticeId();
-      // $result='success';
+        // $result='success';
         if($p->insertNotice()==0)
         {
             echo '添加失败';
@@ -94,27 +105,27 @@ class Index extends Controller
         }
     }
     public function uploadSlides()
-     {
-         $p=new Slides();
-         $p->class_id=session("class_id");
-         $p->n_th=$_POST("n_th");
-         //$p->class_id="1";
-         //$p->n_th="1";
-         if(!$p->storeindisk())
-             exit();
-         if($p->storeindb())
-         {
+    {
+        $p=new Slides();
+//         $p->class_id=session("class_id");
+        $p->class_id='1';
+        $p->n_th=$_POST["n_th"];
+        //$p->class_id="1";
+        //$p->n_th="1";
+        if(!$p->storeindisk())
+            exit();
+        if($p->storeindb())
+        {
             echo "上传成功";
-         }
-         else
-         {
-             echo "文件重复上传";
-         }
+        }
+        else
+        {
+            echo "文件重复上传";
+        }
     }
     public function getAllSlides()
     {
 //        $class_id=session("class_id");
-        $class_id="1";
 //        $dir="./resource/$class_id/slides";
 //        if(!is_dir($dir))
 //        {
@@ -134,7 +145,7 @@ class Index extends Controller
 //        }
         $p=new Slides();
         $p->class_id="1";
-        $arr=$p->getnameaddr();
+        $arr=$p->getall();
         echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
     }
     public function downloadSlides()
@@ -149,7 +160,7 @@ class Index extends Controller
         $p=new Exampaper();
         $p->class_id=session("class_id");
         if(!$p->storeindisk())
-            exit();
+            echo "存入磁盘失败";
     }
     public function downloadExampaper()
     {
@@ -179,6 +190,13 @@ class Index extends Controller
             closedir($headle);
         }
         echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+    }
+    public function getAllVideo()
+    {
+        $p=new Video();
+//        $p->class_id=session("class_id");
+        $p->class_id='1';
+        $p->getall();
     }
     public function uploadVideo()
     {
@@ -216,24 +234,28 @@ class Index extends Controller
     }
     public function getAllTemplate()
     {
-        $class_id=session("class_id");
-        $dir="./resource/$class_id/Template";
-        if(!is_dir($dir))
-        {
-            echo "This Class haven't uploaded any Template!";
-            exit();
-        }
-        $arr = array();
-        if ($headle=opendir($dir)){
-            while ($file=readdir($headle)){
-                $file=iconv("gb2312","utf-8",$file);
-                if ($file!='.' &&  $file!='..')
-                {
-                    array_push($arr,$file);
-                }
-            }
-            closedir($headle);
-        }
+//        $class_id=session("class_id");
+//        $dir="./resource/$class_id/Template";
+//        if(!is_dir($dir))
+//        {
+//            echo "This Class haven't uploaded any Template!";
+//            exit();
+//        }
+//        $arr = array();
+//        if ($headle=opendir($dir)){
+//            while ($file=readdir($headle)){
+//                $file=iconv("gb2312","utf-8",$file);
+//                if ($file!='.' &&  $file!='..')
+//                {
+//                    array_push($arr,$file);
+//                }
+//            }
+//            closedir($headle);
+//        }
+        $p=new Template();
+//        $p->class_id=session['class_id'];
+        $p->class_id='1';
+        $arr=$p->getall();
         echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
     }
     public function uploadTemplate()
@@ -241,9 +263,12 @@ class Index extends Controller
         $p=new Template();
 //        $p->class_id=session("class_id");
         $p->class_id="1";
-        $p->n_th="1";
+        $p->n_th=$_POST["n_th"];
+        $p->ddl=$_POST["DDL"];
         if(!$p->storeindisk())
-            exit();
+            echo "插入硬盘失败";
+        if(!$p->storeindatabase())
+            echo "插入数据库失败";
     }
     public function downloadTemplate()
     {
@@ -252,18 +277,22 @@ class Index extends Controller
         $address="resource/$class_id/Exampaper/$filename";
         echo $address;
     }
+    public function deleteTemplate()
+    {
+        $p=new Template();
+        $p->class_id='1';
+        $p->n_th=$_POST['n_th'];
+        $p->deleteone();
+    }
     public function issueOnlineHomework()
     {
         $p=new Homework();
-//        $p->class_id=$_POST["class_id"];
-//        $p->ddl=$_POST['ddl'];
-//        $data = '[{"app_slug":"123","app_version":"1.0.0.6"},{"app_slug":"456","app_version":"1.0.0.5"},{"app_slug":"789","app_version":"1.0.0.6"}]';
         $p->class_id='1';
-        $p->ddl=$_POST['homeworkTime'];
+        $p->ddl=$_POST['DDL'];
         $p->n_th=$_POST['homeworkTime'];
         if($p->createHomework()==0)        //homework 之前已经布置过
         {
-
+            echo "作业已提交，无法重复提交";
         }
         else
         {
@@ -300,16 +329,80 @@ class Index extends Controller
 
         }
     }
-    public function issueExperiment()
-    {
-
-    }
     public function doOnlineQuestion()
     {
 
     }
     public function doExperiment()
     {
+        $p=new Report();
+        $p->class_id=session['class_id'];
+        $p->stu_id  =session['stu_id'];
+        $p->n_th=$_POST['n_th'];
+        $p->submitreport();
+
+    }
+    public function downloadReport()
+    {
+        $p=new Report();
+        $p->class_id=session['class_id'];
+        $p->stu_id  =session['stu_id'];
+        $p->n_th=$_POST['n_th'];
+        $addr=$p->downloadreport();
+        echo $addr;
+    }
+    public function getAllHomework()
+    {
+        $p=new Homework();
+//        $p->class_id=session['class_id'];
+        $p->class_id='1234560101';
+        $arr=$p->getAllHomework();
+        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+    }
+    public function getAllQuestion1()
+    {
+        $p=new Homework();
+//        $p->class_id=session['class_id'];
+        $p->homework_id='1234010101';
+        $arr=$p->getallquestions1();
+        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+    }
+    public function getAllQuestion2()
+    {
+        $p=new Homework();
+//        $p->class_id=session['class_id'];
+        $p->homework_id='1234010101';
+        $arr=$p->getallquestions2();
+        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+    }
+    public function submitQuestions()
+    {
+        $p=new Homework();
+        $p->homework_id=$_POST['homework_id'];
+        $p->stu_id=$_POST['stu_id'];
+        $questions=$_POST['questionSet'];
+        $arr=json_decode($questions,true);
+        $row=array();
+        if($p->initialDoHomework()==0)
+        {
+            echo "作业已经提交，无法更改！";
+        }
+        else
+        {
+            foreach( $arr as $row)
+            {
+                $type=$row["questionType"];
+                if($type==1)   //选择题
+                {
+                    $p->correctquestion($row['n_th'],$row['answer']);
+                }
+                elseif($type==2)       //问答题
+                {
+                    $p->doquestion2();
+                }
+            }
+            $p->updategrade1();
+        }
 
     }
     
