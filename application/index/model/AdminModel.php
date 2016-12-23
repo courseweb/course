@@ -10,8 +10,8 @@ class AdminModel extends Model{
             if($type=="3"){
                 $join = [
                     ['course d', 'a.course_id=d.course_id'],
-                    ['teach e', 'a.class_id=e.class_id'],
-                    ['teacher f','e.t_id=f.t_id']
+                    ['teach e', 'a.class_id=e.class_id','left'],
+                    ['teacher f','e.t_id=f.t_id','left']
                 ];
                 $result = Db::table('class')->alias('a')->join($join)->field('a.semester,a.year,a.time,d.subject,f.t_name,a.class_id')->select();
 
@@ -30,6 +30,16 @@ class AdminModel extends Model{
                     $arr = array();
                     $index = 0;
                     for ($i = 0; $i < count($result); $i++) { 
+                        $join = [
+                            ['course d', 'a.course_id=d.course_id'],
+                            ['teach e', 'a.class_id=e.class_id','left'],
+                            ['teacher f','e.t_id=f.t_id','left']
+                        ];
+                        $judge = Db::table('class')->alias('a')->join($join)->where('a.class_id',$result[$i]['class_id'])->field('t_name,a.class_id')->select();
+                        if(!$judge[0]['t_name']){
+                            $teacher[$i]='暂无教师';
+                        }
+
                         if($teacher[$i]){
                             $arr[$index]['year'] = $result[$i]['year'];
                             $arr[$index]['semester'] = $result[$i]['semester'];
@@ -214,4 +224,86 @@ class AdminModel extends Model{
         return json_encode($arr);
     }
 
+    public function getCourseInfo(){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="3"){
+                $result=Db::table('course')->field('subject as course,course_id')->select();
+            }else{
+                $result='false_type';
+            }
+        }else{
+            $result='false_unlogin';
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr,JSON_UNESCAPED_UNICODE);
+    }
+
+    public function addClass($year,$semester,$course_id,$time){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="3"){
+                $result=Db::table('class')->where('course_id',$course_id)->field('max(section_id) as max')->find();
+                $section_id=$result['max']+1;
+                $class_id = $course_id*100+$section_id;
+                $result=Db::table('class')->insert([
+                    'class_id'=>$class_id,
+                    'course_id'=>$course_id,
+                    'section_id'=>$section_id,
+                    'time'=>$time,
+                    'semester'=>$semester,
+                    'year'=>$year,
+                ]);
+                if(!$result){
+                    $result='failure';
+                }else{
+                    $result='success';
+                }
+            }else{
+                $result='false_type';
+            }
+        }else{
+            $result='false_unlogin';
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr,JSON_UNESCAPED_UNICODE);
+    }
+
+    public function deleteClass($class_id){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="3"){
+                Db::table('course_notice')->where('class_id',$class_id)->delete();
+                Db::table('do_experiment')->where('class_id',$class_id)->delete();
+                Db::table('experiment')->where('class_id',$class_id)->delete();
+                Db::table('homework')->where('class_id',$class_id)->delete();
+                Db::table('slides')->where('class_id',$class_id)->delete();
+                Db::table('video')->where('class_id',$class_id)->delete();
+                Db::table('take')->where('class_id',$class_id)->delete();
+                Db::table('teach')->where('class_id',$class_id)->delete();
+                Db::table('class')->where('class_id',$class_id)->delete();
+
+                $join=[['homework b','a.homework_id=b.homework_id','left']];
+                $result=Db::table('do_homework')->join($join)->alias('a')->where('b.homework_id',NULL)->field('a.homework_id')->select();
+                foreach ($result as $key => $value) {
+                    Db::table('do_question')->where('homework_id',$class_id)->delete();
+                    Db::table('do_homework')->where('homework_id',$class_id)->delete();
+                    Db::table('question')->where('homework_id',$class_id)->delete();
+                    Db::table('question1')->where('homework_id',$class_id)->delete();
+                }
+                //这里简便起见只清理了数据库，没有清理上传的各种文件。
+                $this->clearStudents();//删除没有教学班的学生
+                $result="success";
+            }else{
+                $result="false_type";
+            }
+        }else{
+            $result="false_unlogin";
+        }
+        $arr = array('result' => $result);
+        return json_encode($arr);
+    }
 }

@@ -759,4 +759,32 @@ class Index extends Controller
 
         echo $result;
     }
+
+    public function getAdminCourseInfo(){
+        $admin=new \app\index\model\AdminModel();
+        $result = $admin->getCourseInfo();
+        
+        echo $result;
+    }
+
+    public function addAdminClass(){
+        $year=$_POST['year'];
+        $semester=$_POST['semester'];
+        $course_id=$_POST['course_id'];
+        $time=$_POST['time'];
+
+        $admin=new \app\index\model\AdminModel();
+        $result = $admin->addClass($year,$semester,$course_id,$time);
+
+        echo $result;
+    }
+
+    public function deleteAdminClass(){
+        $class_id=$_POST['class_id'];
+
+        $admin=new \app\index\model\AdminModel();
+        $result = $admin->deleteClass($class_id);
+
+        echo $result;
+    }
 }
