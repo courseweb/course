@@ -184,14 +184,16 @@ class UserModel extends Model
                         }
                     }
                     $arr = array();
+                    $description = array();
                     $index = 0;
                     for ($i = 0; $i < count($result); $i++) { 
                         if($teacher[$i]){
                             $arr[$index] = $result[$i]['subject'].'-'.$teacher[$i].'-'.$result[$i]['section_id'].'班';
+                            $description[$index] = $result[$i]['description'];
                             $index++;
                         }
                     }
-                    $result=array('id'=>$id,'name'=>$result[0]['stu_name'],'classnames'=>$arr);
+                    $result=array('id'=>$id,'name'=>$result[0]['stu_name'],'classnames'=>$arr,'description'=>$description);
                 }
             }else if($type=="2"){
                 $user = 'teacher';
