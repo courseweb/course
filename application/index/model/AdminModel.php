@@ -43,7 +43,7 @@ class AdminModel extends Model{
                         if($teacher[$i]){
                             $arr[$index]['year'] = $result[$i]['year'];
                             $arr[$index]['semester'] = $result[$i]['semester'];
-                            $arr[$index]['class'] = $result[$i]['subject'].'-'.$teacher[$i].'-'.$result[$i]['time'];
+                            $arr[$index]['classname'] = $result[$i]['subject'].'-'.$teacher[$i].'-'.$result[$i]['time'];
                             $arr[$index]['class_id'] = $result[$i]['class_id'];
                             $index++;
                         }
@@ -289,10 +289,10 @@ class AdminModel extends Model{
                 $join=[['homework b','a.homework_id=b.homework_id','left']];
                 $result=Db::table('do_homework')->join($join)->alias('a')->where('b.homework_id',NULL)->field('a.homework_id')->select();
                 foreach ($result as $key => $value) {
-                    Db::table('do_question')->where('homework_id',$class_id)->delete();
-                    Db::table('do_homework')->where('homework_id',$class_id)->delete();
-                    Db::table('question')->where('homework_id',$class_id)->delete();
-                    Db::table('question1')->where('homework_id',$class_id)->delete();
+                    Db::table('do_question')->where('homework_id',$value['homework_id'])->delete();
+                    Db::table('do_homework')->where('homework_id',$value['homework_id'])->delete();
+                    Db::table('question')->where('homework_id',$value['homework_id'])->delete();
+                    Db::table('question1')->where('homework_id',$value['homework_id'])->delete();
                 }
                 //这里简便起见只清理了数据库，没有清理上传的各种文件。
                 $this->clearStudents();//删除没有教学班的学生

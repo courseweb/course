@@ -787,4 +787,52 @@ class Index extends Controller
 
         echo $result;
     }
+
+    public function isStudent(){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="1"){
+                $result=true;
+            }else{
+                $result=false;
+            }
+        }else{
+            $result=false;
+        }
+        $arr = $result;
+        echo json_encode($arr);
+    }
+
+    public function isTeacher(){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="2"){
+                $result=true;
+            }else{
+                $result=false;
+            }
+        }else{
+            $result=false;
+        }
+        $arr = $result;
+        echo json_encode($arr);
+    }
+
+    public function isAdmin(){
+        if(session('?login')){
+            $id=session('usr_id');
+            $type=session('usr_type');
+            if($type=="3"){
+                $result=true;
+            }else{
+                $result=false;
+            }
+        }else{
+            $result=false;
+        }
+        $arr = $result;
+        echo json_encode($arr);
+    }
 }
