@@ -68,6 +68,18 @@ app
                 $rootScope.downloadReportList();
             }
         };
+        $scope.verifyIdentity = function() {
+            var fd = new FormData();
+            $rootScope.sendData("/index.php/index/Index/isTeacher", fd, function() {
+                if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200 || $rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 404) {
+                    if ($rootScope.xmlhttp.responseText !== "true") {
+                        alert("请先登录");
+                        $state.go("visitor");
+                    }
+                }
+            });
+        };
+        $scope.verifyIdentity();
     })
 
 .controller('t_check_info_controller', ['$scope', '$log', '$rootScope', function($scope, $log, $rootScope) {

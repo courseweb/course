@@ -98,6 +98,18 @@ app.controller("classController", ['$scope', '$rootScope', '$state', function($s
 
     $rootScope.course_name = "软件需求工程";
     $rootScope.course_introduce = "谁上谁知道";
+    $scope.verifyIdentity = function() {
+        var fd = new FormData();
+        $rootScope.sendData("/index.php/index/Index/isStudent", fd, function() {
+          if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200 || $rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 404) {
+              if ($rootScope.xmlhttp.responseText !== "true") {
+                  alert("请先登录");
+                  $state.go("visitor");
+              }
+          }
+        });
+    };
+    $scope.verifyIdentity();
 
     $rootScope.getClass = function() { //课程信息
         $.ajax({

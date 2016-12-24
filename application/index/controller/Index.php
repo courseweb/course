@@ -3,7 +3,6 @@
 namespace app\index\controller;
 
 use think\Controller;
-
 use app\index\model\Exampaper;
 use app\index\model\Notice;
 use app\index\model\Slides;
@@ -21,7 +20,7 @@ class Index extends Controller
 
     public function login()
     {
-//        $id=$_POST['id'];
+        //        $id=$_POST['id'];
 //        $pwd=$_POST['pwd'];
 //        session('id',$id);
 //        session('pwd',$pwd);
@@ -36,7 +35,7 @@ class Index extends Controller
 //        $p->course_id=session('course_id');
         $p->course_id='12345601';
         $result=$p->getDecription();
-        echo urldecode ( json_encode($result, JSON_FORCE_OBJECT) );
+        echo urldecode(json_encode($result, JSON_FORCE_OBJECT));
     }
     public function getAllTitles()
     {
@@ -58,12 +57,9 @@ class Index extends Controller
         $p->release_time=date("Y-m-d h:i:s");
         $p->notice_id==$p->getNoticeId();
         // $result='success';
-        if($p->insertNotice()==0)
-        {
+        if ($p->insertNotice()==0) {
             echo '添加失败';
-        }
-        else
-        {
+        } else {
             echo '添加成功';
         }
     }
@@ -73,7 +69,7 @@ class Index extends Controller
         $p = new Notice();
         $str = $p->getContent();
         $arr = array('result' => $str);
-        echo urldecode ( json_encode($arr, JSON_FORCE_OBJECT) );
+        echo urldecode(json_encode($arr, JSON_FORCE_OBJECT));
     }
     public function deleteNotice()
     {
@@ -81,11 +77,11 @@ class Index extends Controller
         $p->notice_id = $_POST['notice_id'];
         $p->class_id =1;
 //        $p->class_id = $_POST['class_id'];
-        if($p->deleteOne()==0)
+        if ($p->deleteOne()==0) {
             echo "条目已删除";
-        else
+        } else {
             echo "删除成功";
-
+        }
     }
     public function modifyNotice()
     {
@@ -97,11 +93,9 @@ class Index extends Controller
         $p->content=$_POST['notice_content'];
         $p->release_time=date("Y-m-d h:i:s");
         $p->deleteOne();
-        if($p->insertNotice()==0)
-        {
+        if ($p->insertNotice()==0) {
             echo 'Failure';
-        }
-        else{
+        } else {
             echo 'Success';
         }
     }
@@ -113,20 +107,18 @@ class Index extends Controller
         $p->n_th=$_POST["n_th"];
         //$p->class_id="1";
         //$p->n_th="1";
-        if(!$p->storeindisk())
+        if (!$p->storeindisk()) {
             exit();
-        if($p->storeindb())
-        {
-            echo "上传成功";
         }
-        else
-        {
+        if ($p->storeindb()) {
+            echo "上传成功";
+        } else {
             echo "文件重复上传";
         }
     }
     public function getAllSlides()
     {
-//        $class_id=session("class_id");
+        //        $class_id=session("class_id");
 //        $dir="./resource/$class_id/slides";
 //        if(!is_dir($dir))
 //        {
@@ -147,7 +139,7 @@ class Index extends Controller
         $p=new Slides();
         $p->class_id="1";
         $arr=$p->getall();
-        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+        echo urldecode(json_encode($arr, JSON_UNESCAPED_UNICODE));
     }
     public function downloadSlides()
     {
@@ -160,8 +152,9 @@ class Index extends Controller
     {
         $p=new Exampaper();
         $p->class_id=session("class_id");
-        if(!$p->storeindisk())
+        if (!$p->storeindisk()) {
             echo "存入磁盘失败";
+        }
     }
     public function downloadExampaper()
     {
@@ -174,23 +167,21 @@ class Index extends Controller
     {
         $class_id=session("class_id");
         $dir="./resource/$class_id/Exampaper";
-        if(!is_dir($dir))
-        {
+        if (!is_dir($dir)) {
             echo "This Class haven't uploaded any Exampaper!";
             exit();
         }
         $arr = array();
-        if ($headle=opendir($dir)){
-            while ($file=readdir($headle)){
-                $file=iconv("gb2312","utf-8",$file);
-                if ($file!='.' &&  $file!='..')
-                {
-                    array_push($arr,$file);
+        if ($headle=opendir($dir)) {
+            while ($file=readdir($headle)) {
+                $file=iconv("gb2312", "utf-8", $file);
+                if ($file!='.' &&  $file!='..') {
+                    array_push($arr, $file);
                 }
             }
             closedir($headle);
         }
-        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+        echo urldecode(json_encode($arr, JSON_UNESCAPED_UNICODE));
     }
     public function getAllVideo()
     {
@@ -206,36 +197,30 @@ class Index extends Controller
         $p->n_th=$_POST("n_th");
         //$p->class_id="1";
         //$p->n_th="1";
-        if(!$p->storeindisk())
+        if (!$p->storeindisk()) {
             exit();
-        if($p->storeindb())
-        {
-            echo "上传成功";
         }
-        else
-        {
+        if ($p->storeindb()) {
+            echo "上传成功";
+        } else {
             echo "文件重复上传";
         }
-
     }
     public function getVideoByn_th()
     {
         $p=new Video();
         $p->class_id=session("class_id");
         $p->n_th=$_POST("n_th");
-        if($p->getbyn_th())
-        {
+        if ($p->getbyn_th()) {
             $arr=$p->arry;
-            echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
-        }
-        else
-        {
+            echo urldecode(json_encode($arr, JSON_UNESCAPED_UNICODE));
+        } else {
             echo 'fail!';
         }
     }
     public function getAllTemplate()
     {
-//        $class_id=session("class_id");
+        //        $class_id=session("class_id");
 //        $dir="./resource/$class_id/Template";
 //        if(!is_dir($dir))
 //        {
@@ -257,7 +242,7 @@ class Index extends Controller
 //        $p->class_id=session['class_id'];
         $p->class_id='1';
         $arr=$p->getall();
-        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+        echo urldecode(json_encode($arr, JSON_UNESCAPED_UNICODE));
     }
     public function uploadTemplate()
     {
@@ -266,10 +251,12 @@ class Index extends Controller
         $p->class_id="1";
         $p->n_th=$_POST["n_th"];
         $p->ddl=$_POST["DDL"];
-        if(!$p->storeindisk())
+        if (!$p->storeindisk()) {
             echo "插入硬盘失败";
-        if(!$p->storeindatabase())
+        }
+        if (!$p->storeindatabase()) {
             echo "插入数据库失败";
+        }
     }
     public function downloadTemplate()
     {
@@ -291,48 +278,36 @@ class Index extends Controller
         $p->class_id='1';
         $p->ddl=$_POST['DDL'];
         $p->n_th=$_POST['homeworkTime'];
-        if($p->createHomework()==0)        //homework 之前已经布置过
-        {
-            echo "作业已提交，无法重复提交";
-        }
-        else
-        {
+        if ($p->createHomework()==0) {
+            //homework 之前已经布置过
 
+            echo "作业已提交，无法重复提交";
+        } else {
         }
         $homework=$_POST['homeworkArray'];
-        $arr=json_decode($homework,true);
+        $arr=json_decode($homework, true);
         $row=array();
-        foreach( $arr as $row)
-        {
+        foreach ($arr as $row) {
             $type=$row["questionType"];
-            if($type==1)   //选择题
-            {
-                if($p->insertQuestion1($row['chooseScore'],$row['chooseQuestion'],$row['chooseAnswerA'],$row['chooseAnswerB'],$row['chooseAnswerC'],$row['chooseAnswerD'],$row['rightQuestionAnswer'])==1)
-                {
+            if ($type==1) {
+                //选择题
 
+                if ($p->insertQuestion1($row['chooseScore'], $row['chooseQuestion'], $row['chooseAnswerA'], $row['chooseAnswerB'], $row['chooseAnswerC'], $row['chooseAnswerD'], $row['rightQuestionAnswer'])==1) {
+                } else {
+                    echo "插入失败";
                 }
-                else
-                {
+            } elseif ($type==2) {
+                //问答题
+
+                if ($p->insertQuestion2($row['fillInScore'], $row['fillInQuestion'], $row['$fillInAnswer'])==1) {
+                } else {
                     echo "插入失败";
                 }
             }
-            elseif($type==2)       //问答题
-            {
-                if($p->insertQuestion2($row['fillInScore'],$row['fillInQuestion'],$row['$fillInAnswer'])==1)
-                {
-
-                }
-                else
-                {
-                    echo "插入失败";
-                }
-            }
-
         }
     }
     public function doOnlineQuestion()
     {
-
     }
     public function doExperiment()
     {
@@ -341,7 +316,6 @@ class Index extends Controller
         $p->stu_id  =session['stu_id'];
         $p->n_th=$_POST['n_th'];
         $p->submitreport();
-
     }
     public function downloadReport()
     {
@@ -358,7 +332,7 @@ class Index extends Controller
 //        $p->class_id=session['class_id'];
         $p->class_id='1234560101';
         $arr=$p->getAllHomework();
-        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+        echo urldecode(json_encode($arr, JSON_UNESCAPED_UNICODE));
     }
     public function getAllQuestion1()
     {
@@ -366,7 +340,7 @@ class Index extends Controller
 //        $p->class_id=session['class_id'];
         $p->homework_id='1234010101';
         $arr=$p->getallquestions1();
-        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+        echo urldecode(json_encode($arr, JSON_UNESCAPED_UNICODE));
     }
     public function getAllQuestion2()
     {
@@ -374,7 +348,7 @@ class Index extends Controller
 //        $p->class_id=session['class_id'];
         $p->homework_id='1234010101';
         $arr=$p->getallquestions2();
-        echo urldecode( json_encode($arr, JSON_UNESCAPED_UNICODE) );
+        echo urldecode(json_encode($arr, JSON_UNESCAPED_UNICODE));
     }
     public function submitQuestions()
     {
@@ -382,98 +356,97 @@ class Index extends Controller
         $p->homework_id=$_POST['homework_id'];
         $p->stu_id=$_POST['stu_id'];
         $questions=$_POST['questionSet'];
-        $arr=json_decode($questions,true);
+        $arr=json_decode($questions, true);
         $row=array();
-        if($p->initialDoHomework()==0)
-        {
+        if ($p->initialDoHomework()==0) {
             echo "作业已经提交，无法更改！";
-        }
-        else
-        {
-            foreach( $arr as $row)
-            {
+        } else {
+            foreach ($arr as $row) {
                 $type=$row["questionType"];
-                if($type==1)   //选择题
-                {
-                    $p->correctquestion($row['n_th'],$row['answer']);
-                }
-                elseif($type==2)       //问答题
-                {
+                if ($type==1) {
+                    //选择题
+
+                    $p->correctquestion($row['n_th'], $row['answer']);
+                } elseif ($type==2) {
+                    //问答题
+
                     $p->doquestion2();
                 }
             }
             $p->updategrade1();
         }
-
     }
 
 
-    /** 
+    /**
      * loginUser()用于登录
-     * 
+     *
      * 函数的参数如下
      * 用户id:      $_POST['id']
      * 用户类型:    $_POST['type'],{学生=1,老师=2,管理员=3}
      * 用户密码:    $_POST['pwd']
-     * 
+     *
      * @return json_encode($arr)
      * 类型错误:    {"result":"false_type"}
      * 账号错误:    {"result":"false_id"}
      * 密码错误:    {"result":"false_pwd"}
      * 登录成功:    {"result":"success"}
-     */  
-    public function loginUser(){
+     */
+    public function loginUser()
+    {
         $id=$_POST['id'];
         $pwd=md5($_POST['pwd']);
         $type=$_POST['type'];
-         
+
         $user = new \app\index\model\UserModel();
-        $result = $user->login($id,$pwd,$type);
+        $result = $user->login($id, $pwd, $type);
         echo $result;
     }
 
-    /** 
+    /**
      * editUserPwd()用于在登录之后修改密码
-     * 
+     *
      * 函数的参数如下
      * 用户旧密码:    $_POST['pwd']
      * 用户新密码:    $_POST['newPwd']
-     * 
+     *
      * @return json_encode($arr)
      * 未登录:        {"result":"false_unlogin"}
      * 旧密码错误:    {"result":"false_pwd"}
      * 修改新密码失败:{"result":"failure"}
      * 修改新密码成功:{"result":"success"}
-     */  
-    public function editUserPwd(){
+     */
+    public function editUserPwd()
+    {
         $pwd=md5($_POST['pwd']);
         $newPwd=md5($_POST['newPwd']);
 
         $user = new \app\index\model\UserModel();
-        $result = $user->editPwd($pwd,$newPwd);
+        $result = $user->editPwd($pwd, $newPwd);
         echo $result;
     }
 
-    /** 
+    /**
      * getUserQuest()用于获取用户的密保问题
-     * 
+     *
      * 函数的参数如下
      * 用户id:                 $_POST['id']
      * 用户类型:               $_POST['type']
-     * 
+     *
      * @return json_encode($arr)
      * 账户类型错误:           {"result":"false_type"}
      * 问题为空,查询结果不存在:{"result":"false_quest"}
      * 用户id错误,没有该id:    {"result":"false_id"}
      * 获取成功,返回问题内容:  {"result":$result}
      *     $result="";
-     */  
-    public function getUserQuest(){
+     */
+    public function getUserQuest()
+    {
         $id=$_POST['id'];
         $type=$_POST['type'];
 
         $user = new \app\index\model\UserModel();
-        $result = $user->getQuest($id,$type);
+        $result = $user->getQuest($id, $type);
         echo $result;
     }
 
@@ -489,7 +462,8 @@ class Index extends Controller
      * 验证密保答案失败:               {"result":"failure"}
      * 验证密保答案成功:               {"result":"success"}
      */
-    public function veriUserAns(){
+    public function veriUserAns()
+    {
         $ans=$_POST['ans'];
 
         $user = new \app\index\model\UserModel();
@@ -502,14 +476,15 @@ class Index extends Controller
      *
      * 函数参数如下
      * 用户新密码:                $_POST['newPwd']
-     * 
+     *
      * @return json_encode($arr)
      * 没有验证密保答案就直接操作:{"result":"false_notset"}
      * 老师学生以外的用户进行操作:{"result":"false_type"}
      * 重设密码失败,新旧密码一致: {"result":"failure"}
      * 重设密码成功:              {"result":"success"}
      */
-    public function retrUserPwd(){
+    public function retrUserPwd()
+    {
         $newPwd=md5($_POST['newPwd']);
 
         $user = new \app\index\model\UserModel();
@@ -519,7 +494,7 @@ class Index extends Controller
 
     /**
      * showUserInfo()用户显示用户信息
-     * 
+     *
      * @return json_encode($arr)
      * 用户没有登录:              {"result":"false_unlogin"}
      * 老师学生以外的用户进行操作:{"result":"false_type"}
@@ -544,7 +519,8 @@ class Index extends Controller
      *         "reputation":""
      *      }
      */
-    public function showUserInfo(){
+    public function showUserInfo()
+    {
         $user = new \app\index\model\UserModel();
         $result = $user->showInfo();
         echo $result;
@@ -552,7 +528,7 @@ class Index extends Controller
 
     /**
      * editUserInfo()用于修改用户信息
-     * 
+     *
      * 函数的参数如下:
      *  部门:       $_POST['depart'];
      *  职称:       $_POST['job'];
@@ -568,7 +544,8 @@ class Index extends Controller
      * 修改信息失败:              {"result":"failure"}
      * 修改信息成功:              {"result":"success"}
      */
-    public function editUserInfo(){
+    public function editUserInfo()
+    {
         $depart=$_POST['depart'];
         $job=$_POST['job'];
         $tel=$_POST['tel'];
@@ -595,41 +572,46 @@ class Index extends Controller
      * 修改信息失败:{"result":"failure"}
      * 修改信息成功:{"result":"success"}
      */
-    public function setUserQuest(){
+    public function setUserQuest()
+    {
         $quest=$_POST['quest'];
         $ans=$_POST['ans'];
 
         $user = new \app\index\model\UserModel();
-        $result = $user->setQuest($quest,$ans);
+        $result = $user->setQuest($quest, $ans);
         echo $result;
     }
 
-    public function showUserQuest(){
+    public function showUserQuest()
+    {
         $user = new \app\index\model\UserModel();
         $result = $user->showQuest();
         echo $result;
     }
 
-    public function publishLearningEx(){
+    public function publishLearningEx()
+    {
         $title=$_POST['title'];
         $content=$_POST['content'];
 
         $learning_ex=new \app\index\model\LearningExModel();
-        $result = $learning_ex->publish($title,$content);
+        $result = $learning_ex->publish($title, $content);
         echo $result;
     }
 
-    public function editLearningEx(){
+    public function editLearningEx()
+    {
         $title=$_POST['title'];
         $content=$_POST['content'];
         $id=$_POST['id'];
 
         $learning_ex=new \app\index\model\LearningExModel();
-        $result = $learning_ex->edit($id,$title,$content);
+        $result = $learning_ex->edit($id, $title, $content);
         echo $result;
     }
 
-    public function deleteLearningEx(){
+    public function deleteLearningEx()
+    {
         $id=$_POST['id'];
 
         $learning_ex=new \app\index\model\LearningExModel();
@@ -637,121 +619,134 @@ class Index extends Controller
         echo $result;
     }
 
-    public function getLearningExTitles(){
+    public function getLearningExTitles()
+    {
         $pageNum=$_POST['start_num'];
 
         $learning_ex=new \app\index\model\LearningExModel();
         $result = $learning_ex->getTitles($pageNum);
-        
+
         echo $result;
     }
 
-    public function showHomeworkBlankAns(){
+    public function showHomeworkBlankAns()
+    {
         $homework_th=$_POST['onlineHomeworkTime'];
 
         $homework=new \app\index\model\HomeworkModel();
         $result = $homework->showBlankAns($homework_th);
-        
+
         echo $result;
     }
 
-    public function setHomeworkBlankComment(){
+    public function setHomeworkBlankComment()
+    {
         $json = $_POST['onlineHomeworkComment'];
 
         $homework=new \app\index\model\HomeworkModel();
         $result = $homework->setComment($json);
-        
+
         echo $result;
     }
 
-    public function showExperimentAns(){
+    public function showExperimentAns()
+    {
         $n_th=$_POST['reportHomeworkTime'];
 
         $experiment=new \app\index\model\ExperimentModel();
         $result = $experiment->showAns($n_th);
-        
+
         echo $result;
     }
 
-    public function setExperimentComment(){
+    public function setExperimentComment()
+    {
         $json = $_POST['reportHomeworkComment'];
 
         $experiment=new \app\index\model\ExperimentModel();
         $result = $experiment->setComment($json);
-        
+
         echo $result;
     }
 
-    public function getHomeworkComment(){
+    public function getHomeworkComment()
+    {
         $homework=new \app\index\model\HomeworkModel();
         $result = $homework->getComment();
-        
+
         echo $result;
     }
 
-    public function getExperimentComment(){
+    public function getExperimentComment()
+    {
         $experiment=new \app\index\model\ExperimentModel();
         $result = $experiment->getComment();
-        
+
         echo $result;
     }
 
 
-    public function getHomeworkTracer(){
+    public function getHomeworkTracer()
+    {
         $homework=new \app\index\model\HomeworkModel();
         $result = $homework->getTracer();
-        
+
         echo $result;
     }
 
-    public function getExperimentTracer(){
+    public function getExperimentTracer()
+    {
         $experiment=new \app\index\model\ExperimentModel();
         $result = $experiment->getTracer();
-        
+
         echo $result;
     }
 
-    public function getAdminClassInfo(){
+    public function getAdminClassInfo()
+    {
         $admin=new \app\index\model\AdminModel();
         $result = $admin->getClassInfo();
-        
+
         echo $result;
     }
 
-    public function addAdminStudents(){
-        if(session('?login')){
+    public function addAdminStudents()
+    {
+        if (session('?login')) {
             $id=session('usr_id');
             $type=session('usr_type');
-            if($type=="3"){
+            if ($type=="3") {
                 $file = request()->file('excel');
                 $class_id = request()->param('class_id');
 
                 $admin=new \app\index\model\AdminModel();
                 $saveName= "resource/temp". DS . $admin->uploadTemp($file);
                 $stuArr = $admin->importExcel($saveName);
-                $result = $admin->addStudents($stuArr,$class_id);
-            }else{
+                $result = $admin->addStudents($stuArr, $class_id);
+            } else {
                 $result="false_type";
             }
-        }else{
+        } else {
             $result="false_unlogin";
         }
         $arr = array('result' => $result);
         echo json_encode($arr);
     }
 
-    public function addAdminStudent(){
+    public function addAdminStudent()
+    {
         $stu_id=$_POST['stu_id'];
         $stu_name=$_POST['stu_name'];
         $class_id=$_POST['class_id'];
 
         $admin=new \app\index\model\AdminModel();
-        $result = $admin->addStudent($stu_id,$stu_name,$class_id);
+        $result = $admin->addStudent($stu_id, $stu_name, $class_id);
 
         echo $result;
     }
 
-    public function deleteAdminStudent(){
+    public function deleteAdminStudent()
+    {
         $stu_id=$_POST['stu_id'];
 
         $admin=new \app\index\model\AdminModel();
@@ -760,26 +755,29 @@ class Index extends Controller
         echo $result;
     }
 
-    public function getAdminCourseInfo(){
+    public function getAdminCourseInfo()
+    {
         $admin=new \app\index\model\AdminModel();
         $result = $admin->getCourseInfo();
-        
+
         echo $result;
     }
 
-    public function addAdminClass(){
+    public function addAdminClass()
+    {
         $year=$_POST['year'];
         $semester=$_POST['semester'];
         $course_id=$_POST['course_id'];
         $time=$_POST['time'];
 
         $admin=new \app\index\model\AdminModel();
-        $result = $admin->addClass($year,$semester,$course_id,$time);
+        $result = $admin->addClass($year, $semester, $course_id, $time);
 
         echo $result;
     }
 
-    public function deleteAdminClass(){
+    public function deleteAdminClass()
+    {
         $class_id=$_POST['class_id'];
 
         $admin=new \app\index\model\AdminModel();
@@ -788,48 +786,51 @@ class Index extends Controller
         echo $result;
     }
 
-    public function isStudent(){
-        if(session('?login')){
+    public function isStudent()
+    {
+        if (session('?login')) {
             $id=session('usr_id');
             $type=session('usr_type');
-            if($type=="1"){
+            if ($type=="1") {
                 $result=true;
-            }else{
+            } else {
                 $result=false;
             }
-        }else{
+        } else {
             $result=false;
         }
         $arr = $result;
         echo json_encode($arr);
     }
 
-    public function isTeacher(){
-        if(session('?login')){
+    public function isTeacher()
+    {
+        if (session('?login')) {
             $id=session('usr_id');
             $type=session('usr_type');
-            if($type=="2"){
+            if ($type=="2") {
                 $result=true;
-            }else{
+            } else {
                 $result=false;
             }
-        }else{
+        } else {
             $result=false;
         }
         $arr = $result;
         echo json_encode($arr);
     }
 
-    public function isAdmin(){
-        if(session('?login')){
+    public function isAdmin()
+    {
+        if (session('?login')) {
             $id=session('usr_id');
             $type=session('usr_type');
-            if($type=="3"){
+            if ($type=="3") {
                 $result=true;
-            }else{
+            } else {
                 $result=false;
             }
-        }else{
+        } else {
             $result=false;
         }
         $arr = $result;

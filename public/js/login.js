@@ -115,7 +115,7 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
                             }
                         });
                     } else if ($scope.user.type === "3") { //管理员
-                        $state.go('administrator.student');
+                        $state.go('administrator.course');
                         $rootScope.dynamic_bar = "view/profile_login_admin.html";
                         var fd4 = new FormData();
                         $rootScope.sendData("/index.php/index/Index/showUserInfo", fd4, function() {
@@ -346,7 +346,18 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
             });
         }
     };
-
+    $scope.verifyIdentity = function() {
+        var fd = new FormData();
+        $rootScope.sendData("/index.php/index/Index/isStudent", fd, function() {
+            if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 404) {
+                if ($rootScope.xmlhttp.responseText !== "true") {
+                    alert("请先登录");
+                    $state.go("visitor");
+                }
+            }
+        });
+    };
+    $scope.verifyIdentity();
 }])
 
 // 显示个人信息控制器
@@ -354,6 +365,8 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
 
 
 .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.when("", "visitor");
+
     $stateProvider
         .state("modifyinfo_student", {
             url: "/modifyinfo_student",
@@ -361,9 +374,13 @@ app.controller('login_info_controller', ['$scope', '$log', '$rootScope', '$state
         })
 
     .state("showinfo_student", {
-        url: "/showinfo_student",
-        templateUrl: "view/ShowInfo_student.html"
-    })
+            url: "/showinfo_student",
+            templateUrl: "view/ShowInfo_student.html"
+        })
+        .state("visitor", {
+            url: "/visitor",
+            templateUrl: "view/visitor.html"
+        })
 
     .state("showinfo_teacher", {
         url: "/showinfo_teacher",

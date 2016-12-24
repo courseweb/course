@@ -6,16 +6,16 @@
                 <hr />
                 <div class="input">
                     <label for="name">姓名</label>
-                    <input type="text" class="form-control" ng-model="addTeaData.name" placeholder="请输入教师姓名">
+                    <input type="text" class="form-control" ng-model="submittedDataForAddTeacher.name" placeholder="请输入教师姓名">
                     <label for="name">工号</label>
-                    <input type="text" class="form-control" ng-model="addTeaData.id" placeholder="请输入教师工号">
-                    <div ng-show="addTea.successTip" style="margin-top:110px">
+                    <input type="text" class="form-control" ng-model="submittedDataForAddTeacher.id" placeholder="请输入教师工号">
+                    <div ng-show="showDataForAddTeacher.successTip" style="margin-top:110px">
                         <div class="alert alert-success alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功添加教师账户！
                         </div>
                     </div>
 
-                    <div ng-show="addTea.errorTip" style="margin-top:110px">
+                    <div ng-show="showDataForAddTeacher.errorTip" style="margin-top:110px">
                         <div class="alert alert-danger alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 添加教师账户失败，请重试！
                         </div>
@@ -23,24 +23,24 @@
                 </div>
                 <div class="select">
                     <label>选择学年</label>
-                    <select class="form-control" ng-model="addTeaData.selectedYear" ng-change="updateAddTeaSelect('semester')">
-                <option ng-repeat="yearItem in addTea.years" value="{{yearItem}}">{{yearItem}}</option>
+                    <select class="form-control" ng-model="submittedDataForAddTeacher.selectedYear" ng-change="updateAddTeaSelect('semester')">
+                <option ng-repeat="yearItem in showDataForAddTeacher.years" value="{{yearItem}}">{{yearItem}}</option>
               </select>
 
                     <label>选择学期</label>
-                    <select class="form-control" ng-model="addTeaData.selectedSemester" ng-change="updateAddTeaSelect('class')">
-                <option ng-repeat="semesterItem in addTea.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
+                    <select class="form-control" ng-model="submittedDataForAddTeacher.selectedSemester" ng-change="updateAddTeaSelect('classname')">
+                <option ng-repeat="semesterItem in showDataForAddTeacher.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
               </select>
 
                     <label>选择教学班</label>
-                    <select class="form-control" ng-model="addTeaData.selectedClass">
-                <option ng-repeat="classItem in addTea.classes" value="{{classItem}}">{{classItem}}</option>
+                    <select class="form-control" ng-model="submittedDataForAddTeacher.selectedClass">
+                <option ng-repeat="classItem in showDataForAddTeacher.classes" value="{{classItem}}">{{classItem}}</option>
               </select>
                     <label>点击继续选择教学班</label>
                     <a href="" class="btn btn-info btn-block" ng-click="addClass()">
                         <span class="glyphicon glyphicon-plus"></span>添加
                     </a>
-                    <button class="btn btn-default btn-block" ng-click="submitTeaInfo()" ng-disabled="((!addTeaData.name) || (!addTeaData.id))">提交</button>
+                    <button class="btn btn-default btn-block" ng-click="submitTeaInfo()" ng-disabled="((!submittedDataForAddTeacher.name) || (!submittedDataForAddTeacher.id))">提交</button>
                 </div>
                 <div class="show">
                     <table class="table">
@@ -70,13 +70,13 @@
                         <label>工号</label>
                     </div>
                     <div class="error">
-                        <div ng-show="deleteTea.successTip">
+                        <div ng-show="showDataForDeleteTeacher.successTip">
                             <div class="alert alert-success alert-dismissable">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除成功!
                             </div>
                         </div>
 
-                        <div ng-show="deleteTea.errorTip">
+                        <div ng-show="showDataForDeleteTeacher.errorTip">
                             <div class="alert alert-danger alert-dismissable">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除失败，请重试！
                             </div>
@@ -85,10 +85,10 @@
                 </div>
                 <div class="secondRow">
                     <div class="id">
-                        <input type="text" class="form-control" ng-model="deleteTea.id" placeholder="请输入教师工号">
+                        <input type="text" class="form-control" ng-model="submittedDataForDeleteTeacher.id" placeholder="请输入教师工号">
                     </div>
                     <div class="submit">
-                        <button class="btn btn-default btn-block" ng-click="deleteTeaInfo()" ng-disabled="(!deleteTea.id)">删除</button>
+                        <button class="btn btn-default btn-block" ng-click="deleteTeaInfo()" ng-disabled="(!submittedDataForDeleteTeacher.id)">删除</button>
                     </div>
                 </div>
 

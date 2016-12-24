@@ -6,62 +6,64 @@ app
         $scope.group = ["管理学生信息", "管理教师信息", "管理课程信息", "管理班级信息"];
 
         //store information of all classes, include year, semester, course and class
-        // [{
-        //     year: "2015-2016",
-        //     semester: "秋冬学期",
-        //     course : "软件需求工程",
-        //     teacher : "刘玉生",
-        //     time : "周一第3,4,5节-周五第3,4,5节"
-        // }]
+
         $rootScope.allClasses = [];
+        $rootScope.allCourses = [];
 
         $rootScope.years = [];
         $rootScope.semesters = [];
         $rootScope.courses = [];
-        $rootScope.classes = [];
+        $rootScope.classnames = [];
 
         //admin stu info - batch import
-        $rootScope.batch = {
+        $rootScope.showDataForBatch = {
             years: [],
             semesters: [],
-            classes: [],
+            classnames: [],
             successTip: false,
-            errorTip: false
+            errorTip: false,
+            errorTipContent: ""
         };
 
         //admin stu info - add student
-        $rootScope.addStu = {
+        $rootScope.showDataForAddStudent = {
             years: [],
             semesters: [],
-            classes: [],
+            classnames: [],
             successTip: false,
-            errorTip: false
+            errorTip: false,
+            errorTipContent: ""
         };
 
         //admin teacher info - add teacher info
-        $rootScope.addTea = {
+        $rootScope.showDataForAddTeacher = {
             years: [],
             semesters: [],
-            classes: [],
+            classnames: [],
             successTip: false,
-            errorTip: false
+            errorTip: false,
+            errorTipContent: ""
         };
 
         //admin class info - add class info
-        $rootScope.addClass = {
+        $rootScope.showDataForAddClass = {
             allCourses: [],
-            allSemesters: ["秋冬学期", "春夏学期"],
+            allSemesters: ["秋冬", "春夏"],
+            allDays: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+            allTimes: ["1,2节", "3,4节", "3,4,5节", "6,7节", "6,7,8节", "9,10节", "11,12节", "11,12,13节"],
             successTip: false,
-            errorTip: false
+            errorTip: false,
+            errorTipContent: ""
         };
 
         //admin class info - delete class info
-        $rootScope.deleteAllClass = {
+        $rootScope.showDataForDeleteClass = {
             years: [],
             semesters: [],
-            classes: [],
+            classnames: [],
             successTip: false,
-            errorTip: false
+            errorTip: false,
+            errorTipContent: ""
         };
 
         /*create XMLHttpRequest object
@@ -75,6 +77,7 @@ app
             $rootScope.xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
 
+        $rootScope.xmlhttp.responseText = "";
         /**
          * [sendData used to send ajax request]
          * @param  {[string]} url   [target url]
@@ -87,6 +90,19 @@ app
             $rootScope.xmlhttp.send(fd);
         };
 
+        $scope.verifyIdentity = function() {
+            var fd = new FormData();
+            $rootScope.sendData("/index.php/index/Index/isAdmin", fd, function() {
+                if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200 || $rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 404) {
+                    if ($rootScope.xmlhttp.responseText !== "true") {
+                        alert("请先登录");
+                        $state.go("visitor");
+                    }
+                }
+            });
+        };
+        $scope.verifyIdentity();
+
         /**
          * [toggleGroup used to jump to refered admin page]
          * @param  {[number]} number []
@@ -94,19 +110,16 @@ app
         $scope.toggleGroup = function(number) {
             // $rootScope.mainTitle = $scope.group[number];
             if (number === 0) {
-                // $state.go('administrator.student');
+                $scope.getAllClasses($scope.flushAdminStu);
                 $state.go('administrator.student');
-
-                $scope.flushAdminStu();
             } else if (number == 1) {
+                $scope.getAllClasses($scope.flushAdminTea);
                 $state.go('administrator.teacher');
-                $scope.flushAdminTea();
             } else if (number == 2) {
                 $state.go('administrator.course');
-
             } else if (number == 3) {
+                $scope.getAllCourses($scope.flushAdminClass);
                 $state.go('administrator.class');
-                $scope.flushAdminClass();
             }
         };
 
@@ -123,6 +136,19 @@ app
             return returnArr;
         };
 
+        $rootScope.filterDuplicate2D = function(arr, type) {
+            var array = {};
+            var returnArr = [];
+            var itemType;
+            angular.forEach(arr, function(item) {
+                if (!array[item[type]]) {
+                    array[item[type]] = true;
+                    this.push(item[type]);
+                }
+            }, returnArr);
+            return returnArr;
+        };
+
 
         $rootScope.filterExist = function(arr, key, value, neededKey) {
             var returnArr = [];
@@ -132,7 +158,6 @@ app
                     itemValue = item[key];
                     if (itemValue === value) {
                         this.push(item[neededKey]);
-                        console.log(item[neededKey]);
                     }
                 }, returnArr);
             } else {
@@ -148,44 +173,77 @@ app
         /**
          * [getAllClasses get all classes execute immediately after logging system ]
          */
-        $scope.getAllClasses = function() {
+        $scope.getAllClasses = function(fun) {
             var fd = new FormData();
-            $rootScope.sendData("/index.php/index/Admin/getAllClasses", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/getAdminClassInfo", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.allClasses = JSON.parse($rootScope.xmlhttp.responseText);
+                    $rootScope.allClasses = JSON.parse($rootScope.xmlhttp.responseText).result;
 
-                    $rootScope.years = $rootScope.filterDuplicate($rootScope.allClasses, "year");
-                    $rootScope.semesters = $rootScope.filterDuplicate($rootScope.allClasses, "semester");
-                    $rootScope.classes = $rootScope.filterDuplicate($rootScope.allClasses, "class");
-                    $rootScope.courses = $rootScope.filterDuplicate($rootScope.allClasses, "course");
+                    $rootScope.years = $rootScope.filterDuplicate2D($rootScope.allClasses, "year");
+                    $rootScope.semesters = $rootScope.filterDuplicate2D($rootScope.allClasses, "semester");
+                    $rootScope.classnames = $rootScope.filterDuplicate2D($rootScope.allClasses, "classname");
+                    $scope.$apply(function() {
+                        fun();
+                    });
                 }
             });
         };
 
+        $scope.getAllCourses = function(fun) {
+            var fd = new FormData();
+            $rootScope.sendData("/index.php/index/Index/getAdminCourseInfo", fd, function() {
+                if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
+                    $rootScope.allCourses = JSON.parse($rootScope.xmlhttp.responseText).result;
+                    $rootScope.courses = $rootScope.filterDuplicate2D($rootScope.allCourses, "course");
+                    $scope.$apply(function() {
+                        $rootScope.showDataForAddClass.allCourses = $rootScope.courses;
+                    });
+                    $scope.getAllClasses(fun);
+                }
+            });
+        };
         $scope.flushAdminStu = function() {
-            $rootScope.batch.years = $rootScope.years;
-            $rootScope.batch.semesters = $rootScope.semesters;
-            $rootScope.batch.classes = $rootScope.classes;
+            $rootScope.showDataForBatch.years = $rootScope.years;
+            $rootScope.showDataForBatch.semesters = $rootScope.semesters;
+            $rootScope.showDataForBatch.classnames = $rootScope.classnames;
 
-            $rootScope.addStu.years = $rootScope.years;
-            $rootScope.addStu.semesters = $rootScope.semesters;
-            $rootScope.addStu.classes = $rootScope.classes;
+            $rootScope.showDataForAddStudent.years = $rootScope.years;
+            $rootScope.showDataForAddStudent.semesters = $rootScope.semesters;
+            $rootScope.showDataForAddStudent.classnames = $rootScope.classnames;
         };
 
         $scope.flushAdminTea = function() {
-            $rootScope.addTea.years = $rootScope.years;
-            $rootScope.addTea.semesters = $rootScope.semesters;
-            $rootScope.addTea.classes = $rootScope.classes;
+            $rootScope.showDataForAddTeacher.years = $rootScope.years;
+            $rootScope.showDataForAddTeacher.semesters = $rootScope.semesters;
+            $rootScope.showDataForAddTeacher.classnames = $rootScope.classnames;
         };
 
         $scope.flushAdminClass = function() {
-            $rootScope.addClass.allCourses = $rootScope.courses;
-            $rootScope.deleteAllClass.years = $rootScope.years;
-            $rootScope.deleteAllClass.semesters = $rootScope.semesters;
-            $rootScope.deleteAllClass.classes = $rootScope.classes;
+            $rootScope.showDataForAddClass.allCourses = $rootScope.courses;
+            $rootScope.showDataForDeleteClass.years = $rootScope.years;
+            $rootScope.showDataForDeleteClass.semesters = $rootScope.semesters;
+            $rootScope.showDataForDeleteClass.classnames = $rootScope.classnames;
         };
 
+        $rootScope.searchClassId = function(arr, year, semester, classname) {
+            var returnArr = [];
+            angular.forEach(arr, function(item) {
+                if (item.year === year && item.semester === semester && item.classname === classname) {
+                    this.push(item.class_id);
+                }
+            }, returnArr);
+            return returnArr[0];
+        };
 
+        $rootScope.searchCourseId = function(arr, course) {
+            var returnArr = [];
+            angular.forEach(arr, function(item) {
+                if (item.course === course) {
+                    this.push(item.course_id);
+                }
+            }, returnArr);
+            return returnArr[0];
+        };
 
 
     })
@@ -193,7 +251,7 @@ app
         $rootScope.mainTitle = "你好，管理员";
     })
     .controller('studentBatchAdmin', function($scope, $rootScope, $state, $timeout) {
-        $scope.importedData = {
+        $scope.submittedDataForBatch = {
             selectedYear: "",
             selectedSemester: "",
             selectedClass: "",
@@ -203,41 +261,49 @@ app
         $rootScope.result = "";
         $scope.upload = function(files) {
             $scope.$apply(function() {
-                $scope.importedData.selectedExcel = files[0];
+                $scope.submittedDataForBatch.selectedExcel = files[0];
             });
         };
         $scope.updateBatchSelect = function(condition) {
             var temporarySemesters, temporaryAllClasses, temporaryClasses;
             if (condition === "semester") {
-                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $scope.importedData.selectedYear, "semester");
-                $rootScope.batch.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
-            } else if (condition === "class") {
-                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $scope.importedData.selectedYear, "");
-                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $scope.importedData.selectedSemester, "class");
-                $rootScope.batch.classes = $rootScope.filterDuplicate(temporaryClasses, "class");
+                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForBatch.selectedYear, "semester");
+                $rootScope.showDataForBatch.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
+            } else if (condition === "classname") {
+                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForBatch.selectedYear, "");
+                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $scope.submittedDataForBatch.selectedSemester, "classname");
+                $rootScope.showDataForBatch.classes = $rootScope.filterDuplicate(temporaryClasses, "class");
             }
         };
         $scope.imporStuData = function() {
             var fd = new FormData();
-            fd.append("year", $scope.importedData.selectedYear);
-            fd.append("semester", $scope.importedData.selectedSemester);
-            fd.append("class", $scope.importedData.selectedClass);
-            fd.append("excel", $scope.importedData.selectedExcel);
+            var class_id = $rootScope.searchClassId($rootScope.allClasses, $scope.submittedDataForBatch.selectedYear, $scope.submittedDataForBatch.selectedSemester, $scope.submittedDataForBatch.selectedClass);
+            fd.append("class_id", class_id);
+            fd.append("excel", $scope.submittedDataForBatch.selectedExcel);
 
-            $rootScope.sendData("/index.php/index/Admin/imporStuData", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/addAdminStudents", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
+
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.batch.successTip = true;
+                            $rootScope.showDataForBatch.successTip = true;
+                            console.log($rootScope.showDataForBatch.successTip);
                             $timeout(function() {
-                                $rootScope.batch.successTip = false;
-                            }, 2000);
-                        } else if ($rootScope.result === "false format") {
-                            $rootScope.batch.errorTip = true;
+                                $rootScope.showDataForBatch.successTip = false;
+                            }, 1000);
+                        } else if ($rootScope.result === "false_insertStudent") {
+                            $rootScope.showDataForBatch.errorTipContent = "插入学生信息失败,请重新尝试";
+                            $rootScope.showDataForBatch.errorTip = true;
                             $timeout(function() {
-                                $rootScope.batch.errorTip = false;
-                            }, 2000);
+                                $rootScope.showDataForBatch.errorTip = false;
+                            }, 1000);
+                        } else if ($rootScope.result === "false_insertTake") {
+                            $rootScope.showDataForBatch.errorTipContent = "插入上课信息失败,请重新尝试";
+                            $rootScope.showDataForBatch.errorTip = true;
+                            $timeout(function() {
+                                $rootScope.showDataForBatch.errorTip = false;
+                            }, 1000);
                         }
                     });
                 }
@@ -248,7 +314,7 @@ app
 
     })
     .controller('studentSingleAdmin', function($scope, $rootScope, $state, $timeout) {
-        $scope.addStuData = {
+        $scope.submittedDataForAddStudent = {
             name: "",
             id: "",
             selectedYear: "",
@@ -256,29 +322,32 @@ app
             selectedClass: ""
         };
 
+        $scope.stuSelectedAllClassIds = [];
         $scope.stuSelectedAllClasses = [];
-        $scope.deleteStu = {
-            id: "",
+        $scope.showDataForDeleteStudent = {
             successTip: false,
             errorTip: false
         };
+        $scope.submittedDataForDeleteStudent = {
+            id: "",
+        };
         $scope.deleteStuInfo = function() {
             var fd = new FormData();
-            fd.append("stu_id", $scope.deleteStu.id);
+            fd.append("stu_id", $scope.submittedDataForDeleteStudent.id);
 
-            $rootScope.sendData("/index.php/index/Admin/deleteStuInfo", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/deleteAdminStudent", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.deleteStu.successTip = true;
+                            $scope.showDataForDeleteStudent.successTip = true;
                             $timeout(function() {
-                                $rootScope.deleteStu.successTip = false;
+                                $scope.showDataForDeleteStudent.successTip = false;
                             }, 2000);
                         } else if ($rootScope.result === "false") {
-                            $rootScope.deleteStu.errorTip = true;
+                            $scope.showDataForDeleteStudent.errorTip = true;
                             $timeout(function() {
-                                $rootScope.deleteStu.errorTip = false;
+                                $scope.showDataForDeleteStudent.errorTip = false;
                             }, 2000);
                         }
                     });
@@ -288,49 +357,52 @@ app
         $scope.updateAddStuSelect = function(condition) {
             var temporarySemesters, temporaryAllClasses, temporaryClasses;
             if (condition === "semester") {
-                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $scope.addStuData.selectedYear, "semester");
-                $rootScope.addStu.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
-            } else if (condition === "class") {
-                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $scope.addStuData.selectedYear, "");
-                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $scope.addStuData.selectedSemester, "class");
-                $rootScope.addStu.classes = $rootScope.filterDuplicate(temporaryClasses, "class");
+                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForAddStudent.selectedYear, "semester");
+                $rootScope.showDataForAddStudent.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
+            } else if (condition === "classname") {
+                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForAddStudent.selectedYear, "");
+                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $scope.submittedDataForAddStudent.selectedSemester, "classname");
+                $rootScope.showDataForAddStudent.classnames = $rootScope.filterDuplicate(temporaryClasses, "classname");
             }
         };
         $scope.addClass = function() {
-            var classItem = {
+            var class_id;
+            var item = {
                 selectedYear: "",
                 selectedSemester: "",
                 selectedClass: ""
             };
-            classItem.selectedYear = $scope.addStuData.selectedYear;
-            classItem.selectedSemester = $scope.addStuData.selectedSemester;
-            classItem.stuSelectedAllClasses = $scope.addStuData.selectedClass;
-            $scope.stuSelectedAllClasses.push(classItem);
-            $rootScope.addStu.years = $rootScope.years;
-            $rootScope.addStu.semesters = $rootScope.semesters;
-            $rootScope.addStu.classes = $rootScope.classes;
+            class_id = $rootScope.searchClassId($rootScope.allClasses, $scope.submittedDataForAddStudent.selectedYear, $scope.submittedDataForAddStudent.selectedSemester, $scope.submittedDataForAddStudent.selectedClass);
+            $scope.stuSelectedAllClassIds.push(class_id);
+            item.selectedYear = $scope.submittedDataForAddStudent.selectedYear;
+            item.selectedSemester = $scope.submittedDataForAddStudent.selectedSemester;
+            item.selectedClass = $scope.submittedDataForAddStudent.selectedClass;
+            $scope.stuSelectedAllClasses.push(item);
+            $rootScope.showDataForAddStudent.years = $rootScope.years;
+            $rootScope.showDataForAddStudent.semesters = $rootScope.semesters;
+            $rootScope.showDataForAddStudent.classnames = $rootScope.classnames;
 
         };
         $scope.submitStuInfo = function() {
             var fd = new FormData();
-            fd.append("stu_name", $scope.addStuData.name);
-            fd.append("stu_id", $scope.addStuData.id);
-            fd.append("stu_allClasses", JSON.stringify($scope.stuSelectedAllClasses));
+            fd.append("stu_name", $scope.submittedDataForAddStudent.name);
+            fd.append("stu_id", $scope.submittedDataForAddStudent.id);
+            fd.append("class_id", JSON.stringify($scope.stuSelectedAllClassIds));
 
-            $rootScope.sendData("/index.php/index/Admin/submitStuInfo", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/addAdminStudent", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
 
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.addStu.successTip = true;
+                            $rootScope.showDataForAddStudent.successTip = true;
                             $timeout(function() {
-                                $rootScope.addStu.successTip = false;
+                                $rootScope.showDataForAddStudent.successTip = false;
                             }, 2000);
                         } else if ($rootScope.result === "false") {
-                            $rootScope.addStu.errorTip = true;
+                            $rootScope.showDataForAddStudent.errorTip = true;
                             $timeout(function() {
-                                $rootScope.addStu.errorTip = false;
+                                $rootScope.showDataForAddStudent.errorTip = false;
                             }, 2000);
                         }
                     });
@@ -341,7 +413,7 @@ app
 
     })
     .controller('teacherSingleAdmin', function($scope, $rootScope, $state, $timeout) {
-        $rootScope.addTeaData = {
+        $scope.submittedDataForAddTeacher = {
             name: "",
             id: "",
             selectedYear: "",
@@ -350,28 +422,32 @@ app
         };
 
         $scope.TeaSelectedAllClasses = [];
-        $scope.deleteTea = {
+        $scope.TeaSelectedAllClassIds = [];
+        $scope.submittedDataForDeleteTeacher = {
             id: ""
         };
-        $scope.deleteTea.successTip = false;
-        $scope.deleteTea.errorTip = false;
+        $scope.showDataForDeleteTeacher = {
+            successTip: false,
+            errorTip: false
+        };
+
         $scope.deleteTeaInfo = function() {
             var fd = new FormData();
-            fd.append("tea_id", $scope.deleteTea.id);
+            fd.append("t_id", $scope.submittedDataForDeleteTeacher.id);
 
-            $rootScope.sendData("/index.php/index/Admin/deleteTeaInfo", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/deleteTeaInfo", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.deleteTea.successTip = true;
+                            $scope.showDataForDeleteTeacher.successTip = true;
                             $timeout(function() {
-                                $rootScope.deleteTea.successTip = false;
+                                $scope.showDataForDeleteTeacher.successTip = false;
                             }, 2000);
                         } else if ($rootScope.result === "false") {
-                            $rootScope.deleteTea.errorTip = true;
+                            $scope.showDataForDeleteTeacher.errorTip = true;
                             $timeout(function() {
-                                $rootScope.deleteTea.errorTip = false;
+                                $scope.showDataForDeleteTeacher.errorTip = false;
                             }, 2000);
                         }
                     });
@@ -381,48 +457,53 @@ app
         $scope.updateAddTeaSelect = function(condition) {
             var temporarySemesters, temporaryAllClasses, temporaryClasses;
             if (condition === "semester") {
-                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $rootScope.addTeaData.selectedYear, "semester");
-                $rootScope.addTea.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
-            } else if (condition === "class") {
-                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $rootScope.addTeaData.selectedYear, "");
-                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $rootScope.addTeaData.selectedSemester, "class");
-                $rootScope.addTea.classes = $rootScope.filterDuplicate(temporaryClasses, "class");
+                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForAddTeacher.selectedYear, "semester");
+                $rootScope.showDataForAddTeacher.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
+            } else if (condition === "classname") {
+                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForAddTeacher.selectedYear, "");
+                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $scope.submittedDataForAddTeacher.selectedSemester, "classname");
+                $rootScope.showDataForAddTeacher.classnames = $rootScope.filterDuplicate(temporaryClasses, "classname");
             }
         };
         $scope.addClass = function() {
-            var classItem = {
+            var class_id;
+
+            var item = {
                 selectedYear: "",
                 selectedSemester: "",
                 selectedClass: ""
             };
-            classItem.selectedYear = $rootScope.addTeaData.selectedYear;
-            classItem.selectedSemester = $rootScope.addTeaData.selectedSemester;
-            classItem.TeaSelectedAllClasses = $rootScope.addTeaData.selectedClass;
-            $scope.TeaSelectedAllClasses.push(classItem);
-            $rootScope.addTea.years = $rootScope.years;
-            $rootScope.addTea.semesters = $rootScope.semesters;
-            $rootScope.addTea.classes = $rootScope.classes;
+            item.selectedYear = $scope.submittedDataForAddTeacher.selectedYear;
+            item.selectedSemester = $scope.submittedDataForAddTeacher.selectedSemester;
+            item.selectedClass = $scope.submittedDataForAddTeacher.selectedClass;
+            $scope.TeaSelectedAllClasses.push(item);
+
+            class_id = $rootScope.searchClassId($rootScope.allClasses, $scope.submittedDataForAddTeacher.selectedYear, $scope.submittedDataForAddTeacher.selectedSemester, $scope.submittedDataForAddTeacher.selectedClass);
+            $scope.TeaSelectedAllClassIds.push(class_id);
+            $rootScope.showDataForAddTeacher.years = $rootScope.years;
+            $rootScope.showDataForAddTeacher.semesters = $rootScope.semesters;
+            $rootScope.showDataForAddTeacher.classnames = $rootScope.classnames;
 
         };
         $scope.submitTeaInfo = function() {
             var fd = new FormData();
-            fd.append("tea_name", $rootScope.addTeaData.name);
-            fd.append("tea_id", $rootScope.addTeaData.id);
-            fd.append("tea_allClasses", JSON.stringify($scope.TeaSelectedAllClasses));
+            fd.append("t_name", $scope.submittedDataForAddTeacher.name);
+            fd.append("t_id", $scope.submittedDataForAddTeacher.id);
+            fd.append("class_id", JSON.stringify($scope.TeaSelectedAllClasses));
 
-            $rootScope.sendData("/index.php/index/Admin/submitTeaInfo", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/addTeaInfo", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.addTea.successTip = true;
+                            $rootScope.showDataForAddTeacher.successTip = true;
                             $timeout(function() {
-                                $rootScope.addTea.successTip = false;
+                                $rootScope.showDataForAddTeacher.successTip = false;
                             }, 2000);
                         } else if ($rootScope.result === "false") {
-                            $rootScope.addTea.errorTip = true;
+                            $rootScope.showDataForAddTeacher.errorTip = true;
                             $timeout(function() {
-                                $rootScope.addTea.errorTip = false;
+                                $rootScope.showDataForAddTeacher.errorTip = false;
                             }, 2000);
                         }
                     });
@@ -433,7 +514,7 @@ app
 
     })
     .controller('courseSingleAdmin', function($scope, $rootScope, $state, $timeout) {
-        $scope.addedCourse = {
+        $scope.submittedDataForAddCourse = {
             subject: "",
             credits: "",
             teach_hours: "",
@@ -442,43 +523,47 @@ app
             assess: "",
             prerequ: "",
             outline: "",
-            project: ""
+            project: "",
+            description: ""
         };
-        $scope.addCourse = {};
-        $scope.deleteCourse = {
+        $scope.submittedDataForDeleteCourse = {
             course_id: ""
         };
-
-        $scope.addCourse.successTip = false;
-        $scope.addCourse.errorTip = false;
-        $scope.deleteCourse.successTip = false;
-        $scope.deleteCourse.errorTip = false;
+        $scope.showDataForAddCourse = {
+            successTip: false,
+            errorTip: false
+        };
+        $scope.showDataForDeleteCourse = {
+            successTip: false,
+            errorTip: false
+        };
 
         $scope.addCourseInfo = function() {
             var fd = new FormData();
-            fd.append("subject", $scope.addedCourse.subject);
-            fd.append("credits", $scope.addedCourse.credits);
-            fd.append("teach_hours", $scope.addedCourse.teach_hours);
-            fd.append("textbook", $scope.addedCourse.textbook);
-            fd.append("background", $scope.addedCourse.background);
-            fd.append("assess", $scope.addedCourse.assess);
-            fd.append("prerequ", $scope.addedCourse.prerequ);
-            fd.append("outline", $scope.addedCourse.outline);
-            fd.append("project", $scope.addedCourse.project);
+            fd.append("subject", $scope.submittedDataForAddCourse.subject);
+            fd.append("credits", $scope.submittedDataForAddCourse.credits);
+            fd.append("teach_hours", $scope.submittedDataForAddCourse.teach_hours);
+            fd.append("textbook", $scope.submittedDataForAddCourse.textbook);
+            fd.append("background", $scope.submittedDataForAddCourse.background);
+            fd.append("assess", $scope.submittedDataForAddCourse.assess);
+            fd.append("prerequ", $scope.submittedDataForAddCourse.prerequ);
+            fd.append("outline", $scope.submittedDataForAddCourse.outline);
+            fd.append("project", $scope.submittedDataForAddCourse.project);
+            fd.append("description", $scope.submittedDataForAddCourse.description);
 
-            $rootScope.sendData("/index.php/index/Admin/addCourseInfo", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/addCourseInfo", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.addCourse.successTip = true;
+                            $scope.showDataForAddCourse.successTip = true;
                             $timeout(function() {
-                                $rootScope.addCourse.successTip = false;
+                                $scope.showDataForAddCourse.successTip = false;
                             }, 2000);
                         } else if ($rootScope.result === "false") {
-                            $rootScope.addCourse.errorTip = true;
+                            $scope.showDataForAddCourse.errorTip = true;
                             $timeout(function() {
-                                $rootScope.addCourse.errorTip = false;
+                                $scope.showDataForAddCourse.errorTip = false;
                             }, 2000);
                         }
                     });
@@ -487,21 +572,21 @@ app
         };
         $scope.deleteCourseInfo = function() {
             var fd = new FormData();
-            fd.append("course_id", $scope.deleteCourse.course_id);
+            fd.append("course_id", $scope.submittedDataForDeleteCourse.course_id);
 
-            $rootScope.sendData("/index.php/index/Admin/deleteCourseInfo", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/deleteCourseInfo", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.deleteCourse.successTip = true;
+                            $scope.showDataForDeleteCourse.successTip = true;
                             $timeout(function() {
-                                $rootScope.deleteCourse.successTip = false;
+                                $scope.showDataForDeleteCourse.successTip = false;
                             }, 2000);
                         } else if ($rootScope.result === "false") {
-                            $rootScope.deleteCourse.errorTip = true;
+                            $scope.showDataForDeleteCourse.errorTip = true;
                             $timeout(function() {
-                                $rootScope.deleteCourse.errorTip = false;
+                                $scope.showDataForDeleteCourse.errorTip = false;
                             }, 2000);
                         }
                     });
@@ -510,13 +595,15 @@ app
         };
     })
     .controller('classSingleAdmin', function($scope, $rootScope, $state, $timeout) {
-        $scope.addedClass = {
-            selectedYear: 2016,
+        $scope.submittedDataForAddClass = {
+            selectedYear: "2016-2017",
             selectedSemester: "",
             selectedCourse: "",
+            selectedDay: "",
+            selectedTime: ""
         };
 
-        $scope.deletedClass = {
+        $scope.submittedDataForDeleteClass = {
             selectedYear: "",
             selectedSemester: "",
             selectedClass: ""
@@ -524,22 +611,25 @@ app
 
         $scope.addClassInfo = function() {
             var fd = new FormData();
-            fd.append("year", $scope.addedClass.selectedYear);
-            fd.append("semester", $scope.addedClass.selectedSemester);
-            fd.append("course", $scope.addedClass.selectedCourse);
+            var course_id = $rootScope.searchCourseId($rootScope.allCourses, $scope.submittedDataForAddClass.selectedCourse);
+            var time = $scope.submittedDataForAddClass.selectedDay + $scope.submittedDataForAddClass.selectedTime;
+            fd.append("year", $scope.submittedDataForAddClass.selectedYear);
+            fd.append("semester", $scope.submittedDataForAddClass.selectedSemester);
+            fd.append("course_id", course_id);
+            fd.append("time", time);
 
-            $rootScope.sendData("/index.php/index/Admin/addClassInfo", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/addAdminClass", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
                     if ($rootScope.result === "success") {
-                        $rootScope.addClass.successTip = true;
+                        $rootScope.showDataForAddClass.successTip = true;
                         $timeout(function() {
-                            $rootScope.addClass.successTip = false;
+                            $rootScope.showDataForAddClass.successTip = false;
                         }, 2000);
                     } else if ($rootScope.result === "false") {
-                        $rootScope.addClass.errorTip = true;
+                        $rootScope.showDataForAddClass.errorTip = true;
                         $timeout(function() {
-                            $rootScope.addClass.errorTip = false;
+                            $rootScope.showDataForAddClass.errorTip = false;
                         }, 2000);
                     }
                 }
@@ -549,34 +639,33 @@ app
         $scope.updateDeleteClassSelect = function(condition) {
             var temporarySemesters, temporaryAllClasses, temporaryClasses;
             if (condition === "semester") {
-                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $scope.deletedClass.selectedYear, "semester");
-                $rootScope.deleteAllClass.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
-            } else if (condition === "class") {
-                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $scope.deletedClass.selectedYear, "");
-                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $scope.deletedClass.selectedSemester, "class");
-                $rootScope.deleteAllClass.classes = $rootScope.filterDuplicate(temporaryClasses, "class");
+                temporarySemesters = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForDeleteClass.selectedYear, "semester");
+                $rootScope.showDataForDeleteClass.semesters = $rootScope.filterDuplicate(temporarySemesters, "semester");
+            } else if (condition === "classname") {
+                temporaryAllClasses = $rootScope.filterExist($rootScope.allClasses, "year", $scope.submittedDataForDeleteClass.selectedYear, "");
+                temporaryClasses = $rootScope.filterExist(temporaryAllClasses, "semester", $scope.submittedDataForDeleteClass.selectedSemester, "classname");
+                $rootScope.showDataForDeleteClass.classnames = $rootScope.filterDuplicate(temporaryClasses, "classname");
             }
         };
 
         $scope.deleteClassData = function() {
             var fd = new FormData();
-            fd.append("year", $scope.deletedClass.selectedYear);
-            fd.append("semester", $scope.deletedClass.selectedSemester);
-            fd.append("class", $scope.deletedClass.selectedClass);
+            var class_id = $rootScope.searchClassId($rootScope.allClasses, $scope.submittedDataForDeleteClass.selectedYear, $scope.submittedDataForDeleteClass.selectedSemester, $scope.submittedDataForDeleteClass.selectedClass);
+            fd.append("class_id", class_id);
 
-            $rootScope.sendData("/index.php/index/Admin/deleteClassData", fd, function() {
+            $rootScope.sendData("/index.php/index/Index/deleteAdminClass", fd, function() {
                 if ($rootScope.xmlhttp.readyState == 4 && $rootScope.xmlhttp.status == 200) {
-                    $rootScope.result = $rootScope.xmlhttp.responseText;
+                    $rootScope.result = JSON.parse($rootScope.xmlhttp.responseText).result;
                     $scope.$apply(function() {
                         if ($rootScope.result === "success") {
-                            $rootScope.deleteAllClass.successTip = true;
+                            $rootScope.showDataForDeleteClass.successTip = true;
                             $timeout(function() {
-                                $rootScope.deleteAllClass.successTip = false;
+                                $rootScope.showDataForDeleteClass.successTip = false;
                             }, 2000);
                         } else if ($rootScope.result === "false") {
-                            $rootScope.deleteAllClass.errorTip = true;
+                            $rootScope.showDataForDeleteClass.errorTip = true;
                             $timeout(function() {
-                                $rootScope.deleteAllClass.errorTip = false;
+                                $rootScope.showDataForDeleteClass.errorTip = false;
                             }, 2000);
                         }
                     });

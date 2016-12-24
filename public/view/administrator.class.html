@@ -7,76 +7,86 @@
                 <div class="firstCol">
                     <div class="addClassInfo">
                         <label>学年</label>
-                        <input type="text" class="form-control" ng-model="addedClass.selectedYear" placeholder="请输入学年">
+                        <input type="text" class="form-control" ng-model="submittedDataForAddClass.selectedYear" placeholder="请输入学年">
                         <label>选择学期</label>
-                        <select class="form-control" ng-model="addedClass.selectedSemester">
-                      <option ng-repeat="semesterItem in addClass.allSemesters" value="{{semesterItem}}">{{semesterItem}}</option>
-                    </select>
+                        <select class="form-control" ng-model="submittedDataForAddClass.selectedSemester">
+                          <option ng-repeat="semesterItem in showDataForAddClass.allSemesters" value="{{semesterItem}}">{{semesterItem}}</option>
+                        </select>
 
                         <label>选择课程名</label>
-                        <select class="form-control" ng-model="addedClass.selectedCourse">
-                      <option ng-repeat="courseItem in addClass.allCourses" value="{{courseItem}}">{{courseItem}}</option>
-                    </select>
+                        <select class="form-control" ng-model="submittedDataForAddClass.selectedCourse">
+                          <option ng-repeat="courseItem in showDataForAddClass.allCourses" value="{{courseItem}}">{{courseItem}}</option>
+                        </select>
+
+                        <label>选择上课时间</label>
+                        <select class="form-control" ng-model="submittedDataForAddClass.selectedDay">
+                          <option ng-repeat="dayItem in showDataForAddClass.allDays" value="{{dayItem}}">{{dayItem}}</option>
+                        </select>
+
+                        <label></label>
+                        <select class="form-control" ng-model="submittedDataForAddClass.selectedTime">
+                          <option ng-repeat="timeItem in showDataForAddClass.allTimes" value="{{timeItem}}">{{timeItem}}</option>
+                        </select>
 
                     </div>
                     <div class="addClassTip">
-                        <div ng-show="addClass.successTip">
+                        <div ng-show="showDataForAddClass.successTip">
                             <div class="alert alert-success alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功添加课程！
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功添加教学班！
                             </div>
                         </div>
 
-                        <div ng-show="addClass.errorTip">
+                        <div ng-show="showDataForAddClass.errorTip">
                             <div class="alert alert-danger alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 添加课程失败，请重试！
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 添加教学班失败，请重试！
                             </div>
                         </div>
-                        <button type="button" class="btn btn-lg btn-block" ng-click="addClassInfo();" ng-disabled="">添加</button>
+                        <button type="button" class="btn btn-lg btn-block" ng-click="addClassInfo();" ng-disabled="((!submittedDataForAddClass.selectedYear) || (!submittedDataForAddClass.selectedSemester) || (!submittedDataForAddClass.selectedDay) || (!submittedDataForAddClass.selectedTime) || (!submittedDataForAddClass.selectedCourse))">添加</button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="deleteClass">
-            <h4 style="">删除教学班</h4>
-            <hr />
-            <div class="select">
 
-              <label>选择学年</label>
-              <select class="form-control" ng-model="deletedClass.selectedYear" ng-change="updateDeleteClassSelect('semester')">
-                <option ng-repeat="yearItem in deleteAllClass.years" value="{{yearItem}}">{{yearItem}}</option>
+            <div class="deleteClass">
+                <h4 style="">删除教学班</h4>
+                <hr />
+                <div class="select">
+
+                    <label>选择学年</label>
+                    <select class="form-control" ng-model="submittedDataForDeleteClass.selectedYear" ng-change="updateDeleteClassSelect('semester')">
+                <option ng-repeat="yearItem in showDataForDeleteClass.years" value="{{yearItem}}">{{yearItem}}</option>
               </select>
 
-              <label>选择学期</label>
-              <select class="form-control" ng-model="deletedClass.selectedSemester" ng-change="updateDeleteClassSelect('class')">
-                <option ng-repeat="semesterItem in deleteAllClass.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
+                    <label>选择学期</label>
+                    <select class="form-control" ng-model="submittedDataForDeleteClass.selectedSemester" ng-change="updateDeleteClassSelect('classname')">
+                <option ng-repeat="semesterItem in showDataForDeleteClass.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
               </select>
 
-              <label>选择教学班</label>
-              <select class="form-control" ng-model="deletedClass.selectedClass">
-                <option ng-repeat="classItem in deleteAllClass.classes" value="{{classItem}}">{{classItem}}</option>
+                    <label>选择教学班</label>
+                    <select class="form-control" ng-model="submittedDataForDeleteClass.selectedClass">
+                <option ng-repeat="classItem in showDataForDeleteClass.classnames" value="{{classItem}}">{{classItem}}</option>
               </select>
-            </div>
-            <div class="tip">
-
-              <div ng-show="deleteAllClass.successTip" style="height:21%">
-                <div class="alert alert-success alert-dismissable">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功导入数据！
                 </div>
-              </div>
+                <div class="tip">
 
-              <div ng-show="deleteAllClass.errorTip">
-                <div class="alert alert-danger alert-dismissable">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> excel表格格式不正确！
+                    <div ng-show="showDataForDeleteClass.successTip" style="height:21%">
+                        <div class="alert alert-success alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功导入数据！
+                        </div>
+                    </div>
+
+                    <div ng-show="showDataForDeleteClass.errorTip">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> excel表格格式不正确！
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-lg btn-block" ng-click="deleteClassData();" ng-disabled="((!submittedDataForDeleteClass.selectedYear) || (!submittedDataForDeleteClass.selectedSemester) || (!submittedDataForDeleteClass.selectedClass))">删除</button>
                 </div>
-              </div>
 
-              <button type="button" class="btn btn-lg btn-block" ng-click="deleteClassData();" ng-disabled="((!deletedClass.selectedYear) || (!deletedClass.selectedSemester) || (!deletedClass.selectedClass))">删除</button>
+
+
             </div>
-
-
-
         </div>
     </div>
-</div>
 </div>

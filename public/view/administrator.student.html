@@ -6,42 +6,41 @@
             <hr />
 
             <label>选择学年</label>
-            <select class="form-control" ng-model="importedData.selectedYear" ng-change="updateBatchSelect('semester')">
-                <option ng-repeat="yearItem in batch.years" value="{{yearItem}}">{{yearItem}}</option>
+            <select class="form-control" ng-model="submittedDataForBatch.selectedYear" ng-change="updateBatchSelect('semester')">
+                <option ng-repeat="yearItem in showDataForBatch.years" value="{{yearItem}}">{{yearItem}}</option>
               </select>
 
             <label>选择学期</label>
-            <select class="form-control" ng-model="importedData.selectedSemester" ng-change="updateBatchSelect('class')">
-                <option ng-repeat="semesterItem in batch.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
+            <select class="form-control" ng-model="submittedDataForBatch.selectedSemester" ng-change="updateBatchSelect('classname')">
+                <option ng-repeat="semesterItem in showDataForBatch.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
               </select>
 
             <label>选择教学班</label>
-            <select class="form-control" ng-model="importedData.selectedClass">
-                <option ng-repeat="classItem in batch.classes" value="{{classItem}}">{{classItem}}</option>
+            <select class="form-control" ng-model="submittedDataForBatch.selectedClass">
+                <option ng-repeat="classItem in showDataForBatch.classnames" value="{{classItem}}">{{classItem}}</option>
               </select>
 
             <p class="help-block">请按照指定格式上传Excel</p>
-            <div class="form-group">
-                <input type="file" ng-model="importedData.selectedExcel" onchange="angular.element(this).scope().upload(this.files)" />
+            <div class="a-upload">
+                <input type="file" onchange="angular.element(this).scope().upload(this.files)">请选择
+            </div>
+            <div class="">
+                {{submittedDataForBatch.selectedExcel.name}}
             </div>
 
-            <div class="a-upload" >
-                <input type="file" onchange="angular.element(this).scope().upload(this.files)">请选择
-            </div>{{importedData.selectedExcel.name}}
-
-            <div ng-show="batch.successTip" style="height:21%">
+            <div ng-show="showDataForBatch.successTip" style="height:21%">
                 <div class="alert alert-success alert-dismissable">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功导入数据！
                 </div>
             </div>
 
-            <div ng-show="batch.errorTip">
+            <div ng-show="showDataForBatch.errorTip">
                 <div class="alert alert-danger alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> excel表格格式不正确！
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>{{showDataForBatch.errorTipContent}}
                 </div>
             </div>
 
-            <button type="button" class="btn btn-lg btn-block" ng-click="imporStuData();" ng-disabled="((!importedData.selectedYear) || (!importedData.selectedSemester) || (!importedData.selectedClass) || (!importedData.selectedExcel))">导入</button>
+            <button type="button" class="btn btn-lg btn-block" ng-click="imporStuData();" ng-disabled="((!submittedDataForBatch.selectedYear) || (!submittedDataForBatch.selectedSemester) || (!submittedDataForBatch.selectedClass) || (!submittedDataForBatch.selectedExcel))">导入</button>
         </div>
         <div ng-controller="studentSingleAdmin">
             <div class="addStu">
@@ -49,41 +48,41 @@
                 <hr />
                 <div class="input">
                     <label for="name">姓名</label>
-                    <input type="text" class="form-control" ng-model="addStuData.name" placeholder="请输入学生姓名">
+                    <input type="text" class="form-control" ng-model="submittedDataForAddStudent.name" placeholder="请输入学生姓名">
                     <label for="name">学号</label>
-                    <input type="text" class="form-control" ng-model="addStuData.id" placeholder="请输入学生学号">
-                    <div ng-show="addStu.successTip" style="margin-top:110px">
+                    <input type="text" class="form-control" ng-model="submittedDataForAddStudent.id" placeholder="请输入学生学号">
+                    <div ng-show="showDataForAddStudent.successTip" style="margin-top:110px">
                         <div class="alert alert-success alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 成功添加学生账户！
                         </div>
                     </div>
 
-                    <div ng-show="addStu.errorTip" style="margin-top:110px">
+                    <div ng-show="showDataForAddStudent.errorTip" style="margin-top:110px">
                         <div class="alert alert-danger alert-dismissable">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 添加学生账户失败，请重试！
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> {{showDataForAddStudent.errorTipContent}}
                         </div>
                     </div>
                 </div>
                 <div class="select">
                     <label>选择学年</label>
-                    <select class="form-control" ng-model="addStuData.selectedYear" ng-change="updateAddStuSelect('semester')">
-                      <option ng-repeat="yearItem in addStu.years" value="{{yearItem}}">{{yearItem}}</option>
+                    <select class="form-control" ng-model="submittedDataForAddStudent.selectedYear" ng-change="updateAddStuSelect('semester')">
+                      <option ng-repeat="yearItem in showDataForAddStudent.years" value="{{yearItem}}">{{yearItem}}</option>
                     </select>
 
                     <label>选择学期</label>
-                    <select class="form-control" ng-model="addStuData.selectedSemester" ng-change="updateAddStuSelect('class')">
-                      <option ng-repeat="semesterItem in addStu.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
+                    <select class="form-control" ng-model="submittedDataForAddStudent.selectedSemester" ng-change="updateAddStuSelect('classname')">
+                      <option ng-repeat="semesterItem in showDataForAddStudent.semesters" value="{{semesterItem}}">{{semesterItem}}</option>
                     </select>
 
                     <label>选择教学班</label>
-                    <select class="form-control" ng-model="addStuData.selectedClass">
-                      <option ng-repeat="classItem in addStu.classes" value="{{classItem}}">{{classItem}}</option>
+                    <select class="form-control" ng-model="submittedDataForAddStudent.selectedClass">
+                      <option ng-repeat="classItem in showDataForAddStudent.classnames" value="{{classItem}}">{{classItem}}</option>
                     </select>
                     <label>点击继续选择教学班</label>
                     <a href="" class="btn btn-info btn-block" ng-click="addClass()">
                         <span class="glyphicon glyphicon-plus"></span>添加
                     </a>
-                    <button class="btn btn-default btn-block" ng-click="submitStuInfo()" ng-disabled="((!addStuData.name) || (!addStuData.id))">提交</button>
+                    <button class="btn btn-default btn-block" ng-click="submitStuInfo()" ng-disabled="((!submittedDataForAddStudent.name) || (!submittedDataForAddStudent.id))">提交</button>
                 </div>
                 <div class="show">
                     <table class="table">
@@ -113,13 +112,13 @@
                     <label>学号</label>
                   </div>
                   <div class="error">
-                    <div ng-show="deleteStu.successTip">
+                    <div ng-show="showDataForDeleteStudent.successTip">
                         <div class="alert alert-success alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除成功!
                         </div>
                     </div>
 
-                    <div ng-show="deleteStu.errorTip">
+                    <div ng-show="showDataForDeleteStudent.errorTip">
                         <div class="alert alert-danger alert-dismissable">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button> 删除失败，请重试！
                         </div>
@@ -128,10 +127,10 @@
                 </div>
                 <div class="secondRow">
                   <div class="id">
-                    <input type="text" class="form-control" ng-model="deleteStu.id" placeholder="请输入学生学号">
+                    <input type="text" class="form-control" ng-model="submittedDataForDeleteStudent.id" placeholder="请输入学生学号">
                   </div>
                   <div class="submit">
-                      <button class="btn btn-default btn-block" ng-click="deleteStuInfo()" ng-disabled="(!deleteStu.id)">删除</button>
+                      <button class="btn btn-default btn-block" ng-click="deleteStuInfo()" ng-disabled="(!submittedDataForDeleteStudent.id)">删除</button>
                   </div>
                 </div>
 

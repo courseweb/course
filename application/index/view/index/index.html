@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/admin_public.css">
     <link rel="stylesheet" href="css/admin_student.css">
     <link rel="stylesheet" href="css/admin_teacher.css">
+    <link rel="stylesheet" href="css/mainpage.css">
     <style>
         [ng\:cloak],
         [ng-cloak],
@@ -31,7 +32,7 @@
             -webkit-font-smoothing: antialiased;
             font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: #232525;
-            margin-top: 20px;
+            background-image: url("../images/background.jpg");
         }
     </style>
     <!-- 这个必须放在这里，要不然登陆的时候的那个等待符号就加载不出来了 -->
@@ -67,7 +68,7 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <!-- 向左对齐 -->
-                <ul class="nav navbar-nav navbar-left">
+                <!-- <ul class="nav navbar-nav navbar-left">
                     <li style="font-weight:bold;"><a href="javascript:">主页</a></li>
                     <li style="font-weight:bold;"><a href="javascript:">关于我们</a></li>
                     <li style="font-weight:bold;"><a href="javascript:">联系我们</a></li>
@@ -83,7 +84,7 @@
                             <li><a href="javascript:">One more separated link</a></li>
                         </ul>
                     </li>
-                </ul>
+                </ul> -->
 
                 <!-- 向右对其 -->
                 <div ng-include="dynamic_bar">
@@ -100,7 +101,7 @@
                 <div class="modal-body">
 
                     <!-- Interactive Login - START -->
-                    <div class="container-fluid" style="margin-top: 30%;">
+                    <div class="container-fluid" style="margin-top: 5%;">
                         <div class="row">
                             <div class="loginpanel">
                                 <i id="loading" class="hidden fa fa-spinner fa-spin bigicon"></i>
@@ -397,9 +398,6 @@
         <!-- /.modal -->
 
     </div>
-
-
-
     <ui-view></ui-view>
     <script type="text/javascript">
         $("#FindbackPwd").click(function() {
@@ -411,6 +409,7 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-ui-router.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/banner.js"></script>
     <script src="js/admin_router.js"></script>
     <script src="js/administrator.js"></script>
     <script src="js/teacher_router.js"></script>
