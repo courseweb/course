@@ -118,7 +118,7 @@ class ExperimentModel extends Model
             if($type=="2"){
                 if (session('?class_id')) {
                     $class_id=session('class_id');
-                    $result = Db::table('do_experiment')->where('class_id',$class_id)->field('n_th as experiment_th,COUNT(stu_id) as done')->group('n_th')->select();
+                    $result = Db::table('do_experiment')->where('class_id',$class_id)->field('n_th,COUNT(stu_id) as done')->group('n_th')->select();
                     if(!$result){
                         $result='failure';
                     }

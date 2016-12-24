@@ -169,7 +169,7 @@ class HomeworkModel extends Model
                 if (session('?class_id')) {
                     $class_id=session('class_id');
                     $join = [['homework b','a.homework_id=b.homework_id']];
-                    $result = Db::table('do_homework')->alias('a')->join($join)->where('b.class_id',$class_id)->field('b.homework_th,COUNT(a.stu_id) as done')->group('b.homework_th')->select();
+                    $result = Db::table('do_homework')->alias('a')->join($join)->where('b.class_id',$class_id)->field('b.homework_th as n_th,COUNT(a.stu_id) as done')->group('b.homework_th')->select();
                     $array=$result;
                     $result = Db::table('take')->where('class_id',$class_id)->count();
                     for ($i=0; $i < count($array); $i++) { 
